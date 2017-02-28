@@ -1,0 +1,82 @@
+/*
+・599pxまではモバイル専用
+・600px～959pxまではタブレット（とブラウザを狭くしたデスクトップ）
+・960px～1280pxまではデスクトップ（と横置きしたタブレット）
+*/
+.containerA{
+    display: flex;
+    flex-flow: column;
+}
+.containerB{
+    display: flex;
+    flex-flow: row;
+}
+.containerC{
+    display: flex;
+    flex-flow: row;
+}
+.containerD{
+    display: flex;
+}
+
+.boxA{
+    background-color:gold;
+    height:100px;
+    width:100%;
+}
+.boxB{
+    background-color:indigo;
+    height:100%;
+    width:200px;
+}
+.boxC{
+    background-color:chartreuse;
+}
+.boxD{
+    background-color:lightcoral;
+}
+.boxE{
+    background-color:sienna;
+}
+
+/*　画面サイズが480pxからはここを読み込む　*/
+@media screen and (max-width:599px) { 
+    .containerC{
+        flex-flow:column;
+    }
+}
+
+/*　画面サイズが768pxから1024pxまではここを読み込む　*/
+@media screen and (min-width:600px) and ( max-width:959px) {
+    .boxC{
+
+    }
+    .boxD{
+
+    }
+    .boxE{
+
+    }
+}
+
+/*　画面サイズが1024pxからはここを読み込む　*/
+@media screen and (min-width:960px) {
+    .containerB{
+        width:20%;
+    }
+    .containerC{
+        width:80%;
+    }
+    .boxC{
+        width:30%;
+    }
+    .boxD{
+        width:30%;
+    }
+    .boxE{
+        width:30%;
+    }
+}
+
+
+
