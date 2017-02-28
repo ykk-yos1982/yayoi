@@ -1,3 +1,7 @@
+body{
+    color: white;
+}
+
 section{
     display: -webkit-flex;
     display: flex;
@@ -17,7 +21,6 @@ section{
     width: 100%;
     box-sizing: border-box;
     background: #FFAF5F;
-    color: white;
 
     text-align: center;
     line-height: 100px;
@@ -28,7 +31,6 @@ section{
     background: #b0dd58;
     width: 25%;
     height: 100%;
-    color: white;
 
     text-align: center;
     writing-mode: vertical-rl;
@@ -38,14 +40,11 @@ section{
 }
 
 .content{
-    /*width: 300px;*/
     min-width: 300px;
     writing-mode: vertical-rl;
     text-orientation: upright;
     flex-grow: 1;
     vertical-align: middle;
-
-    color: white;
 
     text-align: center;
     font-size: 60px;
