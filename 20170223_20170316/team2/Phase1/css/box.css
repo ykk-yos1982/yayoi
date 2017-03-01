@@ -1,5 +1,10 @@
+html,body{
+	height: 100%;
+}
+
 body{
     color: white;
+	margin: 0px;
 }
 
 section{
@@ -19,7 +24,6 @@ section{
 
 .contentHeader{
     width: 100%;
-    box-sizing: border-box;
     background: #FFAF5F;
 
     text-align: center;
@@ -30,25 +34,33 @@ section{
 .contentMenu{
     background: #b0dd58;
     width: 25%;
-    height: 100%;
-
-    text-align: center;
+	height: 100%;
+	
     writing-mode: vertical-rl;
-    text-orientation: upright;
-    line-height: 100px;
     font-size: 60px;
+	
+	display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap; 
+    flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 .content{
     min-width: 300px;
     writing-mode: vertical-rl;
-    text-orientation: upright;
     flex-grow: 1;
-    vertical-align: middle;
-
-    text-align: center;
     font-size: 60px;
-    line-height: 100px;
+
+	display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap; 
+    flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 .contentLightBlue{
