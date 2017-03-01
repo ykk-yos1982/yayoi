@@ -1,16 +1,26 @@
-html,body{
+html{
 	height: 100%;
 }
 
 body{
     color: white;
 	margin: 0px;
+    height: 100%;
 }
 
-section{
-    display: -webkit-flex;
+.container{
+    min-height: 100vh;
+    height: 100%;
     display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+}
+
+.contents{
+    display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    flex: 1;
 }
 
 .contentMain{
@@ -24,6 +34,7 @@ section{
 
 .contentHeader{
     width: 100%;
+    height: 100px;
     background: #FFAF5F;
 
     text-align: center;
@@ -34,8 +45,7 @@ section{
 .contentMenu{
     background: #b0dd58;
     width: 25%;
-	height: 100%;
-	
+
     writing-mode: vertical-rl;
     font-size: 60px;
 	
@@ -75,13 +85,13 @@ section{
     background: #FFb0FD;
 }
 
-@media screen and (min-width: 782px) and (max-width: 1157px){
+@media screen and (min-width: 838px) and (max-width: 1157px){
     .contentPink{
         writing-mode: horizontal-tb;
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 782px){
+@media screen and (min-width: 0px) and (max-width: 838px){
     .content{
         writing-mode: horizontal-tb;
     }
