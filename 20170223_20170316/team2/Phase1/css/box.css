@@ -46,7 +46,7 @@ body{
     background: #b0dd58;
     width: 25%;
 
-    writing-mode: vertical-rl;
+    writing-mode: tb-rl;
     font-size: 60px;
 	
 	display: -webkit-flex;
@@ -60,7 +60,7 @@ body{
 
 .content{
     min-width: 300px;
-    writing-mode: vertical-rl;
+    writing-mode: tb-rl;
     flex-grow: 1;
     font-size: 60px;
 
@@ -87,13 +87,13 @@ body{
 
 @media screen and (min-width: 838px) and (max-width: 1157px){
     .contentPink{
-        writing-mode: horizontal-tb;
+        writing-mode: lr-tb;
     }
 }
 
 @media screen and (min-width: 0px) and (max-width: 838px){
     .content{
-        writing-mode: horizontal-tb;
+        writing-mode: lr-tb;
     }
 }
 
