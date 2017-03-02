@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@mixin media_query_tablet{
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media_query_pc{
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+
+/******************************************************
+ベースの設定
+******************************************************/
+*{margin: 0; padding: 0; text-align: center;}
+
+html, body{width: 100%; height: 100%;}
+
+html {font-size: 62.5%;}
+
+body {	
+	font-family: 'Doppio One',Verdana,Arial,Meiryo,メイリオ,"MS Pゴシック",Sans-serif;
+	color:black;
+	font-size: 1.4rem;
+	line-height: 1.7;
+	}
+
+a {text-decoration: none;}
+img {border-style:none;}
+ul {list-style: none;}
+
+span{color: #777;}
+
+h1{font-size: 2rem;}
+
+p{margin-top: 30px;}
+
+
+/******************************************************
+ページの大枠
+******************************************************/
+#BigWrapper{width: 100%; margin: 10px auto;}
+     #BigWrapper #wrapper{width: 95%; margin: 10px auto;}
+
+@include media_query_tablet{
+#BigWrapper{width: 750px;}
+     #BigWrapper #wrapper{width: 710px;}
+}
+
+@include media_query_pc{
+#BigWrapper{width: 940px;}
+     #BigWrapper #wrapper{width: 900px;}
+}
+
+/******************************************************
+ヘッダー
+******************************************************/
+
+/* コンテンツ１ */
+#header{height: 100px; margin: 0 auto; padding: 0px;}
+	#header #banner{margin:0px; height: 100px; background: #FFAF5F;}
+
+@include media_query_tablet{
+#header{height: 130px;}
+	#header #banner{height: 130px;}
+}
+
+@include media_query_pc{
+#header{height: 100px;}
+	#header #banner{height: 100px;}
+}
+
+/******************************************************
+コンテナー
+******************************************************/
+
+#container{min-height: 500px;}
+
+$color2:#B0DD58;
+$color3:#69C9F9;
+$color4:#F4EF51;
+$color5:#FFB0FD;
+
+
+	/* コンテンツ２ */
+	#contents{float:left; min-height: 600px; overflow: hidden;width:40%;}
+	#contents .content{margin: 0px; height: 600px; background:$color2;}
+
+    @include media_query_tablet{
+    #contents{float:left; min-height: 600px; overflow: hidden;width:20%;}
+    #contents .content{margin: 0px; height: 600px; background:$color2;}
+	}
+
+    @include media_query_pc{
+    #contents{float:left; min-height: 600px; overflow: hidden;width:19%;}	
+	#contents .content{margin: 0px; height: 600px; background:$color2;}
+	}
+
+
+	/* コンテンツ３ */
+	#sides1{float:left;min-height: 200px; overflow: hidden; width:60%;}
+	#sides1 .side{margin: 0px; height: 200px; background:$color3;}
+
+    @include media_query_tablet{
+	#sides1{float:left;min-height: 400px; overflow: hidden;width:40%;}
+	#sides1 .side{margin: 0px; height: 400px; background:$color3;}
+	}
+
+    @include media_query_pc{
+	#sides1{float:left;min-height: 600px; overflow: hidden;width:27%;}
+	#sides1 .side{margin: 0px; height: 600px; background:$color3;}
+	}
+
+
+	/* コンテンツ４ */
+	#sides2{float:left;min-height: 200px; overflow: hidden; width:60%;}
+	#sides2 .side{margin: 0px; height: 200px; background:$color4;}
+
+    @include media_query_tablet{
+	#sides2{float:left;min-height: 400px; overflow: hidden;width:40%;}
+    #sides2 .side{margin: 0px; height: 400px; background:$color4;}
+	}
+
+    @include media_query_pc{
+	#sides2{float:left;min-height: 600px; overflow: hidden;width:27%;}
+	#sides2 .side{margin: 0px; height: 600px; background:$color4;}
+	}
+	
+
+	/* コンテンツ５ */
+	#sides3{float:left;min-height: 200px; overflow: hidden; width:60%;}	
+	#sides3 .side{margin: 0px; height: 200px; background:$color5;}
+
+    @include media_query_tablet{
+	#sides3{float:left;min-height: 200px; overflow: hidden;width:80%;}
+    #sides3 .side{margin: 0px; height: 200px; background:$color5;}
+	}
+
+	@include media_query_pc{
+	#sides3{float:left;min-height: 600px; overflow: hidden;width:27%;}	
+	#sides3 .side{margin: 0px; height: 600px; background:$color5;}
+	}
