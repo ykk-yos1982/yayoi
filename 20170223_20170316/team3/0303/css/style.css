@@ -7,31 +7,53 @@
 /* 
 ベース(全サイズに適用)
 */
-.base{
+html{
 	height: 100%;
 }
+body{
+	height: 80%;
+}
+.boxA{
+	height: 100%;
+}
+.cont1,.cont2,.cont3,.cont4,.cont5{	
+	background-color:#D81E21;
+	color: white;
+	font-size: 30px;
+	font-family: "ＭＳ Ｐゴシック",sans-serif;
+	text-align: center;	
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cont1{
 	background-color:#ffaf5f;
 	width: 100%;
 	height: 100px;
-	text-align: center;
 }
 .cont2{
 	background-color:#b0dd58;
 	width: 200px;
-	text-align: center;
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode:vertical-rl;
+	-webkit-text-orientation: upright;
+	text-orientation: upright;
 }
 .cont3{
 	background-color:#69c9f9;
-	text-align: center;
+	writing-mode:sideways-rl;
 }
 .cont4{
 	background-color:#f4ef51;
-	text-align: center;
+	writing-mode:sideways-rl;
 }
 .cont5{
 	background-color:#ffb0fd;
-	text-align: center;
+	writing-mode:sideways-rl;
 }
 
 
@@ -52,7 +74,7 @@
 		flex-grow:2;
 	}
 	.cont2{
-		align-items:stretch;
+		flex-basis:200px;
 	}
 	.cont3{
 		flex-grow:1;
@@ -85,14 +107,16 @@
 	.cont2{
 		flex-basis:200px;
 	}
-	.cont3{
+	.cont3,.cont4,.cont5{
 		flex-grow:1;
 	}
-	.cont4{
-		flex-grow:1;
-	}
-	.cont5{
-		flex-grow:1;
+	.cont3,.cont4{
+		writing-mode: vertical-rl;
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: tb-rl;
+		-webkit-writing-mode:vertical-rl;
+		-webkit-text-orientation: upright;
+		text-orientation: upright;
 }
 }
 
@@ -112,14 +136,14 @@
 		flex-direction:row;
 		flex-grow: 2;
 	}
-	.cont3{
+	.cont3,.cont4,.cont5{
 		flex-grow: 1;
-	}
-	.cont4{
-		flex-grow: 1;
-	}
-	.cont5{
-		flex-grow: 1;
+		writing-mode: vertical-rl;
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: tb-rl;
+		-webkit-writing-mode:vertical-rl;
+		-webkit-text-orientation: upright;
+		text-orientation: upright;
 	}
 }
  
