@@ -1,2 +1,9 @@
 /* Scss Document */
+$header-color: #388E3C;
+$button-color: #C8E6C9;
+$active-button-color:  #FF9800;
+$divider-color:        #BDBDBD;
 
+.title{
+    color: $header-color;
+}
