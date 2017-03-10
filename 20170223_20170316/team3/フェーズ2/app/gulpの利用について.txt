@@ -1,0 +1,26 @@
+scssファイルのコンパイルに、「gulp」を利用します。
+
+・gulpとは：
+  Node.jsのStreamAPIを利用したビルドシステム。
+  http://gulpjs.com/
+
+
+・用途：
+  scssファイルをコンパイルし、cssファイルを生成する。
+
+・コンパイル手順：
+1. インストール
+  以下のサイトを参照してNode.js、Gulp.jsをインストールする。
+  https://liginc.co.jp/web/tutorial/117900
+  (1. Node.jsをインストール～3. gulpfile.jsの作成 までの手順の実施)
+
+  ※利用するjsファイルは、UXチーム提供の「guilpfile.js」ファイルと差し替える。
+
+2.scssファイルのコンパイル
+  CLIでプロジェクトフォルダ直下（gulpfile.jsと同階層）に移動し、以下のコマンドを実行する。
+  "gulp"
+  cssフォルダ以下にコンパイルされたcssファイルが作成される。
+
+
+以上
+

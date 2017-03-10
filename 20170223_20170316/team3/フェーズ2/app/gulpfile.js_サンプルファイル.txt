@@ -1,0 +1,26 @@
+    var gulp = require('gulp');
+    var sass = require('gulp-sass');
+     
+    gulp.task('default', function() {
+      gulp.src('scss/**/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('css'));
+    });
+    
+    gulp.task('ts', function() {
+
+         //出力オプション
+         var options =  {
+             removeComments :false
+             
+         };
+
+         gulp.src([
+                './**/*.ts',
+                '!./node_modules/**',//node_modules配下は除外する
+                '!./ts/vendor/**',//vendor配下は除外する
+                '!./ts/component/**'//vendor配下は除外する
+              ])
+             .pipe(typescript(options))
+             .pipe(gulp.dest('./js/function'));
+     });
