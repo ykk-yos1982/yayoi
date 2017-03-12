@@ -3,11 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width;" />
-        <title>Phase２</title>
+        <title>NHK番組表検索</title>
+        
+        <!-- stylesheet -->
         <link rel="stylesheet" href="css\phase2.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        
+        <!-- javascript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="js/phase2.js"></script>
     </head>
     <body>
         <div class="header">
@@ -18,35 +24,35 @@
                     確認したい日付を選択してください。
                 </p>
                 <!-- Flat button -->
-                <button class="mdl-button mdl-js-button today">
+                <button class="js-btn-date mdl-button mdl-js-button today">
                     今日
                 </button>
                 <!-- Colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+1">
+                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+1">
                     03/11
                 </button>
                 <!-- Colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+2">
+                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+2">
                     03/12
                 </button>
                 <!-- Colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+3">
+                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+3">
                     03/13
                 </button>
                 <!-- Colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+4">
+                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+4">
                     03/14
                 </button>
                 <!-- Colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+5">
+                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+5">
                     03/15
                 </button>
                 <!-- Colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+6">
+                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+6">
                     03/16
                 </button>
                 <!-- Colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+7">
+                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored day+7">
                     03/17
                 </button>
             </div>
@@ -56,25 +62,25 @@
             <div class="global">
                 <div class="globalIcon">a
                 </div>
-                <div class="globalSchedule">a
+                <div class="globalSchedule" datasetid="g1">a
                 </div>
             </div>
             <div class="education">
                 <div class="educationIcon">a
                 </div>
-                <div class="educationSchedule">a
+                <div class="educationSchedule" datasetid="e1">a
                 </div>
             </div>
             <div class="bsPremium">
                 <div class="bsPremiumIcon">a
                 </div>
-                <div class="bsPremiumSchedule">a
+                <div class="bsPremiumSchedule" datasetid="s1">a
                 </div>
             </div>
             <div class="bsOne">
                 <div class="bsOneIcon">a
                 </div>
-                <div class="bsOneSchedule">a
+                <div class="bsOneSchedule" datasetid="s3" >a
                 </div>
             </div>
         </div>
