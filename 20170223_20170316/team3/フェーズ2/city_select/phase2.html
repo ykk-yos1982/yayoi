@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        "use strict"
+
+        var prefectures = [
+            {
+                name: '青森県',
+                left: 363,
+                top: 98,
+                right: 447,
+                bottom: 125,
+                city: [
+                    {
+                        name: '青森',
+                        id: '020010'
+                    },
+                    {
+                        name: 'むつ',
+                        id: '020020'
+                    },
+                    {
+                        name: '八戸',
+                        id: '020030'
+                    }
+                ]
+            },
+            {
+                name: '岩手県',
+                left: 406,
+                top: 126,
+                right: 447,
+                bottom: 151,
+                city: [
+                    {
+                        name: '盛岡',
+                        id: '030010'
+                    },
+                    {
+                        name: '宮古',
+                        id: '030020'
+                    },
+                    {
+                        name: '大船渡',
+                        id: '030030'
+                    }
+                ]
+            },
+            {
+                name: '宮城県',
+                left: 406,
+                top: 152,
+                right: 447,
+                bottom: 177,
+                city: [
+                    {
+                        name: '仙台',
+                        id: '040010'
+                    },
+                    {
+                        name: '白石',
+                        id: '040020'
+                    }
+                ]
+            }
+        ];
+
+        var orgImgSize = {
+            width: undefined,
+            height: undefined
+        };
+
+        function initializePrefectureList() {
+            var prefList = $('#tenki-prefList');
+            prefList.empty();
+            $.each(prefectures, function(idx, val) {
+                prefList.append("<li><a tabindex='-1' href='#' data-prefidx='" + idx + "'>" + val.name + "</a></li>");
+            });
+        }
+
+        function getCanvasCoordinate(point, canvas) {
+            var rect = canvas.getBoundingClientRect();
+            var xRate = orgImgSize.width / canvas.scrollWidth;
+            var yRate = orgImgSize.height / canvas.scrollHeight;
+            return {
+                x: (point.x - rect.left) * xRate,
+                y: (point.y - rect.top) * yRate
+            };
+        }
+
+        function getPrefectureFromMap(mouseEventObj) {
+            var point = {
+                x: mouseEventObj.clientX,
+                y: mouseEventObj.clientY
+            };
+            var cp = getCanvasCoordinate(point, mouseEventObj.target);
+
+            return $.grep(prefectures,
+                function(el, idx) {
+                    return (cp.x >= el.left) && (cp.x <= el.right) &&
+                        (cp.y >= el.top) && (cp.y <= el.bottom);
+                }
+            );
+        }
+
+        function updateCityList(prefecture) {
+            var ctrl = ['#contextMenu', '#tenki-cityList'];
+
+            $.each(ctrl, function(i1, v1) {
+                $(v1).empty();
+                $.each(prefecture.city, function(i2, v2) {
+                    $(v1).append("<li><a tabindex='-1' href='#' data-city='" + JSON.stringify(v2) + "'>" + v2.name + "</a></li>");
+                });
+            });
+        }
+
+        function selectPrefecture(prefecture) {
+            updateCityList(prefecture);
+            var button = $('#tenki-prefDropdown');
+            button.empty();
+            button.append(prefecture.name);
+            button.append(" ");
+            button.append("<span class='caret'></span>")
+
+            button = $('#tenki-cityDropdown');
+            button.empty();
+            button.append('場所を選択');
+            button.append(" ");
+            button.append("<span class='caret'></span>")
+        }
+
+        function selectCity(city) {
+            var button = $('#tenki-cityDropdown');
+            button.empty();
+            button.append(city.name);
+            button.append(" ");
+            button.append("<span class='caret'></span>")
+        }
+
+        $('#jp_map').click(function(e) {
+            var isShowMenu = false;
+            var pref = getPrefectureFromMap(e);
+            if (pref != null && pref.length > 0) {
+                if ($('#contextMenu').css('display') == 'none') {
+                    selectPrefecture(pref[0]);
+                    $('#contextMenu').css({
+                        display: 'block',
+                        left: e.clientX,
+                        top: e.clientY
+                    });
+                    isShowMenu = true;
+                }
+            }
+            
+            if (!isShowMenu) {
+                $('#contextMenu').css('display', 'none');
+            }
+        });
+
+        $('#jp_map').mousemove(function(e) {
+            //var pref = getPrefectureFromMap(e);
+        });
+
+        $('#tenki-prefList').on('click', 'li a', function() {
+            var idx = $(this).data('prefidx');
+            selectPrefecture(prefectures[idx]);
+        });
+        
+        $('#tenki-cityList').on('click', 'li a', function() {
+            var city = $(this).data('city');
+            selectCity(city);
+        });
+
+        $('#contextMenu').on('click', 'li a', function() {
+            var city = $(this).data('city');
+            selectCity(city);
+
+            $('#contextMenu').css('display', 'none');
+        });
+
+        $(document).ready(function() {
+            var img = new Image();
+            img.src = './img/jpmap.png';
+            orgImgSize.width = img.width;
+            orgImgSize.height = img.height;
+
+            var jpMap = document.getElementById('jp_map');
+            jpMap.width = orgImgSize.width;
+            jpMap.height = orgImgSize.height;            
+            var context = jpMap.getContext('2d');
+            context.drawImage(img, 0, 0);
+
+            initializePrefectureList();
+        });
+    });
+    </script>
+    <style type="text/css">
+        #jp_map {
+            box-sizing: border-box;
+            margin: 20px;
+            max-width: 523px;
+            width: 100%;
+            height: auto;
+        }
+
+        #contextMenu {
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <canvas id="jp_map"></canvas>
+        <ul id="contextMenu" class="dropdown-menu" role="menu">
+        </ul>
+    </div>
+    <div>
+        <p id="output"></p>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="tenki-prefDropdown"
+         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            都道府県を選択
+            <span class="caret"></span>
+        </button>
+        <ul id="tenki-prefList" class="dropdown-menu" aria-labelledby="tenki-prefDropdown">
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="tenki-cityDropdown"
+         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            場所を選択
+            <span class="caret"></span>
+        </button>
+        <ul id="tenki-cityList" class="dropdown-menu" aria-labelledby="tenki-cityDropdown">
+        </ul>
+    </div>
+</body>
+
+</html>
