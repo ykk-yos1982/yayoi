@@ -1,0 +1,79 @@
+/* �n�}�L�����p�X */
+#map-canvas {
+	width: 300px ;
+	height: 300px ;
+}
+
+/* �{�^�� */
+#method, #reset {
+	border: 1px solid #666 ;
+	box-sizing: border-box ;
+	background-color: #f2f2f2 ;
+	width: 800px ;
+	text-align: center ;
+	height: 40px ;
+	line-height: 40px ;
+	font-size: 16px ;
+	font-weight: 700 ;
+}
+
+/* �e�L�X�g�G���A */
+#return {
+	box-sizing: border-box ;
+	width: 300px ;
+}
+.result{
+	display: flex;
+	flex-grow: row;
+}
+
+.result_map{
+
+}
+
+.result_detail{
+	display: flex;
+	-webkit-flex-direction: row; /* Safari */
+	flex-direction:         row;
+}
+
+.wrap_today{
+	list-style:none;
+}
+
+.head_today{
+	width: 114px;
+	background-color: chocolate;
+	border-radius: 46px;
+	color:white;
+	text-align: center;	
+}
+
+.head_tomorrow{
+	background-color:mediumblue;
+	color:white;
+	text-align: center;	
+}
+
+.icon_today{
+	text-align: center;
+}
+
+.high_today{
+	color:red;
+	text-align: center;
+}
+
+.low_today{
+	color:blue;
+	text-align: center;
+}
+
+.link_title{
+	color:goldenrod;
+	font-size: 30px;
+}
+
+.link_detail{
+	color:deeppink;
+}
