@@ -37,20 +37,25 @@
 	flex-direction:         row;
 }
 
+.header_style{
+	background-color: #DCF9FF;
+	color: #1438EC;
+}
+
 .wrap_today{
 	list-style:none;
 }
 
 .head_today{
 	width: 114px;
-	background-color: chocolate;
+	background-color: #FF872B;
 	border-radius: 46px;
 	color:white;
 	text-align: center;	
 }
 
 .head_tomorrow{
-	background-color:mediumblue;
+	background-color:#2B87FF;
 	color:white;
 	text-align: center;	
 }
@@ -60,17 +65,17 @@
 }
 
 .high_today{
-	color:red;
+	color:#DF346E;
 	text-align: center;
 }
 
 .low_today{
-	color:blue;
+	color:#348ADF;
 	text-align: center;
 }
 
 .link_title{
-	color:goldenrod;
+	color:#EECF09;
 	font-size: 30px;
 }
 

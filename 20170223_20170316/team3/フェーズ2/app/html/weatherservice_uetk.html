@@ -31,7 +31,7 @@
 	<div class="body">
 		<header class="body__header">
 			<div class="header">
-				<nav  class="navbar navbar-default">
+				<nav  class="navbar navbar-default header_style">
 					<div  class="container-fluid">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample">
@@ -64,9 +64,6 @@
 					<div>天気を検索したい都道府県を選択してください。</div>
 				</div>
 				<div class="resultsdisplay">
-
-
-
 					<h3>結果</h3>
 					<!-- 結果表示用のdivタグ -->
 					<div data-result="">未取得</div>
@@ -96,45 +93,46 @@
 							<div>福島県 yyyy/mm/ddの天気です</div>
 							<div>
 								<form id="idokeido">
-									<input id='ido' type='text' value='36.3825979'/>
-									<input id='keido' type='text' value='140.4538716'/>
-									<input id='regionid' type='text' value='4000001'/>
+									<input id="ido" type="text" value="36.3825979"/>
+									<input id="keido" type="text" value="140.4538716"/>
+									<input id="regionid" type="text" value="4000001"/>
 								</form>
 								<div id="map-canvas">ここに地図が表示されます</div>
 								<div>昨日より気温が10℃下がり...</div>
 							</div>
 						</div>
-					<div class="result_detail">
-						<div class="box_today">
-							<ul class="wrap_today list-group">
-								<li class="list-group-item"><div class="head_today">今日の天気</div></li>
-								<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
-								<li class="list-group-item">
-									<div class="high_today">最高気温:33℃</div>
-									<div class="low_today">最低気温:2℃</div>
-								</li>
-							</ul>
-						</div>
-						<div class="box_tomorrow">
-							<ul class="wrap_today list-group">
-								<li class="list-group-item head_tomorrow">明日の天気</li>
-								<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
-								<li class="list-group-item">
-									<div class="high_today">最高気温:33℃</div>
-									<div class="low_today">最低気温:2℃</div>
-								</li>
-							</ul>
-						</div>
+						<div class="result_detail">
+							<div class="box_today">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item"><div class="head_today">今日の天気</div></li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
+							<div class="box_tomorrow">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item head_tomorrow">明日の天気</li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
 
-						<div class="box_da_tomorrow">
-							<ul class="wrap_today list-group">
-								<li class="list-group-item head_tomorrow">明後日の天気</li>
-								<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
-								<li class="list-group-item">
-									<div class="high_today">最高気温:33℃</div>
-									<div class="low_today">最低気温:2℃</div>
-								</li>
-							</ul>
+							<div class="box_da_tomorrow">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item head_tomorrow">明後日の天気</li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -152,6 +150,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</section>
 		<section class="body__footer">
 			フッター

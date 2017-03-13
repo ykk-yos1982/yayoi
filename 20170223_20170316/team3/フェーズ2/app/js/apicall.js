@@ -1,7 +1,13 @@
 $(function() {
   // ［検索］ボタンクリックで郵便番号検索を実行
   $('#search').click(function() {
-    $.get('http://weather.livedoor.com/forecast/webservice/json/v1?city=400040')
+    var url = "http://weather.livedoor.com/forecast/webservice/json/v1?city=400040"
+    
+	$.ajax(url, {
+	        type: 'get',
+	        dataType: 'json'
+	    })
+
     // 結果を取得したら…
     .done(function(data) {
       // 中身が空でなければ、その値を［住所］欄に反映
