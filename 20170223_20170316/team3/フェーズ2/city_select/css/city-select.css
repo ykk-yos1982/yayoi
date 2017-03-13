@@ -1,0 +1,11 @@
+#jp_map {
+    box-sizing: border-box;
+    max-width: 889px;
+    width: 100%;
+    height: auto;
+}
+
+#contextMenu {
+    position: absolute;
+    display: none;
+}
