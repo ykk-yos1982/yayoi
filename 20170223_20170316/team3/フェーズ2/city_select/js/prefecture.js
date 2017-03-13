@@ -1,10 +1,10 @@
 var prefectures = [
     {
         name: '道北',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 644,
+        top: 1,
+        right: 873,
+        bottom: 46,
         city: [
             {
                 name: '稚内',
@@ -22,10 +22,10 @@ var prefectures = [
     },
     {
         name: '道東',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 823,
+        top: 47,
+        right: 873,
+        bottom: 154,
         city: [
             {
                 name: '網走',
@@ -54,28 +54,11 @@ var prefectures = [
         ]
     },
     {
-        name: '道南',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
-        city: [
-            {
-                name: '室蘭',
-                id: '015010'
-            },
-            {
-                name: '浦河',
-                id: '015020'
-            }
-        ]
-    },
-    {
         name: '道央',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 644,
+        top: 47,
+        right: 822,
+        bottom: 99,
         city: [
             {
                 name: '札幌',
@@ -93,11 +76,19 @@ var prefectures = [
     },
     {
         name: '道南',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 644,
+        top: 100,
+        right: 822,
+        bottom: 154,
         city: [
+            {
+                name: '室蘭',
+                id: '015010'
+            },
+            {
+                name: '浦河',
+                id: '015020'
+            },
             {
                 name: '函館',
                 id: '017010'
@@ -169,10 +160,10 @@ var prefectures = [
     },
     {
         name: '秋田県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 611,
+        top: 223,
+        right: 729,
+        bottom: 273,
         city: [
             {
                 name: '秋田',
@@ -186,10 +177,10 @@ var prefectures = [
     },
     {
         name: '山形県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 611,
+        top: 275,
+        right: 727,
+        bottom: 327,
         city: [
             {
                 name: '山形',
@@ -211,10 +202,10 @@ var prefectures = [
     },
     {
         name: '福島県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 611,
+        top: 327,
+        right: 812,
+        bottom: 380,
         city: [
             {
                 name: '福島',
@@ -232,10 +223,10 @@ var prefectures = [
     },
     {
         name: '茨城県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 776,
+        top: 381,
+        right: 813,
+        bottom: 448,
         city: [
             {
                 name: '水戸',
@@ -249,10 +240,10 @@ var prefectures = [
     },
     {
         name: '栃木県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 715,
+        top: 381,
+        right: 775,
+        bottom: 448,
         city: [
             {
                 name: '宇都宮',
@@ -266,10 +257,10 @@ var prefectures = [
     },
     {
         name: '群馬県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 611,
+        top: 381,
+        right: 714,
+        bottom: 448,
         city: [
             {
                 name: '前橋',
@@ -283,10 +274,10 @@ var prefectures = [
     },
     {
         name: '埼玉県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 611,
+        top: 449,
+        right: 775,
+        bottom: 478,
         city: [
             {
                 name: 'さいたま',
@@ -304,10 +295,10 @@ var prefectures = [
     },
     {
         name: '千葉県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 776,
+        top: 449,
+        right: 813,
+        bottom: 548,
         city: [
             {
                 name: '千葉',
@@ -325,10 +316,10 @@ var prefectures = [
     },
     {
         name: '東京都',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 611,
+        top: 479,
+        right: 775,
+        bottom: 515,
         city: [
             {
                 name: '東京',
@@ -350,10 +341,10 @@ var prefectures = [
     },
     {
         name: '神奈川県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 611,
+        top: 516,
+        right: 775,
+        bottom: 548,
         city: [
             {
                 name: '横浜',
@@ -941,10 +932,10 @@ var prefectures = [
     },
     {
         name: '宮崎県',
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
+        left: 134,
+        top: 527,
+        right: 195,
+        bottom: 576,
         city: [
             {
                 name: '宮崎',
