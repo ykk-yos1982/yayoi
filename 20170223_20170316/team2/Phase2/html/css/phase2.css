@@ -1,3 +1,70 @@
 /* Scss Document */
 .title {
-  color: #388E3C; }
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  background-color: #388E3C;
+  text-align: left; }
+
+.tvSchedule {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  margin-left: 15px;
+  margin-right: 15px; }
+  .tvSchedule .schedule {
+    min-width: 257px;
+    width: 257px; }
+
+.schedule {
+  border-style: solid;
+  border-color: #BDBDBD;
+  border-width: 1px;
+  flex-grow: 1; }
+
+.globalIcon {
+  height: 50px;
+  text-align: center; }
+
+.educationIcon {
+  height: 50px;
+  text-align: center; }
+
+.bsPremiumIcon {
+  height: 50px;
+  text-align: center; }
+
+.bsOneIcon {
+  height: 50px;
+  text-align: center; }
+
+.mdl-button--raised.mdl-button--colored:hover, .mdl-button--raised.mdl-button--colored {
+  background-color: #C8E6C9;
+  color: #212121;
+  width: 43px;
+  height: 43px; }
+
+.mdl-button--raised.mdl-button--colored.isActive:hover, .mdl-button--raised.mdl-button--colored.isActive {
+  background-color: #FF9800;
+  color: #FFFFFF;
+  width: 43px;
+  height: 43px; }
+
+.mdl-button {
+  min-width: 43px;
+  padding: 0px;
+  line-height: initial; }
+
+.scheduleStartTime {
+  background-color: #C8E6C9; }
+
+.scheduleContent, .scheduleAct {
+  color: #757575; }
+
+.line {
+  margin-right: 15px;
+  margin-left: 15px; }

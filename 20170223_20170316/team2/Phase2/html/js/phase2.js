@@ -7,6 +7,7 @@
 
 var scheduleTemplete = "<div><div class='scheduleStartTime'>{0}</div><div class='scheduleTitle'>{1}</div><div class='scheduleContent'>{2}</div><div class='scheduleAct'>{3}</div></div>"
 var channelArr = ["g1", "e1", "s1", "s3"];
+var weekDayList = [ "（日）", "（月）", "（火）", "（水）", "（木）", "（金）", "（土）" ] ;
 
 $(document).ready(function () {
 
@@ -39,11 +40,13 @@ $(document).ready(function () {
 
     $(".js-btn-date").each(function () {
         $(this).attr("date", getDate(today, dayCnt));
+        $(this).html(getButtonDate(today, dayCnt));
         dayCnt++;
         return;
     });
 
     $(".js-btn-date").click(function () {
+        $(".scheduleDetail").empty();
         getSchedule($(this).attr("date"));
     });
 
@@ -80,6 +83,14 @@ $(document).ready(function () {
 
     function getDate(target, addDayCnt) {
         return target.getFullYear() + "-" + ("0" + (target.getMonth() + 1)).slice(-2) + "-" + ("0" + (target.getDate() + addDayCnt)).slice(-2);
+    }
+
+    function getButtonDate(target, addDayCnt) {
+        var weekDay = (target.getDay() + addDayCnt)%7;
+        if(addDayCnt==0){
+            return "今日";
+        }
+        return  (target.getMonth() + 1) + "/" + (target.getDate() + addDayCnt) + "<br/>" + weekDayList[ weekDay]; 
     }
 
     function getScheduleStartTime(target) {

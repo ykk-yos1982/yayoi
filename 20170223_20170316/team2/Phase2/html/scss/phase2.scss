@@ -3,7 +3,106 @@ $header-color: #388E3C;
 $button-color: #C8E6C9;
 $active-button-color:  #FF9800;
 $divider-color:        #BDBDBD;
+$white:#FFFFFF;
+
+
+@mixin button{
+    width: 43px;
+    height: 43px;
+    background-color: $button-color;
+}
+
+@mixin flexbox{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+@mixin scheduleFrame{
+    border-style: solid;
+    border-color: $divider-color;
+    border-width: 1px;
+}
+
+@mixin scheduleHeader(){
+    height: 50px;
+    text-align: center;
+}
 
 .title{
-    color: $header-color;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    color: white;
+    background-color: $header-color;
+    text-align: left;
+}
+
+.tvSchedule{
+    @include flexbox();
+    margin-left: 15px;
+    margin-right: 15px;
+    .schedule{
+        min-width: 257px;
+        width:257px;
+    }
+}
+
+.schedule{
+    @include scheduleFrame();
+    flex-grow: 1;
+}
+
+.globalIcon{
+    @include scheduleHeader();
+}
+
+.educationIcon{
+    @include scheduleHeader();
+}
+
+.bsPremiumIcon{
+    @include scheduleHeader();
+}
+
+.bsOneIcon{
+    @include scheduleHeader();
+}
+
+
+.mdl-button--raised.mdl-button--colored:hover, .mdl-button--raised.mdl-button--colored {
+    background-color: $button-color;
+    color: #212121;
+    width: 43px;
+    height: 43px;
+}
+
+.mdl-button--raised.mdl-button--colored.isActive:hover, .mdl-button--raised.mdl-button--colored.isActive {
+    background-color: $active-button-color;
+    color: $white;
+    width: 43px;
+    height: 43px;
+}
+
+.mdl-button{
+    min-width: 43px;
+    padding: 0px;
+    line-height: initial;
+}
+
+.scheduleStartTime{
+    background-color: $button-color;
+}
+
+.scheduleContent, .scheduleAct{
+    color: #757575;
+}
+
+.line{
+    margin-right: 15px;
+    margin-left: 15px;
 }
