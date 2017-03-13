@@ -1,6 +1,6 @@
-#jp_map {
+.mapCanvas {
     box-sizing: border-box;
-    max-width: 889px;
+    max-width: 890px;
     width: 100%;
     height: auto;
 }

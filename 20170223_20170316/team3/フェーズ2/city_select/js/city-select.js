@@ -1,68 +1,6 @@
 $(function () {
     "use strict"
 
-    var prefectures = [
-        {
-            name: '青森県',
-            left: 644,
-            top: 167,
-            right: 812,
-            bottom: 221,
-            city: [
-                {
-                    name: '青森',
-                    id: '020010'
-                },
-                {
-                    name: 'むつ',
-                    id: '020020'
-                },
-                {
-                    name: '八戸',
-                    id: '020030'
-                }
-            ]
-        },
-        {
-            name: '岩手県',
-            left: 728,
-            top: 222,
-            right: 812,
-            bottom: 274,
-            city: [
-                {
-                    name: '盛岡',
-                    id: '030010'
-                },
-                {
-                    name: '宮古',
-                    id: '030020'
-                },
-                {
-                    name: '大船渡',
-                    id: '030030'
-                }
-            ]
-        },
-        {
-            name: '宮城県',
-            left: 728,
-            top: 275,
-            right: 812,
-            bottom: 326,
-            city: [
-                {
-                    name: '仙台',
-                    id: '040010'
-                },
-                {
-                    name: '白石',
-                    id: '040020'
-                }
-            ]
-        }
-    ];
-
     var orgImgSize = {
         width: undefined,
         height: undefined
@@ -137,7 +75,7 @@ $(function () {
         button.append(" <span class='caret'></span>")
     }
 
-    $('#jp_map').click(function (e) {
+    $('#jp_map').on('click', function (e) {
         var isShowMenu = false;
         var pref = getPrefectureFromMap(e, true);
         if (pref != null && pref.length > 0) {
@@ -157,8 +95,15 @@ $(function () {
         }
     });
 
-    $('#jp_map').mousemove(function (e) {
-        //var pref = getPrefectureFromMap(e);
+    $('#jp_map').on('mousemove', function (e) {
+        var pref = getPrefectureFromMap(e);
+        if (pref != null && pref.length > 0) {
+            var ctx = $('#highlight')[0].getContext('2d');
+            ctx.beginPath();
+            ctx.fillStyle = "rgba(" + [255, 255, 255, 1] + ")";
+            ctx.fillRect(pref[0].left, pref[0].top,
+                pref[0].right - pref[0].left + 1, pref[0].bottom - pref[0].top + 1);
+        }
     });
 
     $('#tenki-prefList').on('click', 'li a', function () {

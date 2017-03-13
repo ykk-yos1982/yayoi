@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./css/city-select.css"/>
-    <script type="text/javascript" src="./jquery/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./js/city-select.js"></script>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css?v=3.3.7"/>
+    <link rel="stylesheet" href="./css/city-select.css?v=1.0.0"/>
+    <script type="text/javascript" src="./jquery/js/jquery-3.1.1.min.js?v=3.1.1"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js?v=3.3.7"></script>
+    <script type="text/javascript" src="./js/prefecture.js?v=1.0.0"></script>
+    <script type="text/javascript" src="./js/city-select.js?v=1.0.0"></script>
     <title>天気</title>
 </head>
 
@@ -16,8 +17,9 @@
     <div>
         <p id="mousep"></p>
     </div>
-    <div>
-        <canvas id="jp_map"></canvas>
+    <div id="map">
+        <canvas class="mapCanvas" id="jp_map"></canvas>
+        <!--<canvas class="mapCanvas" id="highlight"></canvas>-->
         <ul id="contextMenu" class="dropdown-menu" role="menu">
         </ul>
     </div>
