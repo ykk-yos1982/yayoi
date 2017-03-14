@@ -1,0 +1,114 @@
+ /* �n�}�L�����p�X */
+#map-canvas {
+	width: 300px ;
+	height: 300px ;
+}
+
+/* �{�^�� */
+#method{
+	border: 1px solid #666 ;
+	border-radius: 5px;
+	box-sizing: border-box ;
+	background-color: #1438EC;
+	color: white;
+	width: 100px ;
+	text-align: center ;
+	height: 40px ;
+	line-height: 40px ;
+	font-size: 16px ;
+	font-weight: 700 ;
+}
+
+/* �e�L�X�g�G���A */
+#return {
+	box-sizing: border-box ;
+	width: 300px ;
+}
+.result{
+	display: flex;
+	flex-grow: row;
+}
+
+.result_detail{
+	display: flex;
+	-webkit-flex-direction: row; /* Safari */
+	flex-direction:         row;
+}
+
+.header_style{
+	background-color: #DCF9FF;
+	color: #1438EC;
+}
+
+.wrap_today{
+	list-style:none;
+}
+
+.head_today{
+	height:50px;
+	background-color: #FF872B;
+	border-radius: 5px;
+	color:white;
+	text-align: center;	
+	font-size: 20px;
+}
+
+.head_tomorrow{
+	background-color:#2B87FF;
+	height: 50px;
+	color:white;
+	text-align: center;	
+	font-size: 20px;
+}
+
+.nonborder{
+	border: none;
+}
+
+.icon_today{
+	text-align: center;
+}
+
+.icon_tomorrow{
+	text-align: center;
+}
+
+.icon_today i{
+	font-size: 50px;
+}
+
+.high_today{
+	color:#DF346E;
+	text-align: center;
+	font-size: 18px;
+}
+
+.low_today{
+	color:#348ADF;
+	text-align: center;
+	font-size: 18px;
+}
+
+.high_tomorrow{
+	color:#DF346E;
+	text-align: center;
+}
+
+.low_tomorrow{
+	color:#348ADF;
+	text-align: center;
+}
+
+.border{
+	border-bottom: 1px solid gray;
+
+}
+
+.link_title{
+	color:#EECF09;
+	font-size: 30px;
+}
+
+.link_detail{
+	color:deeppink;
+}
