@@ -4,46 +4,177 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css?v=3.3.7"/>
-    <link rel="stylesheet" href="./css/city-select.css?v=1.0.1"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css?v=3.3.7" />
+    <link rel="stylesheet" href="./css/city-select.css?v=1.0.2" />
+    <link rel="stylesheet" href="../app/css/weatherservice_uetk.css" type="text/css">
+    <link rel="stylesheet" href="../app/css/vendor/MaterialDesignLite/material.min.css" type="text/css">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSGAfudO7qyMiNbWN3cpUfo5LUTyB57Ek&libraries=drawing,places,geometry,visualization&v=3.27&lang=ja"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://hackerthemes.com/node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="https://hackerthemes.com/node_modules/tether/dist/js/tether.min.js"></script>
     <script type="text/javascript" src="./jquery/js/jquery-3.1.1.min.js?v=3.1.1"></script>
+	<script type="text/javascript" src="../app/js/jquery.xdomainajax.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js?v=3.3.7"></script>
-    <script type="text/javascript" src="./js/prefecture.js?v=1.0.1"></script>
-    <script type="text/javascript" src="./js/city-select.js?v=1.0.1"></script>
-    <title>天気</title>
+	<script type="text/javascript" src="../app/js/vendor/MaterialDesignLite/material.min.js"></script>
+	<script type="text/javascript" src="../app/js/map.js"></script>
+    <script type="text/javascript" src="./js/prefecture.js?v=1.0.2"></script>
+	<script type="text/javascript" src="../app/js/apicall.js"></script>
+    <script type="text/javascript" src="./js/city-select.js?v=1.0.2"></script>
+    <title>天気予報サービス</title>
 </head>
 
 <body>
-    <div>
-        <p id="mousep"></p>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="navbar-left">
+                    <a class="navbar-brand" href="#">天気予報サービス</a>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li><a href="#">Menu</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-sm-6" id="map">
+                <canvas class="mapCanvas" id="jp_map"></canvas>
+                <ul id="contextMenu" class="dropdown-menu" role="menu">
+                </ul>
+            </div>
+            <div class="hidden-xs col-sm-6">
+                <p>天気を検索したい都道府県を選択してください。</p>
+            </div>
+            <div class="hidden-xs col-sm-12">
+                <p id="mousep"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="visible-xs form-group">
+                <label>STEP 1　都道府県を選択してください</label>
+                <select class="form-control" id="tenki-prefList">
+                </select>
+            </div>
+            <div class="visible-xs form-group">
+                <label>STEP 2　地域を選択してください</label>
+                <select class="form-control" id="tenki-cityList">
+                </select>
+            </div>
+        </div>
     </div>
-    <div id="map">
-        <canvas class="mapCanvas" id="jp_map"></canvas>
-        <!--<canvas class="mapCanvas" id="highlight"></canvas>-->
-        <ul id="contextMenu" class="dropdown-menu" role="menu">
-        </ul>
-    </div>
-    <div>
-        <p id="output"></p>
-    </div>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="tenki-prefDropdown"
-         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            都道府県を選択
-            <span class="caret"></span>
-        </button>
-        <ul id="tenki-prefList" class="dropdown-menu" aria-labelledby="tenki-prefDropdown">
-        </ul>
-    </div>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="tenki-cityDropdown"
-         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            場所を選択
-            <span class="caret"></span>
-        </button>
-        <ul id="tenki-cityList" class="dropdown-menu" aria-labelledby="tenki-cityDropdown">
-        </ul>
-    </div>
+
+		<section class="body__contents">
+			<div>			
+				<div class="regionselect">
+					<div>ここに天気予報のMAPを配置</div>
+					<div>天気を検索したい都道府県を選択してください。</div>
+				</div>
+				<div class="resultsdisplay">
+					<h3>結果</h3>
+					<!-- 結果表示用のdivタグ -->
+					<div data-result="">未取得</div>
+
+
+					<!-- 実行ボタン -->
+					<p><button id="method">メソッドを実行</button></p>
+					<p><button id="reset">リセット</button></p>
+					<p><textarea id="return" rows="8"></textarea></p>
+					<!-- 実行ボタン -->
+					  <button data-btn-type="ajax">Data get!</button>
+
+					<form>
+						<div>
+							<label for="zip">郵便番号：</label><br />
+							<input id="zip" type="text" size="10" />
+							<input id="search" type="button" value="検索" />
+						</div>
+						<div>
+							<label for="address">住所：</label><br />
+							<input id="address" type="text" size="35" />
+						</div>
+					</form>
+
+					<div class="result">ここにAPIの結果を表示
+						<div class="result_map">
+							<div>福島県 yyyy/mm/ddの天気です</div>
+							<div>
+								<form id="idokeido">
+									<input id="ido" type="text" value="36.3825979"/>
+									<input id="keido" type="text" value="140.4538716"/>
+									<input id="regionid" type="text" value="4000001"/>
+								</form>
+								<div id="map-canvas">ここに地図が表示されます</div>
+								<div>昨日より気温が10℃下がり...</div>
+							</div>
+						</div>
+						<div class="result_detail">
+							<div class="box_today">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item"><div class="head_today">今日の天気</div></li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
+							<div class="box_tomorrow">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item head_tomorrow">明日の天気</li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="box_da_tomorrow">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item head_tomorrow">明後日の天気</li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="link_title">
+						and more...
+					</div>
+					<div class="link_detail">
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<section class="body__footer">
+			フッター
+		</section>
 </body>
 
 </html>

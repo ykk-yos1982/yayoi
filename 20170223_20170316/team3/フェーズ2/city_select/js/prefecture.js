@@ -1,4 +1,4 @@
-var prefectures = [
+const prefectures = [
     {
         name: '道北',
         left: 644,
@@ -160,7 +160,7 @@ var prefectures = [
     },
     {
         name: '秋田県',
-        left: 611,
+        left: 644,
         top: 223,
         right: 729,
         bottom: 273,
@@ -177,7 +177,7 @@ var prefectures = [
     },
     {
         name: '山形県',
-        left: 611,
+        left: 644,
         top: 275,
         right: 727,
         bottom: 327,
@@ -202,7 +202,7 @@ var prefectures = [
     },
     {
         name: '福島県',
-        left: 611,
+        left: 644,
         top: 327,
         right: 812,
         bottom: 380,
@@ -257,7 +257,7 @@ var prefectures = [
     },
     {
         name: '群馬県',
-        left: 611,
+        left: 644,
         top: 381,
         right: 714,
         bottom: 448,
@@ -274,7 +274,7 @@ var prefectures = [
     },
     {
         name: '埼玉県',
-        left: 611,
+        left: 644,
         top: 449,
         right: 775,
         bottom: 478,
@@ -316,7 +316,7 @@ var prefectures = [
     },
     {
         name: '東京都',
-        left: 611,
+        left: 644,
         top: 479,
         right: 775,
         bottom: 515,
@@ -341,7 +341,7 @@ var prefectures = [
     },
     {
         name: '神奈川県',
-        left: 611,
+        left: 644,
         top: 516,
         right: 775,
         bottom: 548,
@@ -840,7 +840,7 @@ var prefectures = [
     },
     {
         name: '佐賀県',
-        left: 70,
+        left: 104,
         top: 395,
         right: 133,
         bottom: 470,

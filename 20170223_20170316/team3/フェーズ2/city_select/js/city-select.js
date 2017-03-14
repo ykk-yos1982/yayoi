@@ -1,5 +1,7 @@
 $(function () {
-    "use strict"
+    'use strict'
+
+    const mapImage = new Image();
 
     var orgImgSize = {
         width: undefined,
@@ -9,8 +11,8 @@ $(function () {
     function initializePrefectureList() {
         var prefList = $('#tenki-prefList');
         prefList.empty();
-        $.each(prefectures, function (idx, val) {
-            prefList.append("<li><a tabindex='-1' href='#' data-prefidx='" + idx + "'>" + val.name + "</a></li>");
+        $.each(prefectures, (i, v) => {
+            prefList.append("<option value='" + i + "'>" + v.name + "</option>");
         });
     }
 
@@ -36,51 +38,37 @@ $(function () {
             $('#mousep').text(cp.x + ', ' + cp.y);
         }
 
-        return $.grep(prefectures,
-            function (el, idx) {
-                return (cp.x >= el.left) && (cp.x <= el.right) &&
-                    (cp.y >= el.top) && (cp.y <= el.bottom);
+        return $.grep(prefectures, (e, i) => {
+            return (cp.x >= e.left) && (cp.x <= e.right) &&
+                (cp.y >= e.top) && (cp.y <= e.bottom);
             }
         );
     }
 
     function updateCityList(prefecture) {
-        var ctrl = ['#contextMenu', '#tenki-cityList'];
-
-        $.each(ctrl, function (i1, v1) {
-            $(v1).empty();
-            $.each(prefecture.city, function (i2, v2) {
-                $(v1).append("<li><a tabindex='-1' href='#' data-city='" + JSON.stringify(v2) + "'>" + v2.name + "</a></li>");
-            });
+        $('#contextMenu').empty();
+        $('#tenki-cityList').empty();
+        $.each(prefecture.city, (i, v) => {
+            $('#contextMenu').append("<li><a tabindex='-1' href='#' data-city='" + JSON.stringify(v) + "'>" + v.name + "</a></li>");
+            $('#tenki-cityList').append("<option data-city='" + JSON.stringify(v) + "'>" + v.name + "</option>");
         });
     }
 
     function selectPrefecture(prefecture) {
         updateCityList(prefecture);
-        var button = $('#tenki-prefDropdown');
-        button.empty();
-        button.append(prefecture.name);
-        button.append(" <span class='caret'></span>")
 
-        button = $('#tenki-cityDropdown');
-        button.empty();
-        button.append('場所を選択');
-        button.append(" <span class='caret'></span>")
+        var idx = $.inArray(prefecture, prefectures);
+        if (idx >= 0) {
+            $('#tenki-prefList').val(idx);
+        }
     }
 
-    function selectCity(city) {
-        var button = $('#tenki-cityDropdown');
-        button.empty();
-        button.append(city.name);
-        button.append(" <span class='caret'></span>")
-    }
-
-    $('#jp_map').on('click', function (e) {
+    $('#jp_map').on('click', (e) => {
         var isShowMenu = false;
         var pref = getPrefectureFromMap(e, true);
         if (pref != null && pref.length > 0) {
             if ($('#contextMenu').css('display') == 'none') {
-                selectPrefecture(pref[0]);
+                updateCityList(pref[0]);
                 $('#contextMenu').css({
                     display: 'block',
                     left: e.pageX,
@@ -95,45 +83,55 @@ $(function () {
         }
     });
 
-    $('#jp_map').on('mousemove', function (e) {
+    function drawMapImage(canvas, prefecture) {
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(mapImage, 0, 0);
+
+        if (prefecture != null) {
+            ctx.beginPath();
+            ctx.fillStyle = 'rgba(' + [255, 255, 0, 0.4] + ')';
+            ctx.fillRect(prefecture.left, prefecture.top,
+                prefecture.right - prefecture.left + 1,
+                prefecture.bottom - prefecture.top + 1);
+        }
+    }
+
+    $('#jp_map').on('mousemove',(e) => {
         var pref = getPrefectureFromMap(e);
         if (pref != null && pref.length > 0) {
-            var ctx = $('#highlight')[0].getContext('2d');
-            ctx.beginPath();
-            ctx.fillStyle = "rgba(" + [255, 255, 255, 1] + ")";
-            ctx.fillRect(pref[0].left, pref[0].top,
-                pref[0].right - pref[0].left + 1, pref[0].bottom - pref[0].top + 1);
+            drawMapImage($('#jp_map')[0], pref[0]);
+        } else {
+            drawMapImage($('#jp_map')[0], null);
         }
     });
 
-    $('#tenki-prefList').on('click', 'li a', function () {
-        var idx = $(this).data('prefidx');
-        selectPrefecture(prefectures[idx]);
+    $('#tenki-prefList').on('change', () => {
+        var idx = $('option:selected', this).val();
+        updateCityList(prefectures[idx]);
     });
 
-    $('#tenki-cityList').on('click', 'li a', function () {
-        var city = $(this).data('city');
-        selectCity(city);
+    $('#tenki-cityList').on('change', () => {
+        var city = $('option:selected', this).data('city');
+
+        // 地域が選択された時の処理
     });
 
-    $('#contextMenu').on('click', 'li a', function () {
+    $('#contextMenu').on('click', 'li a', () => {
         var city = $(this).data('city');
-        selectCity(city);
+        // 地域が選択された時の処理
 
         $('#contextMenu').css('display', 'none');
     });
 
-    $(document).ready(function () {
-        var img = new Image();
-        img.src = './img/pref.png';
-        orgImgSize.width = img.width;
-        orgImgSize.height = img.height;
+    $(document).ready(() => {
+        mapImage.src = './img/pref.png';
+        orgImgSize.width = mapImage.width;
+        orgImgSize.height = mapImage.height;
 
-        var jpMap = document.getElementById('jp_map');
-        jpMap.width = orgImgSize.width;
-        jpMap.height = orgImgSize.height;
-        var context = jpMap.getContext('2d');
-        context.drawImage(img, 0, 0);
+        var jp_map = $('#jp_map')[0];
+        jp_map.width = orgImgSize.width;
+        jp_map.height = orgImgSize.height;
+        drawMapImage(jp_map, null);
 
         initializePrefectureList();
     });

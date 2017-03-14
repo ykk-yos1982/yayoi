@@ -1,5 +1,17 @@
 $(function() {
-  // mŒŸõnƒ{ƒ^ƒ“ƒNƒŠƒbƒN‚Å—X•Ö”Ô†ŒŸõ‚ğÀs
+
+  // var cityParam = {
+  //     latitude: undefined,
+  //     longitude: undefined,
+  //     city_id: undefined
+  // };
+
+  function citySelected(cityParam) {
+    // åœ°å›³è¡¨ç¤º
+    // å¤©æ°—è¡¨ç¤º  
+  }
+
+  // ï¿½mï¿½ï¿½ï¿½ï¿½ï¿½nï¿½{ï¿½^ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½Å—Xï¿½Ö”Ôï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½s
   $('#search').click(function() {
     var url = "http://weather.livedoor.com/forecast/webservice/json/v1?city=400040"
     
@@ -8,13 +20,13 @@ $(function() {
 	        dataType: 'json'
 	    })
 
-    // Œ‹‰Ê‚ğæ“¾‚µ‚½‚çc
+    // ï¿½ï¿½ï¿½Ê‚ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½c
     .done(function(data) {
-      // ’†g‚ª‹ó‚Å‚È‚¯‚ê‚ÎA‚»‚Ì’l‚ğmZŠn—“‚É”½‰f
+      // ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Å‚È‚ï¿½ï¿½ï¿½ï¿½ÎAï¿½ï¿½ï¿½Ì’lï¿½ï¿½ï¿½mï¿½Zï¿½ï¿½ï¿½nï¿½ï¿½ï¿½É”ï¿½ï¿½f
       if (data.results) {
 							console.log('data:' + data.results);
         var result = $.parseXML(data.results);
-				console.log('•ÏŠ·ŒãresultF' + result);
+				console.log('ï¿½ÏŠï¿½ï¿½ï¿½resultï¿½F' + result);
 				$xml = $( result );
 				$body = $xml.find("body");
 
@@ -25,7 +37,7 @@ $(function() {
 
 				console.log('result' + result);
         $('#map-canvas').val(data.results);
-      // ’†g‚ª‹ó‚Ìê‡‚ÍAƒGƒ‰[ƒƒbƒZ[ƒW‚ğ”½‰f
+      // ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½ÍAï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½bï¿½Zï¿½[ï¿½Wï¿½ğ”½‰f
       } else {
         $('#address').val(data.results);
       }
