@@ -25,7 +25,7 @@
   color: #FFFFFF; 
   background-color: #0066CC;
   padding-left: 40px;
-  height: 90px;
+  height: 100px;
 }
 
 .mdl-layout-title { font-size: 200%; }
@@ -34,7 +34,86 @@
   color: #FFFFFF; 
   background-color: #0066CC;
   padding-left: 40px;
-  height: 120px;
+  height: 80px;
+}
+
+.mdl-layout__container-row{
+  padding-left: 30px;
+}
+
+.name{
+  color: #0066CC;
+  width: 220px;
+  background-color: #FFFFFF;
+  height: 30px;
+  text-align: left;
+  line-height: 220%;
+  font-size: 15px;
+}
+
+.icon-jiyuu{
+  color: #FFFFFF;
+  width: 70px;
+  background-color: #0066CC;
+  height: 30px;
+  text-align: center;
+  line-height: 220%;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.icon-jiyuu-none{
+  color: #0066CC;
+  width: 70px;
+  background-color: #FFFFFF;
+  height: 30px;
+  text-align: center;
+  line-height: 220%;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.time{
+  color: #0066CC;
+  width: 220px;
+  background-color: #FFFFFF;
+  height: 30px;
+  text-align: left;
+  line-height: 220%;
+  font-size: 15px;
+}
+
+.icon-am{
+  color: #FFFFFF;
+  width: 65px;
+  background-color: #e6004d;
+  height: 30px;
+  text-align: center;
+  line-height: 220%;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.icon-pm{
+  color: #FFFFFF;
+  width: 65px;
+  background-color: #008b8b;
+  height: 30px;
+  text-align: center;
+  line-height: 220%;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.icon-ampm-none{
+  color: #FFFFFF;
+  width: 65px;
+  background-color: #FFFFFF;
+  height: 30px;
+  text-align: center;
+  line-height: 220%;
+  border-radius: 6px;
+  font-size: 15px;
 }
 
 .demo-container {
