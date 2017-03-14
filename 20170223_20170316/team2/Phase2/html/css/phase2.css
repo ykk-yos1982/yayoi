@@ -3,6 +3,7 @@
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 25px;
   color: white;
   background-color: #388E3C;
   text-align: left; }
@@ -46,13 +47,15 @@
   background-color: #C8E6C9;
   color: #212121;
   width: 43px;
-  height: 43px; }
+  height: 43px;
+  margin: 2px; }
 
 .mdl-button--raised.mdl-button--colored.isActive:hover, .mdl-button--raised.mdl-button--colored.isActive {
   background-color: #FF9800;
   color: #FFFFFF;
   width: 43px;
-  height: 43px; }
+  height: 43px;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.12); }
 
 .mdl-button {
   min-width: 43px;
@@ -68,3 +71,7 @@
 .line {
   margin-right: 15px;
   margin-left: 15px; }
+
+.selectDate {
+  padding-left: 15px;
+  padding-top: 15px; }
