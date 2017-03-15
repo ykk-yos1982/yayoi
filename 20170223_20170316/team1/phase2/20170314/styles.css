@@ -23,7 +23,7 @@
 
 .demo-header .mdl-layout__header-row {
   color: #FFFFFF; 
-  background-color: #0066CC;
+  background-color: #005bac;
   padding-left: 40px;
   height: 100px;
 }
@@ -32,7 +32,7 @@
 
 .demo-header .mdl-layout__header-row2 {
   color: #FFFFFF; 
-  background-color: #0066CC;
+  background-color: #005bac;
   padding-left: 40px;
   height: 80px;
 }
@@ -52,7 +52,7 @@
 }
 
 .name{
-  color: #0066CC;
+  color: #005bac;
   width: 220px;
   background-color: #FFFFFF;
   height: 30px;
@@ -64,7 +64,7 @@
 .icon-jiyuu{
   color: #FFFFFF;
   width: 70px;
-  background-color: #0066CC;
+  background-color: #005bac;
   height: 30px;
   text-align: center;
   line-height: 220%;
@@ -73,7 +73,7 @@
 }
 
 .icon-jiyuu-none{
-  color: #0066CC;
+  color: #005bac;
   width: 70px;
   background-color: #FFFFFF;
   height: 30px;
@@ -84,7 +84,7 @@
 }
 
 .time{
-  color: #0066CC;
+  color: #005bac;
   width: 220px;
   background-color: #FFFFFF;
   height: 30px;
@@ -152,4 +152,14 @@
 
 .demo-footer .mdl-mini-footer--link-list a {
   font-size: 13px;
+}
+
+.employee__image{
+  padding: 10px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;  
+  width: 40px;
+  height: 40px;
+  border: 0;
 }

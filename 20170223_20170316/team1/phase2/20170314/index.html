@@ -49,26 +49,28 @@
         <!-- ヘッダー１行目（日付部分）-->
         <div class="mdl-layout__header-row">
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-               rel="stylesheet"></link>
+               rel="stylesheet">
           <i class="material-icons" style="font-size:45px;">date_range</i>
           <span style="margin-right: 1em;"></span>
           <span class="mdl-layout-title">
-              <!-- 当日の日付を取得して表示する -->
-              <span id="view_today"></span>              
-              <script type="text/javascript">
-              document.getElementById("view_today").innerHTML = getToday();
-              function getToday() {
-                  var now = new Date();
-	                var year = now.getFullYear();
-	                var mon = now.getMonth()+1; 
-	                var day = now.getDate();
-	                var you = now.getDay(); 
-                 	var youbi = new Array("日","月","火","水","木","金","土");
-                	var s = year + "/" + mon + "/" + day + " (" + youbi[you] + ")";
-	                return s;
-              }
-              </script>
-          <span
+          <!-- 当日の日付を取得して表示する -->
+          <span id="view_today"></span>              
+          <script type="text/javascript">
+          <!--
+            document.getElementById("view_today").innerHTML = getToday();
+            function getToday() {
+                var now = new Date();
+                var year = now.getFullYear();
+                var mon = now.getMonth()+1; 
+                var day = now.getDate();
+                var you = now.getDay(); 
+                var youbi = new Array("日","月","火","水","木","金","土");
+                var s = year + "/" + mon + "/" + day + " (" + youbi[you] + ")";
+                return s;
+            }
+          -->
+          </script>
+          </span>
           <span style="margin-right: 1em;"></span>
           <button class="mdl-button" style="color:#0066CC; background-color: #DDDDDD; width:85px;">
             変更
@@ -83,203 +85,200 @@
       </header>
 
     <!-- コンテナ部分 -->
-    <div class="mdl-layout__container-row">
-      <!-- 要素１ -->
-      <div class="mdl-layout__container-row"> 
-        <ul class="demo-list-item mdl-list">
-        <li class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
-        <span class="mdl-list__item-primary-content">
-  	    <img src="pet.jpg" width="40" height="40" border="0" alt="" style="padding:10px;">
-        <span class="name">
-          山田　太郎
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <i class="material-icons" style="color: #0066CC">phone</i>
-        <span style="margin-right: 2em;"></span>
-        <span class="icon-jiyuu">
-          遅刻
-        </span>
-        <span style="margin-right: 2em;"></span>
-        <span class="time">
-          09:30
-        </span>
-        <span style="margin-right: 3em;"></span>
-        <span class="icon-ampm-none">      
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <span class="icon-pm">
-          PM      
-        </span>
-        <span style="margin-right: 9em;"></span>
-        <button id="demo-menu-lower-right01" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
-        <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right01">
-        <li class="mdl-menu__item">Some Action</li>
-        <li class="mdl-menu__item">Another Action</li>
-        <li disabled class="mdl-menu__item">Disabled Action</li>
-        <li class="mdl-menu__item">Yet Another Action</li>
-        </ul>
+    <!-- 要素１ -->
+    <div class="mdl-layout__container-row"> 
+      <div class="demo-list-item mdl-list">
+        <div class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
+          <span class="mdl-list__item-primary-content"></span>
+          <img src="pet.jpg" class="employee__image"/>
+          <span class="name">
+            山田　太郎
+          </span>
+          <span style="margin-right: 1em;"></span>
+          <i class="material-icons" style="color: #0066CC">phone</i>
+          <span style="margin-right: 2em;"></span>
+          <span class="icon-jiyuu">
+            遅刻
+          </span>
+          <span style="margin-right: 2em;"></span>
+          <span class="time">
+            09:30
+          </span>
+          <span style="margin-right: 3em;" ></span>
+          <span class="icon-ampm-none"></span>
+          <span style="margin-right: 1em;"></span>
+          <span class="icon-pm">
+            PM      
+          </span>
+          <span style="margin-right: 9em;"></span>
+          <button id="demo-menu-lower-right01" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right01">
+            <li class="mdl-menu__item">Some Action</li>
+            <li class="mdl-menu__item">Another Action</li>
+            <li disabled class="mdl-menu__item">Disabled Action</li>
+            <li class="mdl-menu__item">Yet Another Action</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- 要素２ -->
-      <div class="mdl-layout__container-row"> 
-        <ul class="demo-list-item mdl-list">
-        <li class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
-        <span class="mdl-list__item-primary-content">
-  	    <img src="pet.jpg" width="40" height="40" border="0" alt="" style="padding:10px;">
-        <span class="name">
-          佐藤　次郎
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <i class="material-icons" style="color: #0066CC">phone</i>
-        <span style="margin-right: 2em;"></span>
-        <span class="icon-jiyuu">
-          早退
-        </span>
-        <span style="margin-right: 2em;"></span>
-        <span class="time">
-          15:00
-        </span>
-        <span style="margin-right: 3em;"></span>
-        <span class="icon-am">
-          AM      
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <span class="icon-ampm-none">      
-        </span>
-        <span style="margin-right: 9em;"></span>
-        <button id="demo-menu-lower-right02" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
-        <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right02">
-        <li class="mdl-menu__item">Some Action</li>
-        <li class="mdl-menu__item">Another Action</li>
-        <li disabled class="mdl-menu__item">Disabled Action</li>
-        <li class="mdl-menu__item">Yet Another Action</li>
-        </ul>
+    </div>
+    <!-- 要素2 -->
+    <div class="mdl-layout__container-row"> 
+      <div class="demo-list-item mdl-list">
+        <div class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
+          <span class="mdl-list__item-primary-content"></span>
+          <img src="pet.jpg" class="employee__image"/>
+          <span class="name">
+            佐藤　次郎
+          </span>
+          <span style="margin-right: 1em;"></span>
+          <i class="material-icons" style="color: #0066CC">phone</i>
+          <span style="margin-right: 2em;"></span>
+          <span class="icon-jiyuu">
+            早退
+          </span>
+          <span style="margin-right: 2em;"></span>
+          <span class="time">
+            15:00
+          </span>
+          <span style="margin-right: 3em;" ></span>
+          <span class="icon-ampm-none"></span>
+          <span style="margin-right: 1em;"></span>
+          <span class="icon-am">
+            AM      
+          </span>
+          <span style="margin-right: 9em;"></span>
+          <button id="demo-menu-lower-right02" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right02">
+            <li class="mdl-menu__item">Some Action</li>
+            <li class="mdl-menu__item">Another Action</li>
+            <li disabled class="mdl-menu__item">Disabled Action</li>
+            <li class="mdl-menu__item">Yet Another Action</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- 要素３ -->
-      <div class="mdl-layout__container-row"> 
-        <ul class="demo-list-item mdl-list">
-        <li class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
-        <span class="mdl-list__item-primary-content">
-  	    <img src="pet.jpg" width="40" height="40" border="0" alt="" style="padding:10px;">
-        <span class="name">
-          弥生　三郎
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <i class="material-icons" style="color: #0066CC">phone</i>
-        <span style="margin-right: 2em;"></span>
-        <span class="icon-jiyuu">
-          外出
-        </span>
-        <span style="margin-right: 2em;"></span>
-        <span class="time">
-          09:00 ～ 15:00
-        </span>
-        <span style="margin-right: 3em;"></span>
-        <span class="icon-ampm-none">      
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <span class="icon-ampm-none">     
-        </span>
-        <span style="margin-right: 9em;"></span>
-        <button id="demo-menu-lower-right03" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
-        <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right03">
-        <li class="mdl-menu__item">Some Action</li>
-        <li class="mdl-menu__item">Another Action</li>
-        <li disabled class="mdl-menu__item">Disabled Action</li>
-        <li class="mdl-menu__item">Yet Another Action</li>
-        </ul>
+    </div>
+    <!-- 要素3 -->
+    <div class="mdl-layout__container-row"> 
+      <div class="demo-list-item mdl-list">
+        <div class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
+          <span class="mdl-list__item-primary-content"></span>
+          <img src="pet.jpg" class="employee__image"/>
+          <span class="name">
+            弥生　三郎
+          </span>
+          <span style="margin-right: 1em;"></span>
+          <i class="material-icons" style="color: #0066CC">phone</i>
+          <span style="margin-right: 2em;"></span>
+          <span class="icon-jiyuu">
+            外出
+          </span>
+          <span style="margin-right: 2em;"></span>
+          <span class="time">
+            09:00 ～ 15:00
+          </span>
+          <span style="margin-right: 3em;" ></span>
+          <span class="icon-ampm-none"></span>
+          <span style="margin-right: 1em;"></span>
+          <span class="icon-ampm-none">      
+          </span>
+          <span style="margin-right: 9em;"></span>
+          <button id="demo-menu-lower-right03" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right03">
+            <li class="mdl-menu__item">Some Action</li>
+            <li class="mdl-menu__item">Another Action</li>
+            <li disabled class="mdl-menu__item">Disabled Action</li>
+            <li class="mdl-menu__item">Yet Another Action</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- 要素４ -->
-      <div class="mdl-layout__container-row"> 
-        <ul class="demo-list-item mdl-list">
-        <li class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
-        <span class="mdl-list__item-primary-content">
-  	    <img src="pet.jpg" width="40" height="40" border="0" alt="" style="padding:10px;">
-        <span class="name">
-          全角１４文字まで氏名入ります
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <i class="material-icons" style="color: #0066CC">phone</i>
-        <span style="margin-right: 2em;"></span>
-        <span class="icon-jiyuu-none">
-          -
-        </span>
-        <span style="margin-right: 2em;"></span>
-        <span class="time">
-        </span>
-        <span style="margin-right: 3em;"></span>
-        <span class="icon-ampm-none">      
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <span class="icon-pm">
-          PM     
-        </span>
-        <span style="margin-right: 9em;"></span>
-        <button id="demo-menu-lower-right04" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
-        <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right04">
-        <li class="mdl-menu__item">Some Action</li>
-        <li class="mdl-menu__item">Another Action</li>
-        <li disabled class="mdl-menu__item">Disabled Action</li>
-        <li class="mdl-menu__item">Yet Another Action</li>
-        </ul>
+    </div>
+    <!-- 要素4 -->
+    <div class="mdl-layout__container-row"> 
+      <div class="demo-list-item mdl-list">
+        <div class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
+          <span class="mdl-list__item-primary-content"></span>
+          <img src="pet.jpg" class="employee__image"/>
+          <span class="name">
+            全角１４文字まで氏名入ります
+          </span>
+          <span style="margin-right: 1em;"></span>
+          <i class="material-icons" style="color: #0066CC">phone</i>
+          <span style="margin-right: 2em;"></span>
+          <span class="icon-jiyuu">
+            外出
+          </span>
+          <span style="margin-right: 2em;"></span>
+          <span class="time">
+          </span>
+          <span style="margin-right: 3em;" ></span>
+          <span class="icon-ampm-none"></span>
+          <span style="margin-right: 1em;"></span>
+          <span class="icon-pm">
+            PM     
+          </span>
+          <span style="margin-right: 9em;"></span>
+          <button id="demo-menu-lower-right04" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right04">
+            <li class="mdl-menu__item">Some Action</li>
+            <li class="mdl-menu__item">Another Action</li>
+            <li disabled class="mdl-menu__item">Disabled Action</li>
+            <li class="mdl-menu__item">Yet Another Action</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- 要素５ -->
-      <div class="mdl-layout__container-row"> 
-        <ul class="demo-list-item mdl-list">
-        <li class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
-        <span class="mdl-list__item-primary-content">
-  	    <img src="pet.jpg" width="40" height="40" border="0" alt="" style="padding:10px;">
-        <span class="name">
-          全休の場合はこちら　
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <i class="material-icons" style="color: #0066CC">phone</i>
-        <span style="margin-right: 2em;"></span>
-        <span class="icon-jiyuu-none">
-          -
-        </span>
-        <span style="margin-right: 2em;"></span>
-        <span class="time">
-        </span>
-        <span style="margin-right: 3em;"></span>
-        <span class="icon-am">
-          AM      
-        </span>
-        <span style="margin-right: 1em;"></span>
-        <span class="icon-pm">
-          PM     
-        </span>
-        <span style="margin-right: 9em;"></span>
-        <button id="demo-menu-lower-right05" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
-        <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right05">
-        <li class="mdl-menu__item">Some Action</li>
-        <li class="mdl-menu__item">Another Action</li>
-        <li disabled class="mdl-menu__item">Disabled Action</li>
-        <li class="mdl-menu__item">Yet Another Action</li>
-        </ul>
+    </div>     
+    <!-- 要素5 -->
+    <div class="mdl-layout__container-row"> 
+      <div class="demo-list-item mdl-list">
+        <div class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
+          <span class="mdl-list__item-primary-content"></span>
+          <img src="pet.jpg" class="employee__image"/>
+          <span class="name">
+            全休の場合はこちら
+          </span>
+          <span style="margin-right: 1em;"></span>
+          <i class="material-icons" style="color: #0066CC">phone</i>
+          <span style="margin-right: 2em;"></span>
+          <span class="icon-jiyuu-none">
+            -
+          </span>
+          <span style="margin-right: 2em;"></span>
+          <span class="time">
+          </span>
+          <span style="margin-right: 3em;" ></span>
+          <span class="icon-am">
+            AM      
+          </span>
+          <span style="margin-right: 1em;"></span>
+          <span class="icon-pm">
+            PM     
+          </span>
+          <span style="margin-right: 9em;"></span>
+          <button id="demo-menu-lower-right05" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right05">
+            <li class="mdl-menu__item">Some Action</li>
+            <li class="mdl-menu__item">Another Action</li>
+            <li disabled class="mdl-menu__item">Disabled Action</li>
+            <li class="mdl-menu__item">Yet Another Action</li>
+          </ul>
+        </div>
       </div>
-
-    </main>
+    </div>     
     <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
           </div>
     </footer>
-    </main>
     </div>
-    <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/article/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
