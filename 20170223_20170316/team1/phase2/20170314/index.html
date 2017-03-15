@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Material Design Lite</title>
+    <title>勤怠管理確認</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -46,12 +46,14 @@
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <!-- ヘッダー部分 -->
       <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <!-- ヘッダー１行目（日付部分）-->
         <div class="mdl-layout__header-row">
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-               rel="stylesheet">
+               rel="stylesheet"></link>
           <i class="material-icons" style="font-size:45px;">date_range</i>
-          <p>&emsp;</p>
+          <span style="margin-right: 1em;"></span>
           <span class="mdl-layout-title">
               <!-- 当日の日付を取得して表示する -->
               <span id="view_today"></span>              
@@ -68,19 +70,21 @@
 	                return s;
               }
               </script>
-          </span><p>&emsp;&emsp;</p>
+          <span
+          <span style="margin-right: 1em;"></span>
           <button class="mdl-button" style="color:#0066CC; background-color: #DDDDDD; width:85px;">
             変更
           </button>
         </div>
-
+        <!--  ヘッダー２行目（検索ボックス部分） -->
         <div class="mdl-layout__header-row2">
           <form action="my_team" method="post">
-            <input type="text" name="opinion" size="150px" placeholder="ビジネスプラットフォーム開発" style="height:40px;">
+            <input type="text" name="opinion" size="100px" placeholder="ビジネスプラットフォーム開発" style="height:40px;">
           </form>
         </div>
       </header>
 
+    <!-- コンテナ部分 -->
     <main class="mdl-layout__container-row">
 
       <!-- 要素１ -->
@@ -91,21 +95,21 @@
   	    <img src="pet.jpg" width="40" height="40" border="0" alt="" style="padding:10px;">
         <span class="name">
           山田　太郎
-        </span
-        <p>&emsp;</p>
+        </span>
+        <span style="margin-right: 1em;"></span>
         <i class="material-icons" style="color: #0066CC">phone</i>
         <span style="margin-right: 2em;"></span>
         <span class="icon-jiyuu">
           遅刻
         </span>
-        <p>&emsp;&emsp;</p> 
+        <span style="margin-right: 2em;"></span>
         <span class="time">
           09:30
         </span>
         <span style="margin-right: 3em;"></span>
         <span class="icon-ampm-none">      
         </span>
-        <p>&emsp;</p>
+        <span style="margin-right: 1em;"></span>
         <span class="icon-pm">
           PM      
         </span>
@@ -130,13 +134,13 @@
         <span class="name">
           佐藤　次郎
         </span>
-        <p>&emsp;</p>
+        <span style="margin-right: 1em;"></span>
         <i class="material-icons" style="color: #0066CC">phone</i>
         <span style="margin-right: 2em;"></span>
         <span class="icon-jiyuu">
           早退
         </span>
-        <p>&emsp;&emsp;</p> 
+        <span style="margin-right: 2em;"></span>
         <span class="time">
           15:00
         </span>
@@ -144,7 +148,7 @@
         <span class="icon-am">
           AM      
         </span>
-        <p>&emsp;</p>
+        <span style="margin-right: 1em;"></span>
         <span class="icon-ampm-none">      
         </span>
         <span style="margin-right: 9em;"></span>
@@ -168,20 +172,20 @@
         <span class="name">
           弥生　三郎
         </span>
-        <p>&emsp;</p>
+        <span style="margin-right: 1em;"></span>
         <i class="material-icons" style="color: #0066CC">phone</i>
         <span style="margin-right: 2em;"></span>
         <span class="icon-jiyuu">
           外出
         </span>
-        <p>&emsp;&emsp;</p> 
+        <span style="margin-right: 2em;"></span>
         <span class="time">
           09:00 ～ 15:00
         </span>
         <span style="margin-right: 3em;"></span>
         <span class="icon-ampm-none">      
         </span>
-        <p>&emsp;</p>
+        <span style="margin-right: 1em;"></span>
         <span class="icon-ampm-none">     
         </span>
         <span style="margin-right: 9em;"></span>
@@ -205,19 +209,19 @@
         <span class="name">
           全角１４文字まで氏名入ります
         </span>
-        <p>&emsp;</p>
+        <span style="margin-right: 1em;"></span>
         <i class="material-icons" style="color: #0066CC">phone</i>
         <span style="margin-right: 2em;"></span>
         <span class="icon-jiyuu-none">
           -
         </span>
-        <p>&emsp;&emsp;</p> 
+        <span style="margin-right: 2em;"></span>
         <span class="time">
         </span>
         <span style="margin-right: 3em;"></span>
         <span class="icon-ampm-none">      
         </span>
-        <p>&emsp;</p>
+        <span style="margin-right: 1em;"></span>
         <span class="icon-pm">
           PM     
         </span>
@@ -232,6 +236,45 @@
         <li class="mdl-menu__item">Yet Another Action</li>
         </ul>
       </div>
+
+      <!-- 要素５ -->
+      <div class="mdl-layout__container-row01"> 
+        <ul class="demo-list-item mdl-list">
+        <li class="mdl-list__item mdl-card mdl-shadow--2dp" style="margin:-5px; width: 1080px; height: 70px;">
+        <span class="mdl-list__item-primary-content">
+  	    <img src="pet.jpg" width="40" height="40" border="0" alt="" style="padding:10px;">
+        <span class="name">
+          全休の場合はこちら　
+        </span>
+        <span style="margin-right: 1em;"></span>
+        <i class="material-icons" style="color: #0066CC">phone</i>
+        <span style="margin-right: 2em;"></span>
+        <span class="icon-jiyuu-none">
+          -
+        </span>
+        <span style="margin-right: 2em;"></span>
+        <span class="time">
+        </span>
+        <span style="margin-right: 3em;"></span>
+        <span class="icon-am">
+          AM      
+        </span>
+        <span style="margin-right: 1em;"></span>
+        <span class="icon-pm">
+          PM     
+        </span>
+        <span style="margin-right: 9em;"></span>
+        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon" style="text-align: right;">
+        <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+        <li class="mdl-menu__item">Some Action</li>
+        <li class="mdl-menu__item">Another Action</li>
+        <li disabled class="mdl-menu__item">Disabled Action</li>
+        <li class="mdl-menu__item">Yet Another Action</li>
+        </ul>
+      </div>
+
     </main>
     <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">

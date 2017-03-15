@@ -37,6 +37,10 @@
   height: 80px;
 }
 
+.my_team{
+  width: 200px;
+}
+
 .mdl-layout__container-row{
   padding-left: 30px;
 }
