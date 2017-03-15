@@ -98,6 +98,6 @@ $(document).ready(function () {
     function getScheduleStartTime(target) {
         var scheduleStartTime = new Date(target);
         var jstScheduleStartTime = new Date(scheduleStartTime.toLocaleString());
-        return jstScheduleStartTime.getHours() + ":" + ("0" + jstScheduleStartTime.getMinutes()).slice(-2) + "～";
+        return jstScheduleStartTime.getHours() + ":" + ("0" + jstScheduleStartTime.getMinutes()).slice(-2);
     }
 });

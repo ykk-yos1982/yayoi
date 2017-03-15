@@ -4,7 +4,13 @@ $header-color: #388E3C;
 $button-color: #C8E6C9;
 $active-button-color: #FF9800;
 $divider-color: #BDBDBD;
-$white:#FFFFFF;
+$white: #FFFFFF;
+$font13: 13px;
+$font15: 15px;
+body {
+    font-size: $font15;
+}
+
 @mixin button {
     width: 43px;
     height: 43px;
@@ -79,29 +85,25 @@ $white:#FFFFFF;
     @include scheduleHeader();
 }
 
-.mdl-button--raised.mdl-button--colored:hover,
-.mdl-button--raised.mdl-button--colored {
-    background-color: $button-color;
-    color: #212121;
-    width: 43px;
-    height: 43px;
-    margin-right: 15px;
-    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .14), 0 0px 0px -0px rgba(0, 0, 0, .2), 0 0px 0px 0 rgba(0, 0, 0, .12);
-}
-
-.mdl-button--raised.mdl-button--colored.isActive:hover,
-.mdl-button--raised.mdl-button--colored.isActive {
-    background-color: $active-button-color;
-    color: $white;
-    width: 43px;
-    height: 43px;
-    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .14), 0 0px 0px -0px rgba(0, 0, 0, .2), 0 0px 0px 0 rgba(0, 0, 0, .12);
-}
-
 .mdl-button {
     min-width: 43px;
     padding: 0px;
     line-height: initial;
+    &.mdl-button--raised.mdl-button--colored:hover,
+    &.mdl-button--raised.mdl-button--colored {
+        background-color: $button-color;
+        color: #212121;
+        width: 43px;
+        height: 43px;
+        font-size: $font13;
+        margin-right: 15px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    }
+    &.mdl-button--raised.mdl-button--colored.isActive:hover,
+    &.mdl-button--raised.mdl-button--colored.isActive {
+        background-color: $active-button-color;
+        color: $white;
+    }
 }
 
 .scheduleStartTime {
@@ -117,6 +119,7 @@ $white:#FFFFFF;
 .scheduleAct {
     color: #757575;
     margin: 14px;
+    font-size: $font13;
 }
 
 .line {
