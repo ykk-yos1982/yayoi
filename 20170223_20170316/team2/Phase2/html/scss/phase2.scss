@@ -1,119 +1,137 @@
 /* Scss Document */
+
 $header-color: #388E3C;
 $button-color: #C8E6C9;
-$active-button-color:  #FF9800;
-$divider-color:        #BDBDBD;
+$active-button-color: #FF9800;
+$divider-color: #BDBDBD;
 $white:#FFFFFF;
-
-
-@mixin button{
+@mixin button {
     width: 43px;
     height: 43px;
     background-color: $button-color;
 }
 
-@mixin flexbox{
+@mixin flexbox {
     display: flex;
-    display: -webkit-flex;
     flex-direction: row;
-    -webkit-flex-direction: row;
     flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
 }
 
-@mixin scheduleFrame{
-    border-style: solid;
+@mixin scheduleFrame {
+    border-style: solid none solid solid;
     border-color: $divider-color;
     border-width: 1px;
+    &:last-child {
+        border-style: solid;
+    }
 }
 
-@mixin scheduleHeader(){
+@mixin scheduleHeader() {
     height: 50px;
     text-align: center;
 }
 
-@mixin padding(){
+@mixin padding() {
     padding-left: 15px;
     padding-top: 15px;
 }
 
-.title{
+.title {
     @include padding();
     padding-bottom: 15px;
-
     font-size: 25px;
     color: white;
     background-color: $header-color;
     text-align: left;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
-.tvSchedule{
+.tvSchedule {
     @include flexbox();
     margin-left: 15px;
     margin-right: 15px;
-    .schedule{
+    margin-bottom: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    .schedule {
         min-width: 257px;
-        width:257px;
+        width: 257px;
     }
 }
 
-.schedule{
+.schedule {
     @include scheduleFrame();
     flex-grow: 1;
 }
 
-.globalIcon{
+.globalIcon {
     @include scheduleHeader();
 }
 
-.educationIcon{
+.educationIcon {
     @include scheduleHeader();
 }
 
-.bsPremiumIcon{
+.bsPremiumIcon {
     @include scheduleHeader();
 }
 
-.bsOneIcon{
+.bsOneIcon {
     @include scheduleHeader();
 }
 
-
-.mdl-button--raised.mdl-button--colored:hover, .mdl-button--raised.mdl-button--colored {
+.mdl-button--raised.mdl-button--colored:hover,
+.mdl-button--raised.mdl-button--colored {
     background-color: $button-color;
     color: #212121;
     width: 43px;
     height: 43px;
-    margin: 2px;
+    margin-right: 15px;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .14), 0 0px 0px -0px rgba(0, 0, 0, .2), 0 0px 0px 0 rgba(0, 0, 0, .12);
 }
 
-.mdl-button--raised.mdl-button--colored.isActive:hover, .mdl-button--raised.mdl-button--colored.isActive {
+.mdl-button--raised.mdl-button--colored.isActive:hover,
+.mdl-button--raised.mdl-button--colored.isActive {
     background-color: $active-button-color;
     color: $white;
     width: 43px;
     height: 43px;
-    box-shadow:  0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px -0px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.12);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .14), 0 0px 0px -0px rgba(0, 0, 0, .2), 0 0px 0px 0 rgba(0, 0, 0, .12);
 }
 
-.mdl-button{
+.mdl-button {
     min-width: 43px;
     padding: 0px;
     line-height: initial;
 }
 
-.scheduleStartTime{
+.scheduleStartTime {
     background-color: $button-color;
+    padding-left: 7px;
 }
 
-.scheduleContent, .scheduleAct{
+.scheduleTitle {
+    margin: 14px;
+}
+
+.scheduleContent,
+.scheduleAct {
     color: #757575;
+    margin: 14px;
 }
 
-.line{
+.line {
     margin-right: 15px;
     margin-left: 15px;
 }
 
-.selectDate{
+.readMessage {
     @include padding();
+}
+
+.selectDate {
+    @include padding();
+    @include flexbox();
+    padding-top: 0px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
