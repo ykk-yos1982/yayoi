@@ -1,93 +1,98 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width;" />
-        <title>NHK番組表検索</title>
-        
-        <!-- stylesheet -->
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-        <link rel="stylesheet" href="css\phase2.css">
-        
-        <!-- javascript -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        <script src="js/phase2.js"></script>
-    </head>
-    <body>
-        <header class="header">
-            <div class="title">NHK 番組表</div>
-            <div class="selectDate">
-                <p>
-                    NHKが放送しているテレビ番組の番組表を、表示することができます。<br>
-                    確認したい日付を選択してください。
-                </p>
-                <!-- Flat button -->
-                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored isActive">
-                    今日
-                </button>
-                <!-- Colored raised button -->
-                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    03/11<br>(月)</button>
-                
-                <!-- Colored raised button -->
-                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    03/12
-                </button>
-                <!-- Colored raised button -->
-                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    03/13
-                </button>
-                <!-- Colored raised button -->
-                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    03/14
-                </button>
-                <!-- Colored raised button -->
-                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    03/15
-                </button>
-                <!-- Colored raised button -->
-                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    03/16
-                </button>
-                <!-- Colored raised button -->
-                <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    03/17
-                </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width;" />
+    <title>NHK番組表検索</title>
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css\phase2.css">
+
+    <!-- javascript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="js/phase2.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="title">NHK 番組表</div>
+        <p class="readMessage">
+            NHKが放送しているテレビ番組の番組表を、表示することができます。
+            <br> 確認したい日付を選択してください。
+        </p>
+        <div class="selectDate">
+
+            <!-- Flat button -->
+            <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored isActive">
+                今日
+            </button>
+            <!-- Colored raised button -->
+            <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                03/11
+                <br>(月)</button>
+
+            <!-- Colored raised button -->
+            <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                03/12
+            </button>
+            <!-- Colored raised button -->
+            <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                03/13
+            </button>
+            <!-- Colored raised button -->
+            <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                03/14
+            </button>
+            <!-- Colored raised button -->
+            <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                03/15
+            </button>
+            <!-- Colored raised button -->
+            <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                03/16
+            </button>
+            <!-- Colored raised button -->
+            <button class="js-btn-date mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                03/17
+            </button>
+        </div>
+    </header>
+    <hr class="line" />
+    <div class="tvSchedule">
+        <div class="schedule">
+            <div class="globalIcon">
+                <img src="./image/gtv-100x50.png">
             </div>
-        </header>
-        <hr class="line" />
-        <div class="tvSchedule">
-            <div class="schedule">
-                <div class="globalIcon">
-                    <img src="./image/gtv-100x50.png">
-                </div>
-                <div class="scheduleDetail" datasetid="g1">
-                </div>
-            </div>
-            <div class="schedule">
-                <div class="educationIcon">
-                    <img src="./image/etv-100x50.png">
-                </div>
-                <div class="scheduleDetail" datasetid="e1">
-                </div>
-            </div>
-            <div class="schedule">
-                <div class="bsPremiumIcon">
-                    <img src="./image/bsp-100x50.png">
-                </div>
-                <div class="scheduleDetail" datasetid="s1">
-                </div>
-            </div>
-            <div class="schedule">
-                <div class="bsOneIcon">
-                    <img src="./image/bs1-100x50.png">
-                </div>
-                <div class="scheduleDetail" datasetid="s3" >
-                </div>
+            <div class="scheduleDetail" datasetid="g1">
             </div>
         </div>
-    </body>
+        <div class="schedule">
+            <div class="educationIcon">
+                <img src="./image/etv-100x50.png">
+            </div>
+            <div class="scheduleDetail" datasetid="e1">
+            </div>
+        </div>
+        <div class="schedule">
+            <div class="bsPremiumIcon">
+                <img src="./image/bsp-100x50.png">
+            </div>
+            <div class="scheduleDetail" datasetid="s1">
+            </div>
+        </div>
+        <div class="schedule">
+            <div class="bsOneIcon">
+                <img src="./image/bs1-100x50.png">
+            </div>
+            <div class="scheduleDetail" datasetid="s3">
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
