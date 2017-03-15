@@ -1,3 +1,8 @@
+function citySelected(cityParam) {
+  // 地図表示
+  // 天気表示  
+}
+
 $(function() {
 
   // var cityParam = {
@@ -5,11 +10,6 @@ $(function() {
   //     longitude: undefined,
   //     city_id: undefined
   // };
-
-  function citySelected(cityParam) {
-    // 地図表示
-    // 天気表示  
-  }
 
   // �m�����n�{�^���N���b�N�ŗX�֔ԍ����������s
   $('#search').click(function() {
