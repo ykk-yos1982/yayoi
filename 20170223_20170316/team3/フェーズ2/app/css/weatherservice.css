@@ -1,29 +1,19 @@
- /* �n�}�L�����p�X */
+
+
+
 #map-canvas {
 	width: 700px ;
 	height: 300px ;
 }
 
-/* �{�^�� */
-#method{
-	border: 1px solid #666 ;
-	border-radius: 5px;
-	box-sizing: border-box ;
-	background-color: #1438EC;
-	color: white;
-	width: 100px ;
-	text-align: center ;
-	height: 40px ;
-	line-height: 40px ;
-	font-size: 16px ;
-	font-weight: 700 ;
+#res-description{
+	width: 700px ;
 }
 
-/* �e�L�X�g�G���A */
-#return {
-	box-sizing: border-box ;
-	width: 300px ;
+#res-today-img{
+	width: 80%;
 }
+
 .result{
 	display: flex;
 	flex-direction: row;
@@ -39,6 +29,7 @@
 	display: flex;
 	-webkit-flex-direction: row; /* Safari */
 	flex-direction:         row;
+	margin: 15px 50px;
 }
 
 .header_style{
@@ -111,7 +102,10 @@
 
 .border{
 	border-bottom: 1px solid gray;
+}
 
+.link{
+	margin:50px 50px;
 }
 
 .link_title{
