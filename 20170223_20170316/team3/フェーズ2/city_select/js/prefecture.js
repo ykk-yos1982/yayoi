@@ -1,6 +1,7 @@
 const prefectures = [
     {
-        name: '道北',
+        name: '北海道（道北）',
+        searchName: '北海道',
         left: 644,
         top: 1,
         right: 873,
@@ -21,7 +22,8 @@ const prefectures = [
         ]
     },
     {
-        name: '道東',
+        name: '北海道（道東）',
+        searchName: '北海道',
         left: 823,
         top: 47,
         right: 873,
@@ -54,7 +56,8 @@ const prefectures = [
         ]
     },
     {
-        name: '道央',
+        name: '北海道（道央）',
+        searchName: '北海道',
         left: 644,
         top: 47,
         right: 822,
@@ -75,7 +78,8 @@ const prefectures = [
         ]
     },
     {
-        name: '道南',
+        name: '北海道（道南）',
+        searchName: '北海道',
         left: 644,
         top: 100,
         right: 822,
