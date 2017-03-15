@@ -98,7 +98,9 @@ function requestCityLocation(prefecture, city) {
             };
 
             $('#mousep').text(JSON.stringify(cityParam));
+            console.log('kokokokoko');
             citySelected(cityParam);
+            
         } else {
             $('#mousep').text('location not found.');
         }

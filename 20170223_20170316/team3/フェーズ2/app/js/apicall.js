@@ -1,8 +1,10 @@
 function citySelected(cityParam) {
-  // 地図表示
-  console.log('citySelectedが呼ばれました。地図を表示します。');
+  // map
+  console.log('displaymapcalled');
   displaymap(cityParam);
-  // 天気表示  
+  // weather
+  console.log('getWeatherinfo');
+  getWeatherinfo(cityParam.city_id);
 }
 
 // 地図表示
@@ -14,29 +16,29 @@ function displaymap(cityParam){
 	console.log('ido:' + ido);
 	console.log('keido:' + keido);
 
-	// LatLngLiteralを作成
+	// LatLngLiteral
 	var LatLngLiteral = {
 		lat: ido,
 		lng: keido
 	} ;
-	// 初期化用の関数
+	// 
 	function initFunc () {
-		// キャンパスの要素を取得する
+		// 
 		var canvas = document.getElementById( 'map-canvas' ) ;
 
-		// 返り値の案内を空にする
+		// 
 		returnFunc( "" ) ;
 
-		// 地図のインスタンスを作成する
+		// 
 		map = new google.maps.Map( canvas, {
 			zoom: 15 ,
 			center: new google.maps.LatLng( ido, keido ) ,
 		} ) ;
 	} ;
 
-	// メソッドボタンのイベント
+	// メソチE��ボタンのイベンチE
 	document.getElementById( "method" ).onclick = function () {
-		// 実行
+		// 実衁E
 		var result = map.setCenter( LatLngLiteral ) ;
 
 		// 返り値をコンソールに表示
@@ -68,14 +70,14 @@ function displaymap(cityParam){
 		//document.getElementById( "return" ).textContent = value.toString() ;
 	}
 
-	// 地図の表示開始
+	// 地図の表示開姁E
 	initFunc() ;
 }
 
 
 
 // 天気表示
-$(function() {
+
 
   // var cityParam = {
   //     latitude: undefined,
@@ -83,24 +85,30 @@ $(function() {
   //     city_id: undefined
   // };
 
-  // �m�����n�{�^���N���b�N�ŗX�֔ԍ����������s
-  $('#search').click(function() {
-    var url = "http://weather.livedoor.com/forecast/webservice/json/v1?city=400040"
-    
-	$.ajax(url, {
-	        type: 'get',
-	        dataType: 'json'
-	    })
+	function getWeatherinfo(cityid) {
 
-    // ���ʂ��擾�������c
-    .done(function(data) {
-      // ���g�����łȂ����΁A���̒l���m�Z���n���ɔ��f
-      if (data.results) {
-							console.log('data:' + data.results);
+//    var url = 'http://weather.livedoor.com/forecast/webservice/json/v1?city=' + cityid;
+
+//	var url = 'http://weather.livedoor.com/forecast/webservice/json/v1';
+
+var url = 'http://localhost:8080/';
+		
+//	$.ajax(url + city_id, {
+//	        type: 'get',
+//	        dataType: 'json'
+//	    })
+    $.get(url,
+		 {city:cityid
+		 }
+		 ).done(function(data) {
+		console.log('didididid');
+
+      if (data.results) {		 
+		console.log('data:' + data.results);
         var result = $.parseXML(data.results);
-				console.log('�ϊ���result�F' + result);
-				$xml = $( result );
-				$body = $xml.find("body");
+				console.log('result:' + result);
+//				$xml = $( result );
+//				$body = $xml.find("body");
 
 
 				var myNode = $(result).find("body");
@@ -109,10 +117,11 @@ $(function() {
 
 				console.log('result' + result);
         $('#map-canvas').val(data.results);
-      // ���g�����̏ꍇ�́A�G���[���b�Z�[�W�𔽉f
+
       } else {
+	  		console.log('ohno');
+		  		console.log('data:' + data.results);
         $('#address').val(data.results);
       }
-    });
-  });
-});
+    });	
+  }
