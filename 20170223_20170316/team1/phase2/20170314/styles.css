@@ -153,3 +153,13 @@
 .demo-footer .mdl-mini-footer--link-list a {
   font-size: 13px;
 }
+
+.employee__image{
+  padding: 10px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;  
+  width: 40px;
+  height: 40px;
+  border: 0;
+}
