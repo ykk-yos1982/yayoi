@@ -1,6 +1,6 @@
  /* �n�}�L�����p�X */
 #map-canvas {
-	width: 300px ;
+	width: 700px ;
 	height: 300px ;
 }
 
@@ -26,7 +26,13 @@
 }
 .result{
 	display: flex;
-	flex-grow: row;
+	flex-direction: row;
+	-webkit-justify-content: start; /* Safari */
+	justify-content:         start;
+}
+
+.result_map{
+	margin: 0px 15px;
 }
 
 .result_detail{
@@ -38,6 +44,10 @@
 .header_style{
 	background-color: #DCF9FF;
 	color: #1438EC;
+}
+
+.box_today{
+	margin:0px 30px;
 }
 
 .wrap_today{

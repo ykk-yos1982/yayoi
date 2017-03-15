@@ -19,7 +19,6 @@
 	<script type="text/javascript" src="../app/js/jquery.xdomainajax.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js?v=3.3.7"></script>
 	<script type="text/javascript" src="../app/js/vendor/MaterialDesignLite/material.min.js"></script>
-	<script type="text/javascript" src="../app/js/map.js"></script>
     <script type="text/javascript" src="./js/prefecture.js?v=1.0.2"></script>
 	<script type="text/javascript" src="../app/js/apicall.js"></script>
     <script type="text/javascript" src="./js/city-select.js?v=1.0.2"></script>
@@ -105,15 +104,10 @@
 						</div>
 					</form>
 
-					<div class="result">ここにAPIの結果を表示
+					<div class="result">
 						<div class="result_map">
 							<div>福島県 yyyy/mm/ddの天気です</div>
 							<div>
-								<form id="idokeido">
-									<input id="ido" type="text" value="35"/>
-									<input id="keido" type="text" value="139"/>
-									<input id="regionid" type="text" value="4000001"/>
-								</form>
 								<div id="map-canvas">ここに地図が表示されます</div>
 								<div>昨日より気温が10℃下がり...</div>
 							</div>
@@ -134,7 +128,11 @@
 							<div class="box_tomorrow">
 								<ul class="wrap_today list-group">
 									<li class="list-group-item head_tomorrow">明日</li>
-									<li class="list-group-item"><div class="icon_tomorrow"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="icon_tomorrow">
+											<i class="material-icons">cloud_queue</i>
+										</div>
+									</li>
 									<li class="list-group-item">
 										<div class="high_tomorrow">最高気温:33℃</div>
 										<div class="low_tomorrow">最低気温:2℃</div>
@@ -223,7 +221,7 @@ $(document).ready(function () {
 
 					console.log('result' + result);
 			$('#map-canvas').val(data.results);
-		// ���g�����̏ꍇ�́A�G���[���b�Z�[�W�𔽉f
+		// ���g�����̏ꍇ�́A�G���[���b�Z�[�W�𔽉f
 			} else {
 			$('#address').val(data.results);
 			};
@@ -233,72 +231,5 @@ $(document).ready(function () {
 
 </script>
 
-<script>
-$('#method').click(function() {
-	var ido = document.forms.idokeido.ido.value;
-	var keido = document.forms.idokeido.keido.value;
-
-	console.log('ido:' + ido);
-	console.log('keido:' + keido);
-
-	// LatLngLiteralを作成
-	var LatLngLiteral = {
-		lat: ido,
-		lng: keido
-	} ;
-	// 初期化用の関数
-	function initFunc () {
-		// キャンパスの要素を取得する
-		var canvas = document.getElementById( 'map-canvas' ) ;
-
-		// 返り値の案内を空にする
-		returnFunc( "" ) ;
-
-		// 地図のインスタンスを作成する
-		map = new google.maps.Map( canvas, {
-			zoom: 18 ,
-			center: new google.maps.LatLng( ido, keido ) ,
-		} ) ;
-	} ;
-
-	// メソッドボタンのイベント
-	document.getElementById( "method" ).onclick = function () {
-		// 実行
-		var result = map.setCenter( LatLngLiteral ) ;
-
-		// 返り値をコンソールに表示
-		console.log( "返り値:", result ) ;
-
-		// 返り値を表示
-		returnFunc( result ) ;
-	}
-
-	// 返り値表示用の関数
-	function returnFunc ( value ) {
-		switch ( typeof value ) {
-			case "undefined" :
-				value = "undefined" ;
-			break ;
-
-			case "null" :
-				value = "null" ;
-			break ;
-
-			case "object" :
-				try {
-					value = JSON.stringify( value ) ;
-				} catch (e) {
-				}
-			break ;
-		}
-
-		//document.getElementById( "return" ).textContent = value.toString() ;
-	}
-
-	// 地図の表示開始
-	initFunc() ;
-
-});
-</script>
 </body>
 </html>
