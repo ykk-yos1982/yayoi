@@ -42,7 +42,13 @@
 }
 
 .mdl-layout__container-row{
-  padding-left: 30px;
+  padding-left: 20px; 
+  overflow: visible !important;
+}
+
+.mdl-list__item{
+  overflow: visible !important;
+  z-index: auto !important;
 }
 
 .name{
