@@ -1,13 +1,15 @@
 
-
-
 #map-canvas {
 	width: 700px ;
 	height: 300px ;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
 }
 
 #res-description{
 	width: 700px ;
+	margin: 15px;
 }
 
 #res-today-img{
@@ -21,15 +23,20 @@
 	justify-content:         start;
 }
 
-.result_map{
+.result_head_description{
 	margin: 0px 15px;
+	font-size: 21px;
+}
+
+.result_map{
+	margin:15px;
 }
 
 .result_detail{
 	display: flex;
 	-webkit-flex-direction: row; /* Safari */
 	flex-direction:         row;
-	margin: 15px 50px;
+	margin: 30px 50px;
 }
 
 .header_style{
@@ -111,6 +118,8 @@
 .link_title{
 	color:#EECF09;
 	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .link_detail{

@@ -34,7 +34,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
                 <div class="navbar-left">
                     <a class="navbar-brand" href="#">天気予報サービス</a>
                 </div>
@@ -73,25 +72,25 @@
 						</div>
 					</div>
 
-					<div class="row">
+<!--					<div class="row">
 						<div class="col-xs-12">
 							<p id="mousep"></p>
 						</div>
 					</div>
-				</div>
+-->				</div>
 			</div>
 			<p class="border"></p>
 			<div class="resultsdisplay">
 				<div class="result">
 					<div class="result_map">
-						<div>
+						<div class="result_head_description">
 							<span id="res-area"></span>
 							<span id="res-prefecture"></span>
 							<span id="res-date"></span>
 							 の天気です
 						</div>
 						<div>
-							<div id="map-canvas">ここに地図が表示されます</div>
+							<div id="map-canvas"></div>
 							<div id="res-description"></div>
 						</div>
 					</div>
@@ -101,7 +100,7 @@
 								<li class="list-group-item head_today">今日</li>
 								<li class="list-group-item nonborder">
 									<div class="icon_today">
-										<img id="res-today-img" src="">
+										<img id="res-today-img">
 									</div>
 								</li>
 								<li class="list-group-item nonborder">
@@ -119,7 +118,7 @@
 								<li class="list-group-item head_tomorrow">明日</li>
 								<li class="list-group-item">
 									<div class="icon_tomorrow">
-										<img id="res-tomorrow-img" src="">
+										<img id="res-tomorrow-img">
 									</div>
 								</li>
 								<li class="list-group-item">
@@ -137,7 +136,7 @@
 								<li class="list-group-item head_tomorrow">明後日</li>
 								<li class="list-group-item">
 									<div class="icon_tomorrow">
-										<img id="res-da-tomorrow-img" src="">
+										<img id="res-da-tomorrow-img">
 									</div>
 								</li>
 								<li class="list-group-item">
@@ -155,14 +154,13 @@
 			</div>
 			<div class="link">
 				<div class="link_title">
-					and more...
+					and more...☆彡
 				</div>
-				<div class="link_detail">
+				<div id="id_link_detail" class="link_detail">
 				</div>
 			</div>
 	</section>
 	<section class="body__footer">
-		フッター
 	</section>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </body>
