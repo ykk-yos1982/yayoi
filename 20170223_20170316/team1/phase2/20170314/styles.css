@@ -28,7 +28,17 @@
   height: 100px;
 }
 
-.mdl-layout-title { font-size: 200%; }
+.change_date {
+  color:#0066CC; 
+  background-color: #DDDDDD; 
+  width:85px;
+  height:40px;
+  border-radius: 4px;
+}
+
+.mdl-layout-title {
+  font-size: 200%; 
+}
 
 .demo-header .mdl-layout__header-row2 {
   color: #FFFFFF; 

@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Material Design Liteのテンプレートを一部使用 -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -55,8 +56,7 @@
           <span class="mdl-layout-title">
           <!-- 当日の日付を取得して表示する -->
           <span id="view_today"></span>              
-          <script type="text/javascript">
-          <!--
+          <script type="text/javascript">          
             document.getElementById("view_today").innerHTML = getToday();
             function getToday() {
                 var now = new Date();
@@ -68,11 +68,10 @@
                 var s = year + "/" + mon + "/" + day + " (" + youbi[you] + ")";
                 return s;
             }
-          -->
           </script>
           </span>
           <span style="margin-right: 1em;"></span>
-          <button class="mdl-button" style="color:#0066CC; background-color: #DDDDDD; width:85px;">
+          <button class="change_date">
             変更
           </button>
         </div>
@@ -95,7 +94,9 @@
             山田　太郎
           </span>
           <span style="margin-right: 1em;"></span>
-          <i class="material-icons" style="color: #0066CC">phone</i>        
+          <span class ="linkicon">
+            <i class="material-icons" style="color: #0066CC">phone</i>
+          </span>        
           <span style="margin-right: 2em;"></span>
           <span class="icon-jiyuu">
             遅刻
