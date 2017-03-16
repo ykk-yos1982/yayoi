@@ -31,11 +31,6 @@ function getPrefecturesFromMap(mouseEventObj, debug) {
         y: mouseEventObj.clientY
     };
 
-    // // Debug
-    // if (debug != null && debug) {
-    //     $('#mousep').text(mouseEventObj.pageX + ', ' + mouseEventObj.pageY);
-    // }
-
     var cp = getCanvasCoordinate(point, mouseEventObj.target);
 
     return $.grep(prefectures, function(e, i) {
@@ -97,7 +92,6 @@ function requestCityLocation(prefecture, city) {
                 city_id: city.id
             };
 
-            $('#mousep').text(JSON.stringify(cityParam));
             console.log('kokokokoko');
             citySelected(cityParam);
             
@@ -150,13 +144,13 @@ $(function () {
                         left: e.pageX - offset.left,
                         top: e.pageY - offset.top
                     });
-                    isShowMenu = true;
+                    
+                    $(document).one('click', function(event) {
+                        $('#contextMenu').css('display', 'none');
+                    });
+                    e.stopPropagation();
                 }
             }
-        }
-
-        if (!isShowMenu) {
-            $('#contextMenu').css('display', 'none');
         }
     });
 
@@ -182,7 +176,5 @@ $(function () {
     $('#contextMenu').on('click', 'li a', function() {
         var idx = $(this).data('idx');
         selectCity(idx, true);
-
-        $('#contextMenu').css('display', 'none');
     });
 });
