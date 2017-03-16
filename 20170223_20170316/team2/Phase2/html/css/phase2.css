@@ -1,6 +1,7 @@
 /* Scss Document */
 body {
-  font-size: 15px; }
+  font-size: 15px;
+  color: #212121; }
 
 .title {
   padding-left: 15px;
@@ -112,6 +113,7 @@ body {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding-left: 30px;
   padding-top: 0px;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
