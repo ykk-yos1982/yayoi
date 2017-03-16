@@ -68,7 +68,8 @@ function selectCity(cityIdx, isMapOpe) {
     if (requestHandle != undefined) {
         clearTimeout(requestHandle);
     }
-    requestHandle = setTimeout(requestCityLocation, 500, pref, city);
+    //requestHandle = setTimeout(requestCityLocation, 500, pref, city);
+    requestHandle = setTimeout(requestCityLocationAjax, 500, pref, city);
 }
 
 function requestCityLocation(prefecture, city) {
@@ -100,6 +101,49 @@ function requestCityLocation(prefecture, city) {
         }
     }).fail(function(data) {
         $('#mousep').text(JSON.stringify(data));
+    });
+}
+
+function requestCityLocationAjax(prefecture, city) {
+    var pname = prefecture.name;
+    if (prefecture.searchName != undefined) {
+        pname = prefecture.searchName;
+    }
+
+    var url = 'https://maps.googleapis.com/maps/api/geocode/json';
+    $.ajax({
+        url: url,
+        type: 'GET',
+        async: true,
+        cache: false,
+        data: {
+            address: pname + '+' + city.name,
+            region: 'jp',
+            key: 'AIzaSyAt1d7gpMDrCOxk6JM4-tH4E3LmB7snBj4'
+        },
+        dataType: 'json',
+        complete: function(xhr, textStatus) {
+            if (xhr.status === 200 && xhr.responseText.length > 0) {
+                var res = JSON.parse(xhr.responseText);
+                var loc = res.results[0].geometry.location;
+                
+                if (loc != undefined) {
+                    var cityParam = {
+                        latitude: loc.lat,
+                        longitude: loc.lng,
+                        city_id: city.id
+                    };
+                    
+                    console.log('kokokokoko');
+                    citySelected(cityParam);
+                } else {
+                    $('#mousep').text('location not found.');
+                }
+            } else if (xhr.status != 200) {
+                $('#mousep').text(xhr.status + ' ' + xhr.responseText);
+                aborted = true;
+            }
+        }
     });
 }
 
