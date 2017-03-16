@@ -142,3 +142,13 @@ body {
     flex-wrap: nowrap;
     overflow-x: auto;
 }
+
+.credit{
+    width: 100%;
+    margin-bottom: 15px;
+    color: $divider-color;
+    text-align: right;
+    & > span{
+        margin-right: 15px;
+    }
+}
