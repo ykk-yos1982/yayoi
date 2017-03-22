@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -22,6 +22,7 @@
     <script type="text/javascript" src="./js/prefecture.js?v=1.0.2"></script>
 	<script type="text/javascript" src="../app/js/apicall.js"></script>
     <script type="text/javascript" src="./js/city-select.js?v=1.0.2"></script>
+	<script type="text/javascript" src="../app/js/bundle.js"></script>
     <title>天気予報サービス</title>
 </head>
 
@@ -82,7 +83,7 @@
 			<p class="border"></p>
 			<div class="resultsdisplay" id="idresultsdisplay" style="display:none">
 				<div class="result">
-					<div class="result_map  col-sm-12 col-lg-6">
+					<div class="result_map">
 						<div class="result_head_description">
 							<span id="res-area"></span>
 							<span id="res-prefecture"></span>
@@ -94,7 +95,7 @@
 							<div id="res-description"></div>
 						</div>
 					</div>
-					<div class="result_detail col-sm-12 col-lg-6">
+					<div class="result_detail">
 						<div class="box_today">
 							<ul class="wrap_today list-group">
 								<li class="list-group-item head_today">今日</li>
