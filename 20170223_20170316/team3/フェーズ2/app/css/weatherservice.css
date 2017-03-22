@@ -7,17 +7,24 @@
 		margin-left: 15px;
 		margin-bottom: 15px;
 	}
-
 	#res-description{
 		width: 80% ;
 		margin: 15px;
 	}
-
 	.result_map{
 		width: 100%;
 	}
 	.result_detail{
 		width: 100%;
+	}
+	.box_today{
+		width: 150px;
+	}
+	.box_tomorrow{
+		width: 100px;
+	}
+	.box_da_tomorrow{
+		width: 100px;
 	}
 
 }
@@ -42,10 +49,16 @@
 	.result_detail{
 		width: 30%;
 	}
+	.box_today{
+		width: 200px;
+	}
+	.box_tomorrow{
+		width: 150px;
+	}
+	.box_da_tomorrow{
+		width: 150px;
+	}
 }
-
-
-
 
 #res-today-img{
 	width: 80%;
