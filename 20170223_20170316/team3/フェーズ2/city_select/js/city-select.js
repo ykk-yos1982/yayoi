@@ -93,7 +93,8 @@ function requestCityLocation(prefecture, city) {
                 city_id: city.id
             };
 
-            console.log('kokokokoko');
+            document.getElementById("idresultsdisplay").style.display="block";
+            document.getElementById("idlink").style.display="block";
             citySelected(cityParam);
             
         } else {
@@ -119,8 +120,9 @@ function requestCityLocationAjax(prefecture, city) {
         data: {
             address: pname + '+' + city.name,
             region: 'jp',
-            key: 'AIzaSyAt1d7gpMDrCOxk6JM4-tH4E3LmB7snBj4'
-        },
+            key: 'AIzaSyCjolC5FXcFq74h3Fj0hlWgEMqrQhq4x_Q'
+//            key: 'AIzaSyAt1d7gpMDrCOxk6JM4-tH4E3LmB7snBj4' 
+       },
         dataType: 'json',
         complete: function(xhr, textStatus) {
             if (xhr.status === 200 && xhr.responseText.length > 0) {
@@ -133,8 +135,9 @@ function requestCityLocationAjax(prefecture, city) {
                         longitude: loc.lng,
                         city_id: city.id
                     };
-                    
-                    console.log('kokokokoko');
+
+                    document.getElementById("idresultsdisplay").style.display="block";
+                    document.getElementById("idlink").style.display="block";
                     citySelected(cityParam);
                 } else {
                     $('#mousep').text('location not found.');
