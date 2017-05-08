@@ -1,3 +1,6 @@
+# CSS_Trainingのルール
+* 下記に記載しているセレクタを少なくとも１度は使用すること
+
 ## classセレクタ	
 ## 擬似クラス	
 	* 要素名:hover
@@ -27,12 +30,22 @@
 ## 隣接セレクタ	
 	* セレクタ+セレクタ
 	
-## 同一階層セレクタ	
-	* セレクタ~セレクタ
+* 文字サイズは下記を使用すること
+~~~
+$font-size-13: 13px;
+$font-size-19: 19px;
+$font-size-27: 27px;
+~~~
 
+* 文字色は下記を使用すること
+~~~
+$primary-color-dark:   #1976D2;
+$primary-color:        #2196F3;
+$primary-color-light:  #BBDEFB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #8BC34A;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+~~~
 
-ID		#hoge		100点
-クラス		.hoge		10点
-擬似クラス		a[href*="google"]		10点
-要素名		ul		1点
-擬似要素		:first-child		1点
+* padding,marginはいづれも24pxとすること
