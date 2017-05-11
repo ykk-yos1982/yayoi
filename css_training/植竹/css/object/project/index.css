@@ -2,15 +2,6 @@
 /* Scss Document */
 /* Scss Document */
 /* Scss Document */
-[font-size="13"] {
-  font-size: 13px; }
-
-[font-size="19"] {
-  font-size: 19px; }
-
-[font-size="27"] {
-  font-size: 27px; }
-
 .body {
   font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif"; }
   .body__main {
@@ -75,3 +66,12 @@
 
 a[href] {
   text-decoration: none; }
+
+[font-size="13"] {
+  font-size: 13px; }
+
+[font-size="19"] {
+  font-size: 19px; }
+
+[font-size="27"] {
+  font-size: 27px; }

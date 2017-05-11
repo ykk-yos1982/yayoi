@@ -4,17 +4,6 @@
 @import "../component/_color";
 @import "../component/_font";
 
-[font-size="13"]{
-	font-size: $font-size-13;
-}
-
-[font-size="19"]{
-	font-size: $font-size-19;
-}
-
-[font-size="27"]{
-	font-size: $font-size-27;
-}
 
 .body{
 	font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
@@ -111,4 +100,16 @@
 
 a[href]{
 	text-decoration: none;
+}
+
+[font-size="13"]{
+	font-size: $font-size-13;
+}
+
+[font-size="19"]{
+	font-size: $font-size-19;
+}
+
+[font-size="27"]{
+	font-size: $font-size-27;
 }
