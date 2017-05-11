@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* Scss Document */
+/* Scss Document */
+/* Scss Document */
+.body__main {
+  padding: 24px;
+  margin: 24px; }
+
+.body__main, .table {
+  border: solid thin;
+  border-radius: 4px; }
+
+.header__title {
+  background-color: #2196F3; }
+  .header__title:after {
+    content: "セレクタの使い方を覚えよう";
+    color: #757575; }
+
+.table .table__row:first-child td {
+  background-color: #FFFFFF; }
+
+.table .table__row td {
+  background-color: #8BC34A; }
+
+.form__chkbox:checked + label + div {
+  visibility: hidden; }
+
+.main__link p a {
+  color: #8BC34A; }
+
+.main__link p a:not([target="_blank"]) {
+  color: #BBDEFB; }
+
+.form > *, .main__link a, .footer .footer__navitem a {
+  cursor: help; }
+
+a[href^="#"]:hover {
+  text-decoration: none;
+  color: #1976D2; }
+
+a[href^="#"]:active {
+  color: #8BC34A; }
