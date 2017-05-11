@@ -26,25 +26,21 @@
   .body__main .main > div:not([class^="main__"]) {
     border: solid thin;
     border-radius: 4px; }
-
-.table {
-  width: 100%;
-  text-align: center; }
-  .table__row:first-child td {
-    background-color: #FFFFFF; }
-  .table__row td {
-    background-color: #8BC34A; }
-  .table [class^="table__row"] td {
-    font-weight: bold; }
-
-.main__form .form__chkbox:checked + label + div {
-  visibility: hidden; }
-
-.main__link p a {
-  color: #8BC34A; }
-
-.main__link p a:not([target*="_blank"]) {
-  color: #BBDEFB; }
+  .body__main .main .table {
+    width: 100%;
+    text-align: center; }
+    .body__main .main .table__row:first-child td {
+      background-color: #FFFFFF; }
+    .body__main .main .table__row td {
+      background-color: #8BC34A; }
+    .body__main .main .table [class^="table__row"] td {
+      font-weight: bold; }
+  .body__main .main__form .form__chkbox:checked + label + div {
+    visibility: hidden; }
+  .body__main .main__link p a {
+    color: #8BC34A; }
+  .body__main .main__link p a:not([target*="_blank"]) {
+    color: #BBDEFB; }
 
 .body__footer a[href]:hover {
   color: #1976D2; }

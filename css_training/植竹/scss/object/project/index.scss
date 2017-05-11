@@ -37,38 +37,35 @@
 		> div:not([class^="main__"]){
 			border: solid thin;
 			border-radius: 	4px;
+		}		
+		.table{
+			width: 100%;
+			text-align: center;
+			&__row:first-child td{
+				background-color: $primary-color-text;
+			}
+			&__row td{
+				background-color: $accent-color;
+			}
+			[class^="table__row"] td{
+				font-weight: bold;
+			}
 		}
-	}
-}
-
-.table{
-	width: 100%;
-	text-align: center;
-	&__row:first-child td{
-		background-color: $primary-color-text;
-	}
-	&__row td{
-		background-color: $accent-color;
-	}
-	[class^="table__row"] td{
-		font-weight: bold;
-	}
-}
-
-.main__form{
-	.form{
-		&__chkbox:checked + label + div{
-			visibility: hidden;
+		&__form{
+			.form{
+				&__chkbox:checked + label + div{
+					visibility: hidden;
+				}
+			}
 		}
-	}
-}
-
-.main__link p{
-	& a{
-		color: $accent-color;
-	}
-	& a:not([target*="_blank"]){
-		color: $primary-color-light;
+		&__link p{
+			& a{
+				color: $accent-color;
+			}
+			& a:not([target*="_blank"]){
+				color: $primary-color-light;
+			}
+		}		
 	}
 }
 
