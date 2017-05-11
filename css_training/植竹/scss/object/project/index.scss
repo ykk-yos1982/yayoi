@@ -1,0 +1,114 @@
+/* Scss Document */
+@charset "utf-8";
+
+@import "../component/_color";
+@import "../component/_font";
+
+[font-size="13"]{
+	font-size: $font-size-13;
+}
+
+[font-size="19"]{
+	font-size: $font-size-19;
+}
+
+[font-size="27"]{
+	font-size: $font-size-27;
+}
+
+.body{
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
+	&__main{
+		padding: 24px;
+		margin: 24px;
+	}
+}
+
+.body__header{
+	.header{
+		background-color: $primary-color;
+		margin: 24px;
+		&__title{
+			font-size: $font-size-27;
+			margin-left: 24px;
+			&:after{
+				content:"セレクタの使い方を覚えよう";
+				color: $secondary-text-color;
+				font-size: $font-size-19;
+				margin-left: 24px;
+			}
+		}
+	}
+}
+
+.body__main{
+		border: solid thin;
+		border-radius: 	4px;
+	.main{
+		> div:not([class^="main__"]){
+			border: solid thin;
+			border-radius: 	4px;
+		}
+	}
+}
+
+.table{
+	width: 100%;
+	text-align: center;
+	&__row:first-child td{
+		background-color: $primary-color-text;
+	}
+	&__row td{
+		background-color: $accent-color;
+	}
+	[class^="table__row"] td{
+		font-weight: bold;
+	}
+}
+
+.main__form{
+	.form{
+		&__chkbox:checked + label + div{
+			visibility: hidden;
+		}
+	}
+}
+
+.main__link p{
+	& a{
+		color: $accent-color;
+	}
+	& a:not([target*="_blank"]){
+		color: $primary-color-light;
+	}
+}
+
+.body__footer{
+	& a[href]:hover{
+		color: $primary-color-dark;	
+	}
+	& a[href]:active{
+		color: $accent-color;
+	}
+	.footer{
+		&__nav{
+			.footer__navitem:first-child a{
+				text-decoration: underline;
+			}
+			.footer__navitem:first-child a:hover{
+				text-decoration: none;
+			}
+			.footer__navitem:last-child a:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.form > *,.main__link a,.footer .footer__navitem a{
+	cursor: pointer;
+}
+
+a[href]{
+	text-decoration: none;
+}
