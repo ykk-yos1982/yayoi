@@ -5,10 +5,6 @@
 @import "../component/_color";
 @import "../component/_font";
 
-.form > *,.main__link a,.footer .footer__navitem a{
-	cursor: pointer;
-}
-
 .body{
 	font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
 	&__main{
@@ -38,7 +34,7 @@
 		border: solid thin;
 		border-radius: 	4px;
 	& .main{
-		> div:not([class^="main__"]){
+		& > div:not([class^="main__"]){
 			border: solid thin;
 			border-radius: 	4px;
 		}		
@@ -51,6 +47,9 @@
 		}
 		&__form{
 			& .form{
+				&__chkbox,&__lbl{
+					cursor: pointer;
+				}
 				&__chkbox:checked ~ div{
 					visibility: hidden;
 				}
@@ -63,7 +62,15 @@
 					color: $primary-color-light;
 				}
 			}
-		}		
+		}
+		&__button{
+			& .buttonitem{
+				cursor: pointer;
+				&:focus{
+					background-color: $accent-color;
+				}
+			}
+		}
 	}
 }
 
