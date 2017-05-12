@@ -1,9 +1,13 @@
 /* Scss Document */
 @charset "utf-8";
 
+@import "../../foundation/_base";
 @import "../component/_color";
 @import "../component/_font";
 
+.form > *,.main__link a,.footer .footer__navitem a{
+	cursor: pointer;
+}
 
 .body{
 	font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
@@ -14,7 +18,7 @@
 }
 
 .body__header{
-	.header{
+	& .header{
 		background-color: $primary-color;
 		margin: 24px;
 		&__title{
@@ -33,80 +37,61 @@
 .body__main{
 		border: solid thin;
 		border-radius: 	4px;
-	.main{
+	& .main{
 		> div:not([class^="main__"]){
 			border: solid thin;
 			border-radius: 	4px;
 		}		
-		.table{
+		& .table{
 			width: 100%;
 			text-align: center;
-			&__row:first-child td{
-				background-color: $primary-color-text;
-			}
-			&__row td{
+			&__row:not(:first-child) td{
 				background-color: $accent-color;
-			}
-			[class^="table__row"] td{
-				font-weight: bold;
 			}
 		}
 		&__form{
-			.form{
-				&__chkbox:checked + label + div{
+			& .form{
+				&__chkbox:checked ~ div{
 					visibility: hidden;
 				}
 			}
 		}
-		&__link p{
+		&__link{
 			& a{
 				color: $accent-color;
-			}
-			& a:not([target*="_blank"]){
-				color: $primary-color-light;
+				&:not([href*="http://"]){
+					color: $primary-color-light;
+				}
 			}
 		}		
 	}
 }
 
 .body__footer{
-	& a[href]:hover{
-		color: $primary-color-dark;	
-	}
-	& a[href]:active{
-		color: $accent-color;
-	}
-	.footer{
+	& .footer{
 		&__nav{
-			.footer__navitem:first-child a{
-				text-decoration: underline;
-			}
-			.footer__navitem:first-child a:hover{
-				text-decoration: none;
-			}
-			.footer__navitem:last-child a:hover{
-				text-decoration: underline;
+			& .footer__navitem{
+				& a{
+					&:hover{
+						color: $primary-color-dark;	
+					}
+					&:active{
+						color: $accent-color;
+					}
+				}
+				&:first-child a{
+					text-decoration: underline;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+				&:last-child a{
+					&:hover{
+						text-decoration: underline;
+					}
+				}
 			}
 		}
 	}
 }
 
-.form > *,.main__link a,.footer .footer__navitem a{
-	cursor: pointer;
-}
-
-a[href]{
-	text-decoration: none;
-}
-
-[font-size="13"]{
-	font-size: $font-size-13;
-}
-
-[font-size="19"]{
-	font-size: $font-size-19;
-}
-
-[font-size="27"]{
-	font-size: $font-size-27;
-}

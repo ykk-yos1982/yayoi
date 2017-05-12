@@ -1,7 +1,23 @@
 @charset "UTF-8";
 /* Scss Document */
 /* Scss Document */
+a[href] {
+  text-decoration: none; }
+
 /* Scss Document */
+/* Scss Document */
+[font-size="13"] {
+  font-size: 13px; }
+
+[font-size="19"] {
+  font-size: 19px; }
+
+[font-size="27"] {
+  font-size: 27px; }
+
+.form > *, .main__link a, .footer .footer__navitem a {
+  cursor: pointer; }
+
 .body {
   font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif"; }
   .body__main {
@@ -29,45 +45,25 @@
   .body__main .main .table {
     width: 100%;
     text-align: center; }
-    .body__main .main .table__row:first-child td {
-      background-color: #FFFFFF; }
-    .body__main .main .table__row td {
+    .body__main .main .table__row:not(:first-child) td {
       background-color: #8BC34A; }
-    .body__main .main .table [class^="table__row"] td {
-      font-weight: bold; }
-  .body__main .main__form .form__chkbox:checked + label + div {
+  .body__main .main__form .form__chkbox:checked ~ div {
     visibility: hidden; }
-  .body__main .main__link p a {
+  .body__main .main__link a {
     color: #8BC34A; }
-  .body__main .main__link p a:not([target*="_blank"]) {
-    color: #BBDEFB; }
+    .body__main .main__link a:not([href*="http://"]) {
+      color: #BBDEFB; }
 
-.body__footer a[href]:hover {
+.body__footer .footer__nav .footer__navitem a:hover {
   color: #1976D2; }
 
-.body__footer a[href]:active {
+.body__footer .footer__nav .footer__navitem a:active {
   color: #8BC34A; }
 
 .body__footer .footer__nav .footer__navitem:first-child a {
   text-decoration: underline; }
-
-.body__footer .footer__nav .footer__navitem:first-child a:hover {
-  text-decoration: none; }
+  .body__footer .footer__nav .footer__navitem:first-child a:hover {
+    text-decoration: none; }
 
 .body__footer .footer__nav .footer__navitem:last-child a:hover {
   text-decoration: underline; }
-
-.form > *, .main__link a, .footer .footer__navitem a {
-  cursor: pointer; }
-
-a[href] {
-  text-decoration: none; }
-
-[font-size="13"] {
-  font-size: 13px; }
-
-[font-size="19"] {
-  font-size: 19px; }
-
-[font-size="27"] {
-  font-size: 27px; }
