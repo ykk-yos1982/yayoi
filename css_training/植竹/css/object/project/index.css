@@ -15,9 +15,6 @@ a[href] {
 [font-size="27"] {
   font-size: 27px; }
 
-.form > *, .main__link a, .footer .footer__navitem a {
-  cursor: pointer; }
-
 .body {
   font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif"; }
   .body__main {
@@ -47,12 +44,18 @@ a[href] {
     text-align: center; }
     .body__main .main .table__row:not(:first-child) td {
       background-color: #8BC34A; }
+  .body__main .main__form .form__chkbox, .body__main .main__form .form__lbl {
+    cursor: pointer; }
   .body__main .main__form .form__chkbox:checked ~ div {
     visibility: hidden; }
   .body__main .main__link a {
     color: #8BC34A; }
     .body__main .main__link a:not([href*="http://"]) {
       color: #BBDEFB; }
+  .body__main .main__button .buttonitem {
+    cursor: pointer; }
+    .body__main .main__button .buttonitem:focus {
+      background-color: #8BC34A; }
 
 .body__footer .footer__nav .footer__navitem a:hover {
   color: #1976D2; }
