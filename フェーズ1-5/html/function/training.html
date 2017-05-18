@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="content-language" content="ja">
+    <meta charset="utf-8">
+    <meta name="keywords" content="文書の内容をキーワードで指定">
+    <meta name="description" content="文書の説明文">
+    <meta name="author" content="弥生株式会社">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>layout_3</title>
+
+    <link rel="shortcut icon" href="../../img/common/favicon.ico">
+
+    <!-- stylesheet-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="../../css/vendor/MaterialDesignLite/material.min.css" rel="stylesheet" type="text/css">
+    <link href="../../css/vendor/yayoi/yayoi-common.min.css" rel="stylesheet" type="text/css">
+
+    <!-- javascript -->
+    <script type="text/javascript" src="../../js/vendor/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/MaterialDesignLite/material.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/yayoi/yayoi-common.js"></script>
+    <script type="text/javascript" src="../../js/object/project/training.js"></script>
+    
+</head>
+
+<body>
+    <div class="body">
+
+        <!-- header -->
+        <header class="body__header">
+            <div class="header mdl-shadow--2dp">
+
+                <button id="js-sidenavi-toggle" class="header__menu mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">menu</i>
+                </button>
+                <button id="js-search-toggle" class="header__searchtoggle mdl-button mdl-js-button mdl-button--icon" type="button">
+                    <i class="material-icons">arrow_back</i>
+                </button>
+                
+                <!-- ロゴ -->
+                <a href="#">
+                    <img class="header__logo" src="../../img/yayoi/logo.svg">
+                </a>
+                <!-- ロゴ -->
+                <a href="#">
+                    <img class="header__servicename" src="../../img/common/service-name.svg">
+                </a>
+                
+                <!-- ページタイトル -->
+                <div class="mdl-cell--hide-desktop mdl-cell--hide-bigdesktop">
+                    <span class="header__title">タイトル</span>
+                </div>
+
+                <!-- 検索エリア -->
+                <div class="header__search">
+                    <form class="o-inputgroup">
+                        <input type="text" class="o-inputcontrol mdl-cell--hide-phone mdl-cell--hide-tablet" placeholder="よくある質問の検索" device-type="pc">
+                        <button class="o-inputaddon material-icons material-icons mdl-cell--hide-phone mdl-cell--hide-tablet" device-type="pc">search</button>
+                        
+                        <button id="js-headersearch" class="mdl-button mdl-js-button mdl-button--icon material-icons mdl-cell--hide-desktop mdl-cell--hide-bigdesktop" device-type="mobile" type="button">
+                            <i class="material-icons o-fontc--white">search</i>
+                        </button>                        
+                    </form>
+                </div>
+                <!-- ユーザー -->
+                <div class="header__user">
+                    <button id="js-headermenu" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons mdl-cell--hide-phone mdl-cell--hide-tablet">arrow_drop_down</i>
+                        <i class="material-icons mdl-cell--hide-desktop mdl-cell--hide-bigdesktop o-fontc--white">account_circle</i>
+                    </button>
+                    <span class="mdl-cell--hide-phone mdl-cell--hide-tablet">弥生 太郎</span>
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="js-headermenu">
+                        <li class="mdl-menu__item mdl-cell--hide-desktop mdl-cell--hide-bigdesktop">弥生 太郎</li>
+                        <li class="mdl-menu__item"><a href="http://www.yayoi-kk.co.jp"><span>ログアウト</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- main -->
+        <section class="body__contents">
+            <div class="contents">
+                <div class="contents__sidebar">
+                    <nav class="sidebar">
+                        <ul class="demo-list-icon mdl-list sidebar__nav">
+
+                            <li id="js-home" class="mdl-list__item is-active" title="ホーム">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">home</i>
+                                    <a class="o-linkdarkgrey--md" href="http://www.yayoi-kk.co.jp">ホ－ム</a>
+                                </span>
+                            </li>
+
+                            <li id="js-home" class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">person</i>
+                                    <a class="o-linkdarkgrey--md" href="http://www.yayoi-kk.co.jp">PAP会員専用ページ</a>
+                                </span>
+                            </li>
+
+                            <li id="js-home" class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">person</i>
+                                    <a class="o-linkdarkgrey--md" href="http://www.yayoi-kk.co.jp">青色申告推奨会専用ページ</a>
+                                </span>
+                            </li>
+
+                            <li id="js-home" class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">person</i>
+                                    <a class="o-linkdarkgrey--md" href="http://www.yayoi-kk.co.jp">YBP専用ページ</a>
+                                </span>
+                            </li>
+
+                            <li id="js-message" class="mdl-list__item" title="製品サポート">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">devices</i>
+                                    製品サポート
+                                </span>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-message" title="保有製品・製品登録番号の確認">
+                                <a class="mdl-list__item-primary-content o-linkdarkgrey--sm" target="_blank"  href="http://www.yayoi-kk.co.jp">
+                                    保有製品・製品登録番号の確認
+                                </a>
+                            </li>
+
+                            <li id="js-support" class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">help</i>
+                                    <a class="o-linkdarkgrey--md" target="_blank" href="http://www.yayoi-kk.co.jp">サポ－ト</a>
+                                </span>
+                            </li>
+
+                            <li id="js-manage" class="mdl-list__item" title="各種メニュー">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">description</i>
+                                    各種メニュー
+                                </span>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-manage" title="パッケージ製品管理">
+                                <a class="mdl-list__item-primary-content o-linkdarkgrey--sm" href="http://www.yayoi-kk.co.jp">
+                                    パッケージ製品管理
+                                </a>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-manage" title="オンラインサービス契約管理">
+                                <a class="mdl-list__item-primary-content o-linkdarkgrey--sm" href="http://www.yayoi-kk.co.jp">
+                                    オンラインサービス契約管理
+                                </a>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-manage" title="データ共有管理">
+                                <a class="mdl-list__item-primary-content o-linkdarkgrey--sm" href="http://www.yayoi-kk.co.jp">
+                                    データ共有管理
+                                </a>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-manage" title="パートナー様専用">
+                                <a class="mdl-list__item-primary-content o-linkdarkgrey--sm" href="http://www.yayoi-kk.co.jp">
+                                    パートナー様専用
+                                </a>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-manage" title="事業グループ管理">
+                                <a class="mdl-list__item-primary-content o-linkdarkgrey--sm" href="http://www.yayoi-kk.co.jp">
+                                    事業グループ管理
+                                </a>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-manage" title="弥生ID登録情報の確認・変更">
+                                <a class="mdl-list__item-primary-content o-linkdarkgrey--sm" href="http://www.yayoi-kk.co.jp">
+                                    弥生ID登録情報の確認・変更
+                                </a>
+                            </li>
+
+                            <li id="js-cloud" class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">cloud_queue</i>
+                                    クラウドアプリ
+                                </span>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-cloud">
+                                <span class="mdl-list__item-primary-content">
+                                    <a class="o-linkyblue--sm" target="_blank" href="http://www.yayoi-kk.co.jp">
+                                        <span >弥生会計 オンライン</span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-cloud">
+                                <span class="mdl-list__item-primary-content">
+                                    <a class="o-linkyblue--sm" target="_blank" href="http://www.yayoi-kk.co.jp">
+                                        <span >やよいの給与明細 オンライン</span>
+                                    </a>
+                                </span>                                
+                            </li>
+                            <li class="mdl-list__item u-d-n" for="js-cloud">
+                                <span class="mdl-list__item-primary-content">
+                                    <a class="o-linkyblue--sm" target="_blank" href="http://www.yayoi-kk.co.jp">
+                                        <span >Misoca</span>
+                                    </a>
+                                </span>                                
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="contents__main">
+                    <div class="o-card">
+						テキストあいうえお
+                      
+                          <button id="settext" class="o-card__btn mdl-button mdl-js-button mdl-button--raised">
+					        値セット
+						  </button>
+
+                       <div class="mdl-textfieldgroup--column is-invalid"><!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
+							<div class="mdl-textfieldgroup__item">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-invalid"><!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
+									<input class="mdl-textfield__input" type="text" id="textfield1">
+									<label class="mdl-textfield__label" for="textfield1">項目タイトル</label>
+									<span class="mdl-textfield__error">項目（１）は必須入力です。</span>
+								</div>
+								<div class="o-inputgroup--column is-invalid"><!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
+									<div class="o-inputlabel">項目タイトル</div>
+									<div class="o-margin--bottom1"></div>
+									<input class="o-inputcontrol" type="text" placeholder="項目（１）">
+									<span class="o-inputerror">入力できる文字は半角英数字（6～12桁）です。</span>
+									<div class="mdl-textfield__guide">例）半角英数文字6～12文字まで、大文字小文字は区別されます。
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="body__footer">
+            <div class="footer">
+                <ul class="footer__nav">
+                    <li class="navitem">
+                        <a class="o-linkgrey--sm" href="#">プライバシ－ポリシ－</a>
+                    </li>
+                    <li>｜</li>
+                    <li class="nav-item">
+                        <a class="o-linkgrey--sm" href="#">免責事項</a>
+                    </li>                
+                    <li>｜</li>
+                    <li class="navitem">
+                        <a class="o-linkgrey--sm" href="#">お問い合わせ</a>
+                    </li>
+                    <li>｜</li>
+                    <li class="navitem">
+                        <a class="o-linkgrey--sm" href="#">弥生ID利用規約</a>
+                    </li>
+                </ul>
+                <div class="footer__copyright">
+                    <div>Copyright © Yayoi Co., Ltd. All rights reserved.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
