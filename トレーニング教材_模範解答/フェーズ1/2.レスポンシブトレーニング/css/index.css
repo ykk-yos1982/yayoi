@@ -1,0 +1,87 @@
+/*
+ブレイクポイント
+ ～359px：モバイル専用
+ 360px～719px：タブレット
+ 720px～1440px：デスクトップ
+*/
+
+/*全サイズ共通*/
+html,body{
+    height: 100%;
+}
+.main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+p {
+    margin: 0px;
+}
+.main--boxA{
+    flex-grow: 0;
+}
+.main--boxB{
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+    flex-grow: 1;
+    justify-content: center;
+}
+.item1,.item2,.item3{
+    color: white;
+    font-size: 30px;
+    font-family: "ＭＳ Ｐゴシック",sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item1{
+    background-color:#ffaf5f;
+    height: 100px;
+}
+.item2{
+    background-color:#b0dd58;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.item3{
+    background-color:#69c9f9;
+}
+
+/*スマートフォンサイズ*/
+@media screen and (max-width:359px) {
+    .main--boxB{
+        flex-direction:column;
+    }
+    .item2{
+        height: 50%;
+    }
+    .item3{
+        min-width: 60px;
+        height: 50%;
+    }
+}
+
+/*タブレットサイズ*/
+@media screen and (min-width:360px) and ( max-width:719px) {
+    .item2{
+        order: 2;
+        flex-basis:300px;
+    }
+    .item3{
+        flex-grow: 1;
+        order: 1;
+    }
+}
+
+/*デスクトップサイズ*/
+@media screen and (min-width:720px) {
+    .item2{
+        order: 1;
+        flex-basis:300px;
+    }
+    .item3{
+        flex-grow: 1;
+        order: 2;
+    }
+}
