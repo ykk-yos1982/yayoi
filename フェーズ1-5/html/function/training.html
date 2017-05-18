@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     
-    <title>layout_3</title>
+    <title>トレーニング</title>
 
     <link rel="shortcut icon" href="../../img/common/favicon.ico">
 
@@ -89,28 +89,28 @@
                     <nav class="sidebar">
                         <ul class="demo-list-icon mdl-list sidebar__nav">
 
-                            <li id="js-home" class="mdl-list__item is-active" title="ホーム">
+                            <li id="js-home1" class="mdl-list__item is-active" title="ホーム">
                                 <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-icon">home</i>
                                     <a class="o-linkdarkgrey--md" href="http://www.yayoi-kk.co.jp">ホ－ム</a>
                                 </span>
                             </li>
 
-                            <li id="js-home" class="mdl-list__item">
+                            <li id="js-home2" class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-icon">person</i>
                                     <a class="o-linkdarkgrey--md" href="http://www.yayoi-kk.co.jp">PAP会員専用ページ</a>
                                 </span>
                             </li>
 
-                            <li id="js-home" class="mdl-list__item">
+                            <li id="js-home3" class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-icon">person</i>
                                     <a class="o-linkdarkgrey--md" href="http://www.yayoi-kk.co.jp">青色申告推奨会専用ページ</a>
                                 </span>
                             </li>
 
-                            <li id="js-home" class="mdl-list__item">
+                            <li id="js-home4" class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-icon">person</i>
                                     <a class="o-linkdarkgrey--md" href="http://www.yayoi-kk.co.jp">YBP専用ページ</a>
@@ -205,31 +205,33 @@
                 </div>
                 <div class="contents__main">
                     <div class="o-card">
-						テキストあいうえお
                       
-                          <button id="settext" class="o-card__btn mdl-button mdl-js-button mdl-button--raised">
-					        値セット
+                          <button id="step1" class="o-card__btn mdl-button mdl-js-button mdl-button--raised">
+					        step1
 						  </button>
+                          <div class="o-margin--bottom1"></div>
+                          <button id="step2" class="o-card__btn mdl-button mdl-js-button mdl-button--raised">
+					        step2
+						  </button>
+                        <div class="o-margin--bottom2"></div>
 
-                       <div class="mdl-textfieldgroup--column is-invalid"><!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
-							<div class="mdl-textfieldgroup__item">
-								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-invalid"><!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
-									<input class="mdl-textfield__input" type="text" id="textfield1">
-									<label class="mdl-textfield__label" for="textfield1">項目タイトル</label>
-									<span class="mdl-textfield__error">項目（１）は必須入力です。</span>
-								</div>
-								<div class="o-inputgroup--column is-invalid"><!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
-									<div class="o-inputlabel">項目タイトル</div>
-									<div class="o-margin--bottom1"></div>
-									<input class="o-inputcontrol" type="text" placeholder="項目（１）">
-									<span class="o-inputerror">入力できる文字は半角英数字（6～12桁）です。</span>
-									<div class="mdl-textfield__guide">例）半角英数文字6～12文字まで、大文字小文字は区別されます。
-									</div>
-								</div>
+                       <div class="o-inputgroup--column"><!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
+                           <div class="o-inputlabel">項目１</div>
+                           <div class="o-margin--bottom1"></div>
+                           <input id="textfield1" class="o-inputcontrol" type="text" placeholder="項目（１）">
+                           <span class="o-inputerror">入力できる文字は半角英数字（6～12桁）です。</span>
+                       </div>
 
-							</div>
-						</div>
+                       <div class="o-margin--bottom1"></div>
 
+                       <div class="o-inputgroup--column"><!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
+                           <div class="o-inputlabel">項目２</div>
+                           <div class="o-margin--bottom1"></div>
+                           <input class="o-inputcontrol" type="text" placeholder="項目（２）">
+                           <span class="o-inputerror">入力できる文字は半角英数字（6～12桁）です。</span>
+                       </div>
+                       <div class="o-margin--bottom1"></div>
+                       <a href="#" id="clear" class="o-linkblue--lg">テキストフィールドの値をクリア</a>
                     </div>
                 </div>
             </div>
