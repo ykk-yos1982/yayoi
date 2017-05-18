@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>home</title>	
+	<!-- stylesheet-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<link href="../css/vendor/MaterialDesignLite/material.min.css" rel="stylesheet" type="text/css">
+	<link href="../css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="../css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="../css/weatherservice_uetk.css" rel="stylesheet" type="text/css">
+
+	<!-- javascript -->
+	<!-- google APIKey -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSGAfudO7qyMiNbWN3cpUfo5LUTyB57Ek&libraries=drawing,places,geometry,visualization&v=3.27&lang=ja"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://hackerthemes.com/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="https://hackerthemes.com/node_modules/tether/dist/js/tether.min.js" type="text/javascript"></script>
+	<script src="../js/vendor/MaterialDesignLite/material.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="../js/map.js"></script>
+	<script src="../js/apicall.js"></script>
+	<script src="../js/jquery.xdomainajax.js"></script>
+
+</head>
+<body>
+	<div class="body">
+		<header class="body__header">
+			<div class="header">
+				<nav  class="navbar navbar-default header_style">
+					<div  class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">天気予報サービス</a>
+						</div>
+						<div class="collapse navbar-collapse" id="navbarEexample">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#"  class="dropdown-toggle" data-toggle="dropdown">Menu<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">○○サービス</a></li>
+										<li><a href="#">△△サービス</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<section class="body__contents">
+			<div>			
+				<div class="regionselect">
+					<div>ここに天気予報のMAPを配置</div>
+					<div>天気を検索したい都道府県を選択してください。</div>
+				</div>
+				<div class="resultsdisplay">
+					<h3>結果</h3>
+					<!-- 結果表示用のdivタグ -->
+					<div data-result="">未取得</div>
+
+
+					<!-- 実行ボタン -->
+					<p><button id="method">メソッドを実行</button></p>
+					<p><button id="reset">リセット</button></p>
+					<p><textarea id="return" rows="8"></textarea></p>
+					<!-- 実行ボタン -->
+					  <button data-btn-type="ajax">Data get!</button>
+
+					<form>
+						<div>
+							<label for="zip">郵便番号：</label><br />
+							<input id="zip" type="text" size="10" />
+							<input id="search" type="button" value="検索" />
+						</div>
+						<div>
+							<label for="address">住所：</label><br />
+							<input id="address" type="text" size="35" />
+						</div>
+					</form>
+
+					<div class="result">ここにAPIの結果を表示
+						<div class="result_map">
+							<div>福島県 yyyy/mm/ddの天気です</div>
+							<div>
+								<form id="idokeido">
+									<input id="ido" type="text" value="35"/>
+									<input id="keido" type="text" value="139"/>
+									<input id="regionid" type="text" value="4000001"/>
+								</form>
+								<div id="map-canvas">ここに地図が表示されます</div>
+								<div>昨日より気温が10℃下がり...</div>
+							</div>
+						</div>
+						<div class="result_detail">
+							<div class="box_today">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item"><div class="head_today">今日の天気</div></li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
+							<div class="box_tomorrow">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item head_tomorrow">明日の天気</li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="box_da_tomorrow">
+								<ul class="wrap_today list-group">
+									<li class="list-group-item head_tomorrow">明後日の天気</li>
+									<li class="list-group-item"><div class="icon_today"><i class="material-icons">cloud_queue</i></div></li>
+									<li class="list-group-item">
+										<div class="high_today">最高気温:33℃</div>
+										<div class="low_today">最低気温:2℃</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="link_title">
+						and more...
+					</div>
+					<div class="link_detail">
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+						<p><a class="link_detail">足立区</a></p>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<section class="body__footer">
+			フッター
+		</section>
+	</div>
+
+<script>
+$(function() {
+  //  クリックイベントにajax処理を登録する
+  $('body').on('click', 'button[data-btn-type=ajax]', function(e) {
+    console.log('click btn');
+    //  リクエストの下準備
+    //  リクエスト時に一緒に送るデータの作成
+    var send_data;
+    send_data = {
+      //  テキストボックスの値を設定
+      user_type : $('input').val()
+    };
+    console.log(send_data);
+    //  WebAPIを叩く
+    $.ajax({
+      //  リクエストの内容
+      url: 'http://weather.livedoor.com/forecast/webservice/json/v1?city=200010',
+			type: 'get',
+      dataType: "json",
+//      data: send_data,
+      //  レスポンス成功時の処理
+      success: function(responce) {
+        if (responce.result === "OK") {
+          console.log(responce);
+          $('div[data-result=""]').html(JSON.stringify(responce));
+        } else {
+          console.log(responce);
+          $('div[data-result=""]').html(JSON.stringify(responce));
+        }
+        return false;
+      },
+      //  レスポンス失敗時の処理
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        console.log(XMLHttpRequest);
+        console.log(textStatus);
+        console.log(errorThrown);
+        $('div[data-result=""]').html(JSON.stringify("データ取得中にエラーが発生しました。"));
+        return false;
+      }
+    });
+    //  フォーカスをテキストボックスに合わせる
+    $('input').focus();
+
+    return false;
+  });
+});
+</script>
+
+<script src="jquery.xdomainajax.js"></script>
+
+
+<script>
+// グローバル変数
+var map ;
+//console.log('map:' + map);
+
+var ido = document.forms.idokeido.ido.value;
+var keido = document.forms.idokeido.keido.value;
+
+console.log('ido:' + ido);
+console.log('keido:' + keido);
+
+// LatLngLiteralを作成
+var LatLngLiteral = {
+	lat: ido,
+	lng: keido,
+//	lat: 36.3825979 ,	// 緯度
+//	lng: 140.4538716 ,	// 経度
+} ;
+
+// 初期化用の関数
+function initFunc () {
+	// キャンパスの要素を取得する
+	var canvas = document.getElementById( 'map-canvas' ) ;
+
+	// 返り値の案内を空にする
+	returnFunc( "" ) ;
+
+	// 地図のインスタンスを作成する
+	map = new google.maps.Map( canvas, {
+		zoom: 12 ,
+		center: new google.maps.LatLng( 36.3825979, 140.4538716 ) ,
+	} ) ;
+} ;
+
+// メソッドボタンのイベント
+document.getElementById( "method" ).onclick = function () {
+	// 実行
+	var result = map.setCenter( LatLngLiteral ) ;
+
+	// 返り値をコンソールに表示
+	console.log( "返り値:", result ) ;
+
+	// 返り値を表示
+	returnFunc( result ) ;
+}
+
+// リセットボタンのイベント
+document.getElementById( "reset" ).onclick = initFunc ;
+
+// 返り値表示用の関数
+function returnFunc ( value ) {
+	switch ( typeof value ) {
+		case "undefined" :
+			value = "undefined" ;
+		break ;
+
+		case "null" :
+			value = "null" ;
+		break ;
+
+		case "object" :
+			try {
+				value = JSON.stringify( value ) ;
+			} catch (e) {
+			}
+		break ;
+	}
+
+	document.getElementById( "return" ).textContent = value.toString() ;
+}
+
+// 地図の表示開始
+initFunc() ;
+</script>
+
+
+
+</body>
+</html>

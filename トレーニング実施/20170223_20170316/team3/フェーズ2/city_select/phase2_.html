@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css?v=3.3.7">
+    <link rel="stylesheet" href="./css/city-select.css?v=1.0.2">
+    <link rel="stylesheet" href="../app/css/weatherservice.css">
+    <link rel="stylesheet" href="../app/css/vendor/MaterialDesignLite/material.min.css">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSGAfudO7qyMiNbWN3cpUfo5LUTyB57Ek&libraries=drawing,places,geometry,visualization&v=3.27&lang=ja"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://hackerthemes.com/node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="https://hackerthemes.com/node_modules/tether/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="./jquery/js/jquery-3.1.1.min.js?v=3.1.1"></script>
+	<script type="text/javascript" src="../app/js/jquery.xdomainajax.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js?v=3.3.7"></script>
+	<script type="text/javascript" src="../app/js/vendor/MaterialDesignLite/material.min.js"></script>
+    <script type="text/javascript" src="./js/prefecture.js?v=1.0.2"></script>
+	<script type="text/javascript" src="../app/js/apicall.js"></script>
+    <script type="text/javascript" src="./js/city-select.js?v=1.0.2"></script>
+    <title>天気予報サービス</title>
+</head>
+<body>
+    <nav class="navbar navbar-default header_style">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-left">
+                    <a class="navbar-brand" href="#">天気予報サービス</a>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li><a href="#">Menu</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<section class="body__contents">
+		<div class="regionselect">
+			<div class="container">
+				<div class="row">
+					<div class="hidden-xs col-sm-6" id="map">
+						<canvas class="mapCanvas" id="jp_map"></canvas>
+						<ul id="contextMenu" class="dropdown-menu" role="menu">
+						</ul>
+					</div>
+					<div class="hidden-xs col-sm-6">
+						<p>天気を検索したい都道府県を選択してください。</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="visible-xs form-group">
+						<label>STEP 1　都道府県を選択してください</label>
+						<select class="form-control" id="tenki-prefList">
+						</select>
+					</div>
+					<div class="visible-xs form-group">
+						<label>STEP 2　地域を選択してください</label>
+						<select class="form-control" id="tenki-cityList">
+						</select>
+					</div>
+				</div>
+<!--				<div class="row">
+					<div class="col-xs-12">
+						<p id="mousep"></p>
+					</div>
+				</div>
+-->				</div>
+		</div>
+		<p class="border"></p>
+		<div class="resultsdisplay">
+			<div class="result">
+				<div class="result_map">
+					<div class="result_head_description">
+						<span id="res-area"></span>
+						<span id="res-prefecture"></span>
+						<span id="res-date"></span>
+						 の天気です
+					</div>
+					<div>
+						<div id="map-canvas"></div>
+						<div id="res-description"></div>
+					</div>
+				</div>
+				<div class="result_detail">
+					<div class="box_today">
+						<ul class="wrap_today list-group">
+							<li class="list-group-item head_today">今日</li>
+							<li class="list-group-item nonborder">
+								<div class="icon_today">
+									<img id="res-today-img">
+								</div>
+							</li>
+							<li class="list-group-item nonborder">
+								<div class="high_today">
+									<span>最高気温</span><span id="res-today-max"></span><span>℃</span>
+								</div>
+								<div class="low_today">
+									<span>最低気温</span><span id="res-today-min"></span><span>℃</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="box_tomorrow">
+						<ul class="wrap_today list-group">
+							<li class="list-group-item head_tomorrow">明日</li>
+							<li class="list-group-item">
+								<div class="icon_tomorrow">
+									<img id="res-tomorrow-img">
+								</div>
+							</li>
+							<li class="list-group-item">
+								<div class="high_tomorrow">
+									<span>最高気温</span><span id="res-tomorrow-max"></span><span>℃</span>
+								</div>
+								<div class="low_tomorrow">
+									<span>最低気温</span><span id="res-tomorrow-min"></span><span>℃</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="box_da_tomorrow">
+						<ul class="wrap_today list-group">
+							<li class="list-group-item head_tomorrow">明後日</li>
+							<li class="list-group-item">
+								<div class="icon_tomorrow">
+									<img id="res-da-tomorrow-img">
+								</div>
+							</li>
+							<li class="list-group-item">
+								<div class="high_tomorrow">
+									<span>最高気温</span><span id="res-da-tomorrow-max"></span><span>℃</span>
+								</div>
+								<div class="low_tomorrow">
+									<span>最低気温</span><span id="res-da-tomorrow-min"></span><span>℃</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="link">
+			<div class="link_title">
+				and more...☆彡
+			</div>
+			<div id="id_link_detail" class="link_detail">
+			</div>
+		</div>
+	</section>
+	<section class="body__footer">
+	</section>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</body>
+</html>
