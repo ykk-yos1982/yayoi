@@ -1,0 +1,95 @@
+/* SCSS Document */
+
+@charset "utf-8";
+@import "../component/_color";
+@import "../component/_font";
+@import "../component/_grid";
+@import "../../foundation/_bbbb";
+
+@mixin item{ 
+    color: white;
+    font-size: $font33;
+    font-family: "ＭＳ Ｐゴシック",sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &--boxA{
+        flex-grow: 0;
+        & .item1{
+            @include item;
+            background-color: $orange;
+            height: 100px;
+        }
+    }
+    &--boxB{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: center;
+        & .item2{
+            @include item;
+            background-color: $green;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        & .item3{
+            @include item;
+            background-color: $blue;
+        }
+    }
+}
+
+/*スマートフォンサイズ*/
+@media (max-width: $grid-tablet-breakpoint - 1) {
+	.main{
+		&--boxB{
+			flex-direction: column;
+			& .item2{
+				height: 50%;
+			}
+			& .item3{
+				min-width: 60px;
+				height: 50%;
+			}
+		}
+	}
+}
+
+/*タブレットサイズ*/
+@media (min-width: $grid-tablet-breakpoint) and (max-width: $grid-desktop-breakpoint - 1) {
+	.main{
+		&--boxB{
+			& .item2{
+				order: 2;
+				flex-basis: 300px;
+			}
+			& .item3{
+				flex-grow: 1;
+				order: 1;
+			}
+		}
+	}
+}
+
+/*デスクトップサイズ*/
+@media (min-width: $grid-desktop-breakpoint) {
+	.main{
+		&--boxB{
+			& .item2{
+				order: 1;
+				flex-basis: 300px;
+			}
+			& .item3{
+				flex-grow: 1;
+				order: 2;
+			}
+		}
+	}
+}
