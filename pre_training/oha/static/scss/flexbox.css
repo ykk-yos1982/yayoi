@@ -1,0 +1,75 @@
+html, body {
+  font-size: 1.5rem;
+  height: 100%; }
+
+h1 {
+  font-size: 1rem;
+  background: rgba(50, 50, 50, 0.8);
+  color: #eeb119;
+  margin: 0; }
+
+button {
+  width: 12rem; }
+
+.wrapper, .row, .column {
+  display: flex;
+  flex-wrap: wrap; }
+
+.row {
+  flex-direction: row; }
+
+* {
+  min-height: 0;
+  min-width: 0; }
+
+.column {
+  flex-direction: column; }
+
+.box {
+  border: 3px solid #2b2b2b;
+  margin: -3px;
+  text-align: center; }
+
+.boxHeight--1 {
+  height: 3rem;
+  line-height: 3rem; }
+
+.boxHeight--2 {
+  height: 6rem;
+  line-height: 6rem; }
+
+.boxHeight--3 {
+  height: 9rem;
+  line-height: 9rem; }
+
+.width--1 {
+  width: 3rem; }
+
+.width--2 {
+  width: 6rem; }
+
+.width--3 {
+  width: 9rem; }
+
+.width--4 {
+  width: 12rem; }
+
+.red {
+  background: linear-gradient(#ef93a9, #ee391b); }
+
+.yellow {
+  background: linear-gradient(#f3edbd, #ebf31f); }
+
+.blue {
+  background: linear-gradient(#0addff, #1E00FF); }
+
+.green {
+  background: linear-gradient(#b3f0c0, #1cf03d); }
+
+.orange {
+  background: linear-gradient(#ffc328, #ff7403); }
+
+.margin--small {
+  margin: 0.5rem; }
+
+/*# sourceMappingURL=flexbox.css.map */
