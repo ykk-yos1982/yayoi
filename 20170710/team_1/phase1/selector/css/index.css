@@ -1,0 +1,39 @@
+.footer :hover{
+    color: #1976D2;
+    text-decoration: none;
+}
+.footer :active{
+    color:#8BC34A;
+}
+.form:hover{
+     cursor: pointer;
+}
+.main__link:hover{
+    cursor: pointer;
+}
+.buttonitem:hover{
+    cursor: pointer;
+}
+
+.buttonitem:focus{
+    background-color: #8BC34A;
+}
+
+/* 
+padding,marginはいづれも24pxとすること
+テーブルの枠線は<div<タグにスタイルを設定すること
+四角形の角丸は4pxとすること
+▼フォームのチェックまたは右隣のラベルを押下するとその下のメッセージが切り替わる
+
+▼フォーム、▼リンク、▼ボタン、フッターリンクに設置した要素はホバージに指アイコンにすること
+（済）
+
+▼ボタンのボタンはフォーカス時に色をaccent-colorに変更すること
+(済)
+
+フッターリンクのリンクは下記のように動作する(済)
+    ホバー時に下線の有無を切り替えること
+    ホバー時に色をprimary-color-darkに変更すること
+    押下中は色をaccent-colorに変更すること
+    ただし、▼リンクには上記動作を含めないこと
+*/
