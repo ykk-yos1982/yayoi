@@ -1,0 +1,78 @@
+/* 全体の設定 */
+.font{
+    align-items: center;
+    color: #FFF;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    height: 100vh;
+}
+.Box1{
+    background-color: #FFAF5F;
+}
+.Box2{
+    background-color: #B0DD58;
+}
+.Box3{
+    background-color: #69C9F9;
+}
+
+/* スマホ画面用 */
+@media screen and (max-width: 359px){
+    .container{
+        flex-direction: column;
+    }
+    .Box1{
+        height: 30%;
+        width: 100%;
+    }
+    .Box2{
+        height: 100%;
+        width: 100%;
+    }
+    .Box3{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* タブレット画面用 */
+@media screen and (min-width: 360px) and (max-width: 719px){
+    .container{
+        flex-flow: wrap row-reverse;
+    }
+    .Box1{
+        height: 10%;
+        width: 100%;
+    }
+    .Box2{
+        height: 90%;
+        width: 40%;
+    }
+    .Box3{
+        height: 90%;
+        width: 60%;
+    }
+}
+
+/* PC画面用 */
+@media screen and (min-width: 720px){
+    .container{
+        flex-flow: wrap row;
+    }
+    .Box1{
+        height: 10%;
+        width: 100%;
+    }
+    .Box2{
+        height: 90%;
+        width: 20%;
+    }
+    .Box3{
+        height: 90%;
+        width: 80%;
+    }
+}
