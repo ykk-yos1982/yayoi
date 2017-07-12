@@ -10,6 +10,11 @@
     display: flex;
     height: 100vh;
 }
+.container2{
+    display: flex;
+    height: 90vh;
+    width: 100%;
+}
 .Box1{
     background-color: #FFAF5F;
 }
@@ -25,16 +30,18 @@
     .container{
         flex-direction: column;
     }
+    .container2{
+        flex-direction: column;
+    }
     .Box1{
-        height: 30%;
         width: 100%;
     }
     .Box2{
-        height: 100%;
+        flex-shrink: 0;
         width: 100%;
     }
     .Box3{
-        height: 100%;
+        flex-shrink: 0;
         width: 100%;
     }
 }
@@ -42,18 +49,19 @@
 /* タブレット画面用 */
 @media screen and (min-width: 360px) and (max-width: 719px){
     .container{
-        flex-flow: wrap row-reverse;
+        flex-flow: column;
+    }
+    .container2{
+        flex-direction: row-reverse;
     }
     .Box1{
         height: 10%;
         width: 100%;
     }
     .Box2{
-        height: 90%;
         width: 40%;
     }
     .Box3{
-        height: 90%;
         width: 60%;
     }
 }
@@ -61,18 +69,19 @@
 /* PC画面用 */
 @media screen and (min-width: 720px){
     .container{
-        flex-flow: wrap row;
+        flex-flow: column;
+    }
+    .container2{
+        flex-direction: row;
     }
     .Box1{
         height: 10%;
         width: 100%;
     }
     .Box2{
-        height: 90%;
         width: 20%;
     }
     .Box3{
-        height: 90%;
         width: 80%;
     }
 }
