@@ -57,9 +57,6 @@ tr[font-size="13"]{
 .main__link a{
     text-decoration:none;
 }
-.main__link a{
-    text-decoration:none;
-}
 .main__link a[href]{
     color:mediumturquoise;
 }
