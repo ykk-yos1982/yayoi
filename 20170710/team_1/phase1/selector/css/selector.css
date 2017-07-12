@@ -1,21 +1,51 @@
-.footer :hover{
+.header__title {
+    background-color: #2196F3;
+}
+.main {
+    border: solid 1px #212121;
+    border-radius: 5px;
+    padding: 30px;
+}
+.table {
+    border: solid 1px #212121;
+     width: 100%;
+}
+.table .table__row {
+    background-color: #8BC34A;
+    text-align: center;
+}
+.table .table__row:first-child {
+    background-color: #FFFFFF;
+}
+tr[font-size ="27"]{
+   font-size: 27px;
+}
+tr[font-size ="19"]{
+   font-size: 19px;
+}
+tr[font-size ="13"]{
+   font-size: 13px;
+}
+
+
+
+.footer:hover {
     color: #1976D2;
     text-decoration: none;
 }
-.footer :active{
+.footer:active {
     color:#8BC34A;
 }
 .form:hover{
      cursor: pointer;
 }
-.main__link:hover{
+.main__link:hover {
     cursor: pointer;
 }
-.buttonitem:hover{
+.buttonitem:hover {
     cursor: pointer;
 }
-
-.buttonitem:focus{
+.buttonitem:focus {
     background-color: #8BC34A;
 }
 
@@ -37,3 +67,15 @@ padding,marginはいづれも24pxとすること
     押下中は色をaccent-colorに変更すること
     ただし、▼リンクには上記動作を含めないこと
 */
+
+
+.color {
+    background-color: #1976D2;
+    background-color: #2196F3;
+    background-color: #BBDEFB;
+    background-color: #FFFFFF;
+    background-color: #8BC34A;
+    background-color: #212121;
+    background-color: #757575;
+}
+
