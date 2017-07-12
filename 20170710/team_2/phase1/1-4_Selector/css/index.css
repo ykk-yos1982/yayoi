@@ -7,7 +7,7 @@
 }
 
 .header__title{
-    background-color: #ccc;
+    background-color: #1976D2;
     font-size: 27px;
     padding-left: 24px;
 }
@@ -16,6 +16,7 @@
     content: "セレクタの使い方を覚えよう";
     font-size: 19px;
     margin-left: 24px;
+    color:#999;
 }
 
 .body__title{
@@ -23,7 +24,7 @@
     font-size: 19px;
 }
 
-.table{
+div>.table{
     border: 1px solid #000;
     border-radius: 4px;
     width: 100%;
@@ -34,14 +35,51 @@
     background-color: #b0DD58;
 }
 
-[font-size="27"]{
+tr[font-size="27"]{
     font-size: 27px;
 }
 
-[font-size="19"]{
+tr[font-size="19"]{
     font-size: 19px;
 }
 
-[font-size="13"]{
+tr[font-size="13"]{
     font-size: 13px;
+}
+
+.form__chkbox:checked+.form__lbl+.form__description{
+display: none;
+}
+
+.footer__navitem,.buttonitem ,[class ^= "form"]{
+     cursor: pointer; 
+}
+
+.buttonitem:focus{
+background-color: #8BC34A;
+}
+
+.footer__navitem>a:hover{
+    text-decoration:none;
+    color: #1976D2;
+}
+
+.footer__navitem>a:active{
+    color: #88C34A;
+}
+
+.main__link a{
+    text-decoration:none;
+}
+
+.main__link a{
+    text-decoration:none;
+}
+
+a[href *= "http"]{
+    color:green;
+}
+
+a[href = "#anchor__top"]{
+    color:mediumturquoise;
 }
