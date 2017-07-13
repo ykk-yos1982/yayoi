@@ -12,8 +12,6 @@
 }
 .container2{
     display: flex;
-    height: 90vh;
-    width: 100%;
 }
 .Box1{
     background-color: #FFAF5F;
@@ -29,20 +27,20 @@
 @media screen and (max-width: 359px){
     .container{
         flex-direction: column;
+        height: 200vh;
+    }
+    .Box1{
+        flex-grow: 1;
     }
     .container2{
         flex-direction: column;
-    }
-    .Box1{
-        width: 100%;
+        flex-grow: 7;
     }
     .Box2{
-        flex-shrink: 0;
-        width: 100%;
+        flex-grow: 3;
     }
     .Box3{
-        flex-shrink: 0;
-        width: 100%;
+        flex-grow: 3;
     }
 }
 
@@ -51,18 +49,18 @@
     .container{
         flex-flow: column;
     }
+    .Box1{
+        flex-grow: 1;
+    }
     .container2{
         flex-direction: row-reverse;
-    }
-    .Box1{
-        height: 10%;
-        width: 100%;
+        flex-grow: 6;
     }
     .Box2{
-        width: 40%;
+        flex-grow: 3;
     }
     .Box3{
-        width: 60%;
+        flex-grow: 7;
     }
 }
 
@@ -71,17 +69,17 @@
     .container{
         flex-flow: column;
     }
+    .Box1{
+        flex-grow: 1;
+    }
     .container2{
         flex-direction: row;
-    }
-    .Box1{
-        height: 10%;
-        width: 100%;
+        flex-grow: 6;
     }
     .Box2{
-        width: 20%;
+        flex-grow: 7;
     }
     .Box3{
-        width: 80%;
+        flex-grow: 3;
     }
 }
