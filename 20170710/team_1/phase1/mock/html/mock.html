@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="content-language" content="ja">
+    <meta charset="utf-8">
+    <meta name="keywords" content="文書の内容をキーワードで指定">
+    <meta name="description" content="文書の説明文">
+    <meta name="author" content="弥生株式会社">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>マイポータル - ログイン</title>
+
+    <link rel="shortcut icon" href="../img/common/favicon.ico">
+
+    <!-- stylesheet-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="../css/vendor/MaterialDesignLite/material.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/vendor/yayoi/yayoi-common.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/vendor/yayoi/yayoi-mypage.min.css" rel="stylesheet" type="text/css">
+
+    <!-- javascript -->
+    <script src="../js/vendor/jquery/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendor/MaterialDesignLite/material.min.js"></script>
+    <script src="../js/vendor/yayoi/yayoi-common.js"></script>
+</head>
+
+<body>
+    <div class="body">
+        <!-- header -->
+        <header class="body__header">
+            <div class="header mdl-shadow--2dp">
+                <div class="header__menu"></div>
+                <button id="js-search-toggle" class="header__searchtoggle mdl-button mdl-js-button mdl-button--icon" type="button">
+                    <i class="material-icons">arrow_back</i>
+                </button>
+                <!-- ロゴ -->
+                <a href="#">
+                    <img class="header__logo" src="../img/yayoi/logo.svg">
+                </a>
+                <!-- ロゴ -->
+                <a href="#">
+                    <img class="header__servicename" src="../img/common/service-name.svg">
+                </a>
+                <!-- ページタイトル -->
+                <div class="mdl-cell--hide-desktop mdl-cell--hide-bigdesktop">
+                    <span class="header__title">マイポータル</span>
+                </div>
+                <!-- 検索エリア -->
+                <div class="header__search">
+                    <form class="o-inputgroup">
+                        <input type="text" class="o-inputcontrol mdl-cell--hide-phone mdl-cell--hide-tablet" placeholder="よくある質問の検索" device-type="pc">
+                        <button class="o-inputaddon material-icons material-icons mdl-cell--hide-phone mdl-cell--hide-tablet" device-type="pc">search</button>
+
+                        <button id="js-headersearch" class="mdl-button mdl-js-button mdl-button--icon material-icons mdl-cell--hide-desktop mdl-cell--hide-bigdesktop"
+                            device-type="mobile" type="button">
+                            <i class="material-icons o-fontc--white">search</i>
+                        </button>
+                    </form>
+                </div>
+                <!-- サポート -->
+                <div class="header__support">
+                    <a class="o-iconlink--lightgreylight" href="http://www.yayoi-kk.co.jp">
+                    <i class="material-icons">help</i>
+                        <span class="o-linkblue--sm mdl-cell--hide-phone mdl-cell--hide-tablet" href="#">サポート</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- main -->
+        <section class="body__contents">
+            <div class="contents--center">
+                <div class="contents--center__main">
+                    <div class="o-title--lg o-fontc--yblue"></div>
+                    <div class="o-card">
+                        <div class="o-card__header mdl-cell--hide-phone mdl-cell--hide-tablet is-mobile-visible">
+                            <div class="o-card__headerleft--blank"></div>
+                            <div class="o-card__title">ログイン</div>
+                            <div class="o-card__headerrigt--blank"></div>
+                        </div>
+                        <div class="o-inputgroup--column">
+                            <!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
+                            <div class="o-margin--bottom1"></div>
+                            <div class="o-card__message">弥生ID（メ―ルアドレス）とパスワードを入力して「ログイン」ボタンをクリックしてください。</div>
+
+                            <div class="o-margin--bottom1"></div>
+                            <div class="u-mr-a u-c-red">
+                            <p class="attention2">弥生IDまたはパスワードが違います。</p>
+                            </div>
+                            <a href="#" class="o-linkblue--md u-ta-c o-fontc--ybluespecial">パスワードを忘れた方はこちら</a>
+
+                            <div class="o-margin--bottom1"></div>
+                            <input class="o-inputcontrol" type="text" placeholder="弥生ID（メールアドレス）">
+                            <div class="o-margin--bottom1"></div>
+                            <button class="o-card__btn mdl-button mdl-js-button mdl-button--raised">次へ</button>
+                        </div>
+                    </div>
+                    <div class="o-margin--bottom1"></div>
+                    <div class="o-card">
+
+                        <div class="o-card__header mdl-cell--hide-phone mdl-cell--hide-tablet is-mobile-visible">
+                            <div class="o-card__headerleft--blank"></div>
+                            <div class="o-card__title">はじめてご利用のお客さま</div>
+                            <div class="o-card__headerrigt--blank"></div>
+                        </div>
+
+                        <div class="o-inputgroup--column">
+                            <!-- バリデーションエラー時は、クラス名にis-invalidを付与する-->
+                            <div class="o-margin--bottom1"></div>
+                            <button class="o-card__btn mdl-button mdl-js-button mdl-button--raised mdl-button--orange">弥生ID新規登録</button>
+                        </div>
+                    </div>
+                    <div class="o-margin--bottom1"></div>
+                    <a href="#" class="o-linkblue--md">弥生IDについてはこちら</a>
+                </div>
+            </div>
+    </div>
+    </section>
+    <!-- footer -->
+    <footer class="body__footer">
+        <div class="footer">
+            <ul class="footer__nav">
+                <li class="navitem">
+                    <a class="o-linkgrey--sm" href="#">プライバシ－ポリシ－</a>
+                </li>
+                <li>｜</li>
+                <li class="nav-item">
+                    <a class="o-linkgrey--sm" href="#">免責事項</a>
+                </li>
+                <li>｜</li>
+                <li class="navitem">
+                    <a class="o-linkgrey--sm" href="#">お問い合わせ</a>
+                </li>
+                <li>｜</li>
+                <li class="navitem">
+                    <a class="o-linkgrey--sm" href="#">弥生ID利用規約</a>
+                </li>
+            </ul>
+            <div class="footer__copyright">
+                <div>Copyright © Yayoi Co., Ltd. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
