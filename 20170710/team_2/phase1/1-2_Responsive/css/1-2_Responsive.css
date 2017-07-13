@@ -8,10 +8,12 @@
 }
 .container{
     display: flex;
+    flex-direction: column;
     height: 100vh;
 }
 .container2{
     display: flex;
+    flex-grow: 6;
 }
 .Box1{
     background-color: #FFAF5F;
@@ -26,7 +28,6 @@
 /* スマホ画面用 */
 @media screen and (max-width: 359px){
     .container{
-        flex-direction: column;
         height: 200vh;
     }
     .Box1{
@@ -34,7 +35,6 @@
     }
     .container2{
         flex-direction: column;
-        flex-grow: 7;
     }
     .Box2{
         flex-grow: 3;
@@ -46,15 +46,11 @@
 
 /* タブレット画面用 */
 @media screen and (min-width: 360px) and (max-width: 719px){
-    .container{
-        flex-flow: column;
-    }
     .Box1{
         flex-grow: 1;
     }
     .container2{
         flex-direction: row-reverse;
-        flex-grow: 6;
     }
     .Box2{
         flex-grow: 3;
@@ -66,20 +62,16 @@
 
 /* PC画面用 */
 @media screen and (min-width: 720px){
-    .container{
-        flex-flow: column;
-    }
     .Box1{
         flex-grow: 1;
     }
     .container2{
         flex-direction: row;
-        flex-grow: 6;
     }
     .Box2{
-        flex-grow: 7;
+        flex-grow: 2;
     }
     .Box3{
-        flex-grow: 3;
+        flex-grow: 8;
     }
 }
