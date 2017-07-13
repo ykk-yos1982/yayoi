@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="content-language" content="ja">
+    <meta charset="utf-8">
+    <meta name="keywords" content="文書の内容をキーワードで指定">
+    <meta name="description" content="文書の説明文">
+    <meta name="author" content="弥生株式会社">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>layout_4</title>
+
+    <link rel="shortcut icon" href="../../img/common/favicon.ico">
+
+    <!-- stylesheet-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="../../css/vendor/MaterialDesignLite/material.min.css" rel="stylesheet" type="text/css">
+    <link href="../../css/vendor/yayoi/yayoi-common.min.css" rel="stylesheet" type="text/css">
+    <link href="../../css/vendor/yayoi/yayoi-mypage.min.css" rel="stylesheet" type="text/css">
+    <!-- javascript -->
+    <script type="text/javascript" src="../../js/vendor/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/MaterialDesignLite/material.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/yayoi/yayoi-common.js"></script>
+    
+</head>
+
+<body>
+    <div class="body">
+
+        <!-- header -->
+        <header class="body__header">
+            <div class="header mdl-shadow--2dp">
+
+                <div class="header__menu"></div>
+                
+                <button id="js-search-toggle" class="header__searchtoggle mdl-button mdl-js-button mdl-button--icon" type="button">
+                    <i class="material-icons">arrow_back</i>
+                </button>
+                
+                <!-- ロゴ -->
+                <a href="#">
+                    <img class="header__logo" src="../../img/yayoi/logo.svg">
+                </a>
+                <!-- ロゴ -->
+                <a href="#">
+                    <img class="header__servicename" src="../../img/common/service-name.svg">
+                </a>
+                
+                <!-- ページタイトル -->
+                <div class="mdl-cell--hide-desktop mdl-cell--hide-bigdesktop">
+                    <span class="header__title">タイトル</span>
+                </div>
+
+                <!-- 検索エリア -->
+                <div class="header__search">
+                    <form class="o-inputgroup">
+                        <input type="text" class="o-inputcontrol mdl-cell--hide-phone mdl-cell--hide-tablet" placeholder="よくある質問の検索" device-type="pc">
+                        <button class="o-inputaddon material-icons material-icons mdl-cell--hide-phone mdl-cell--hide-tablet" device-type="pc">search</button>
+                        
+                        <button id="js-headersearch" class="mdl-button mdl-js-button mdl-button--icon material-icons mdl-cell--hide-desktop mdl-cell--hide-bigdesktop" device-type="mobile" type="button">
+                            <i class="material-icons o-fontc--white">search</i>
+                        </button>                        
+                    </form>
+                </div>
+                
+                <!-- サポート -->
+                <div class="header__support">
+                    <a class="o-iconlink--lightgreylight" href="http://www.yayoi-kk.co.jp">
+                        <i class="material-icons">help</i>
+                        <span class="o-linkblue--sm mdl-cell--hide-phone mdl-cell--hide-tablet" href="#">サポート</span>
+                    </a>                                    
+                </div>
+            </div>
+            <div class="headerbar mdl-shadow--2dp">
+                <nav class="headerbar__nav">
+                    <ul class="mdl-list">
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>
+                        <li class="mdl-list__item">
+                            <a href="http://www.yayoi-kk.co.jp">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">home</i>
+                                    ホーム
+                                </span>
+                            </a>
+                        </li>
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>
+                        
+                        <li class="mdl-list__item">
+                            <a href="http://www.yayoi-kk.co.jp">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">person</i>
+                                    PAP会員専用ページ
+                                </span>
+                            </a>
+                        </li>
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>
+                        
+                        <li class="mdl-list__item">
+                            <a href="http://www.yayoi-kk.co.jp">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">person</i>
+                                    青色申告推奨会専用ページ
+                                </span>
+                            </a>
+                        </li>                        
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>
+                        
+                        <li class="mdl-list__item">
+                            <a href="http://www.yayoi-kk.co.jp">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">person</i>
+                                    YBP専用ページ
+                                </span>
+                            </a>
+                        </li>                        
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>                        
+                        
+                        <li class="mdl-list__item">
+                            <a href="http://www.yayoi-kk.co.jp">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">devices</i>
+                                    製品サポート
+                                </span>
+                            </a>
+                            <div class="mdl-dropdownmenu mdl-submenu__productssupport">
+                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect">
+                                    <li class="mdl-menu__item"><a href="http://www.google.co.jp">保有製品・製品登録番号の確認</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>
+                        
+                        <li class="mdl-list__item">
+                            <a href="http://www.yayoi-kk.co.jp">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">help</i>
+                                    サポート
+                                </span>
+                            </a>
+                        </li>                        
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>   
+                        
+                        <li class="mdl-list__item">
+                            <a href="http://www.yayoi-kk.co.jp">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">description</i>
+                                    各種メニュー
+                                </span>
+                            </a>
+                            <div class="mdl-dropdownmenu mdl-submenu__description">
+                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect">
+                                    <li class="mdl-menu__item"><a href="http://www.google.co.jp">サービス利用再開設定</a></li>
+                                    <li class="mdl-menu__item"><a href="#">パッケージ製品管理</a></li>
+                                    <li class="mdl-menu__item"><a href="#">オンラインサービス契約管理</a></li>
+                                    <li class="mdl-menu__item"><a href="#">データ共有管理</a></li>
+                                    <li class="mdl-menu__item"><a href="#">パートナー様専用</a></li>
+                                    <li class="mdl-menu__item"><a href="#">事業グループ管理</a></li>
+                                    <li class="mdl-menu__item"><a href="#">弥生ID登録情報の確認・変更</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>
+                        
+                        <li class="mdl-list__item">
+                            <a href="http://www.yayoi-kk.co.jp">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">cloud</i>
+                                    クラウドアプリ
+                                </span>
+                            </a>
+                            <div class="mdl-dropdownmenu mdl-submenu__cloud">
+                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect">
+                                    <li class="mdl-menu__item"><a href="#">弥生会計オンライン</a></li>
+                                    <li class="mdl-menu__item"><a href="#">やよいの青色申告オンライン</a></li>
+                                    <li class="mdl-menu__item"><a href="#">やよいの白色申告オンライン</a></li>
+                                    <li class="mdl-menu__item"><a href="#">やよいの給与明細オンライン</a></li>
+                                    <li class="mdl-menu__item"><a href="#">Misoca</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mdl-list__item separate">
+                            <div></div>
+                        </li>                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- main -->
+        <section class="body__contents">
+            <div class="contents">
+                <div class="contents__main">
+                    <div class="o-card">
+                        <img src="../../img/yayoi/mypage.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="body__footer">
+            <div class="footer">
+                <ul class="footer__nav">
+                    <li class="navitem">
+                        <a class="o-linkgrey--sm" href="#">プライバシ－ポリシ－</a>
+                    </li>
+                    <li>｜</li>
+                    <li class="nav-item">
+                        <a class="o-linkgrey--sm" href="#">免責事項</a>
+                    </li>
+                    <li>｜</li>
+                    <li class="navitem">
+                        <a class="o-linkgrey--sm" href="#">お問い合わせ</a>
+                    </li>
+                    <li>｜</li>
+                    <li class="navitem">
+                        <a class="o-linkgrey--sm" href="#">弥生ID利用規約</a>
+                    </li>
+                </ul>
+                <div class="footer__copyright">
+                    <div>Copyright © Yayoi Co., Ltd. All rights reserved.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
