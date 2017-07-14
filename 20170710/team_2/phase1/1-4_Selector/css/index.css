@@ -80,6 +80,6 @@ a[href ^= "http"]{
 }
 
 /* ポインタアイコン */
-li[class *="navitem"],.buttonitem ,[class ^= "form"]{
+li[class *="navitem"] a,.buttonitem ,[class ^= "form__"]{
      cursor: pointer; 
 }
