@@ -1,5 +1,12 @@
 .header__title {
     background-color: #2196F3;
+    padding-left: 15px;
+}
+.header__title:after {
+    content: "セレクタの使い方を覚えよう";
+    padding-left: 15px;
+    font-size: 19px;
+    color: #757575;
 }
 .body{
     font-family: MS 明朝,serif;
@@ -11,15 +18,17 @@
 }
 .table {
     border: solid 1px #212121;
+    border-radius: 4px;
     width: 100%;
+}
+.table .table__row {
+    text-align: center;
 }
 .table .table__row:first-child {
     background-color: #FFFFFF;
-    text-align: center;
 }
 .table .table__row:not(:first-child) {
     background-color: #8BC34A;
-    text-align: center;
 }
 tr[font-size ="27"]{
     font-size: 27px;
@@ -33,30 +42,26 @@ tr[font-size ="13"]{
 .form__chkbox:hover{
     cursor: pointer;
 }
-.form__lbl:hover{
-    cursor: pointer;
-}
-.form__description:hover{
+.form__chkbox+.form__lbl:hover, .form__description:hover{
     cursor: pointer;
 }
 .form__chkbox:checked ~ div.form__description {
     display:none;
 }
-.main__link>div>p:first-child>a,.main__link>div>p:first-child+p>a{
-    color:  inherit;
-    text-decoration:none;
-}
-.main__link>div>p:first-child,.main__link>div>p:first-child+p{
+.main__link>div>p:last-child{
     color:  #8BC34A ;
 }
-.main__link>div>p:last-child>a{
-    color:  inherit;
-    text-decoration:none;
-}
-.main__link>div>p:last-child{
+.main__link>div>p:not(:last-child){
     color:  #BBDEFB ;
 }
-.main__link:hover {
+a[href^="http"]{
+    color:  inherit;
+    text-decoration:none;
+    cursor: pointer;
+}
+a[href*="anchor"]{
+    color:  inherit;
+    text-decoration:none;
     cursor: pointer;
 }
 .buttonitem:hover {
