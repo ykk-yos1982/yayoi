@@ -1,27 +1,26 @@
+.o-card{
+    max-width: 765px;
+}
+.contents--center__main .o-card{
+    width: 565px;
+}
+
 @media screen and (max-width: 719px){
     .o-card__title{
         font-size: 14px;
+    }
+    .contents--center .contents--center__main .o-card{
+        width: 100%;
+        max-width: 565px;
     }
 }
 @media screen and (min-width: 720px) and (max-width: 1019px){
     .o-card .o-card__header .o-card__title{
         font-size: 20px;
     }
-    .o-card{
-        max-width: 765px;
-    }
-    .contents--center__main .o-card{
-        width: 565px;
-    }
 }
 @media screen and (min-width: 1020px){
     .o-card .o-card__header .o-card__title{
         font-size: 20px;
-    }
-    .o-card{
-        max-width: 765px;
-    }
-    .contents--center__main .o-card{
-        width: 565px;
     }
 }
