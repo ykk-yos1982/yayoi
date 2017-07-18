@@ -1,0 +1,86 @@
+.calender{
+    border: 1px solid #000;
+    padding-top: 120px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    height: 350px;
+    width: 650px;
+}
+
+.month{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.weekcontainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.box {
+    border: 1px solid #000;
+    margin: -1px;
+    padding: 5px;
+}
+
+.day__8{
+    display: flex;
+    flex-direction: column;
+}
+.day__9{
+    display: flex;
+    flex-direction: column;
+}
+.week__5__day__1{
+    display: flex;
+    flex: 1;
+    margin: -1px;
+    border: 1px solid #000;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+.week__5__day__8{
+    display: flex;
+    flex: 1;
+    margin: -1px;
+    border: 1px solid #000;    
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+.week__5__day__2{
+    display: flex;
+    flex: 1;
+    margin: -1px;
+    border: 1px solid #000;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+.week__5__day__9{
+    display: flex;
+    flex: 1;
+    border: 1px solid #000;
+    margin: -1px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.boxspecial{
+    
+}
+.test{
+    flex: 1;
+    border: 1px solid #000;
+    margin: -1px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
