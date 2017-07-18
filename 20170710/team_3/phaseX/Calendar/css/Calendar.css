@@ -1,0 +1,43 @@
+html,body{
+    height: 100%;
+}
+.body__main,.day_of_the_week,.firstweek,.secondweek,.thridweek,.fourthweeek,.fifthweek,.body__displayColumn{
+    display: flex;
+}
+.body__main{
+    flex-direction: column;
+}
+.body__displayColumn{
+    flex-direction:column;
+    height: 100%;
+    width: 100%;
+}
+.day_of_the_week,.firstweek,.secondweek,.thridweek,.fourthweeek,.fifthweek{
+    flex-direction: row;
+}
+p{
+    width: 15px;
+    height: 15px;
+}
+
+.firstweek,.secondweek,.thridweek,.fourthweeek,.fifthweek,#date{
+    border:  1px solid black;
+    margin-bottom: -1px;
+    flex-grow: 1;
+}
+.body__top{
+    height: 10%;
+}
+.day_of_the_week{
+    height: 5%;
+    flex-grow: 1;
+}
+.body__main{
+    height: 85%;
+}
+.saturday{
+    color: blue;
+}
+.sunday{
+    color: red;
+}
