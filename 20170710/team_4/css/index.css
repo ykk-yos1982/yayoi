@@ -1,89 +1,110 @@
 .calender{
     border: 1px solid #000;
-    padding-top: 120px;
+    padding-top: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
-    height: 350px;
+    height: 450px;
     width: 650px;
-}
-
-.month{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
 }
-.weekcontainer {
+.holes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.hole{
+    background-color: #000;
+    height: 10px;
+    width: 10px;
+}
+.title{
     display: flex;
     flex-direction: row;
     flex: 1;
 }
-.box {
-    border: 1px solid #000;
-    margin: -1px;
-    padding: 3px;
+.month__number{
+    font-size: 60px;
+    margin-left: 40px;
 }
-
-.day__8{
+.title__sub{
     display: flex;
     flex-direction: column;
+    margin-top: auto;
+    margin-left: 20px;
 }
-.day__9{
-    display: flex;
-    flex-direction: column;
+.year{
+    font-size: 10px;
 }
-.week__5__day__1{
-    display: flex;
-    flex: 1;
-    margin: -1px;
-    border: 1px solid #000;
-    padding: 3px;
-}
-.week__5__day__8{
-    display: flex;
-    flex: 1;
-    margin: -1px;
-    border: 1px solid #000;    
-    padding: 3px;
-}
-.week__5__day__2{
-    display: flex;
-    flex: 1;
-    margin: -1px;
-    border: 1px solid #000;
-    padding: 2px;
-}
-.week__5__day__9{
-    display: flex;
-    flex: 1;
-    border: 1px solid #000;
-    margin: -1px;
-    padding: 2px;
+.month__english{
+    font-size: 15px;
 }
 
-.boxspecial{
-    
+.grid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 5;
+}
+.week__header{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    font-size: 12px;
+}
+.week__header__box{
+    flex: 1;
+}
+.week__body {
+    display: flex;
+    flex-direction: row;
+    flex: 4;
+}
+.week__body__box {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin: -1px;
+    padding: 5px;
 }
 .test{
     flex: 1;
+    border-collapse: separate;
     border: 1px solid #000;
     margin: -1px;
     box-sizing: border-box;
 }
-
-.sun .day, .nationalholiday>.day{
-    color: red;
-}
-.sat .day{
-    color: blue;
-}
 .day{
     font-size: 16px;
 }
-.rokuyou{
+.rokuyou,.holiday__name{
     font-size: 8px;
 }
-.boxspecial .day{
+.holiday__set{
+    display: flex;
+    flex-direction: row;
+}
+.halfbox .day{
     font-size: 12px;
+}
+.halfbox__container{
+    display: flex;
+    flex-direction: column;
+}
+.halfbox{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid #000;
+    margin: -1px;
+    padding: 2px;
+}
+.week__header .sun,.sun .day,.nationalholiday .day,.holiday__name{
+    color: #cc0033;
+}
+.week__header .sat,.sat .day{
+    color: #005bac;
+}
+.holiday__name {
+    /* 明日実装します */
 }
