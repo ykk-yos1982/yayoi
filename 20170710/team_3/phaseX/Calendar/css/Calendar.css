@@ -1,32 +1,58 @@
 html,body{
-    height: 100%;
+    height: 90%;
 }
-.body__main,.day_of_the_week,.firstweek,.secondweek,.thridweek,.fourthweeek,.fifthweek,.body__displayColumn{
-    display: flex;
-}
+
 .body__main{
+    display: flex;
     flex-direction: column;
 }
 .body__displayColumn{
+    display: flex;
     flex-direction:column;
     height: 100%;
     width: 100%;
 }
-.day_of_the_week,.firstweek,.secondweek,.thridweek,.fourthweeek,.fifthweek{
+[class *= "week"]{
+    display: flex;
     flex-direction: row;
 }
-p{
-    width: 15px;
-    height: 15px;
-}
 
-.firstweek,.secondweek,.thridweek,.fourthweeek,.fifthweek,#date{
-    border:  1px solid black;
-    margin-bottom: -1px;
+[class="day_of_the_week"]>[class*="day"]{
     flex-grow: 1;
 }
+
+p{
+    display: flex;
+    width: 50px;
+    height: 15px;
+}
+#date p:first-child{
+    margin: 5px 0px 0px 10px;
+    font-size: 23px;
+}
+#date p:last-child{
+    margin: 10px 0px 0px 8px;
+}
+
+.firstweek,.secondweek,.thridweek,.fourthweek,.fifthweek{
+    display: flex;
+    flex-grow: 1;
+}
+
+#date{
+    display: flex;
+    border:  1px solid black;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    flex: 1;
+    min-height: 0px;
+    flex-direction: column;
+}
+
 .body__top{
     height: 10%;
+        display: flex;
+    flex-direction: row;
 }
 .day_of_the_week{
     height: 5%;
@@ -40,4 +66,43 @@ p{
 }
 .sunday{
     color: red;
+}
+
+.fifthweek .sunday,.fifthweek .monday{
+    display: flex;
+    flex-direction: column;
+}
+
+.fifthweek .sunday div,.fifthweek .monday div{
+    border-bottom:  1px solid black;
+    margin-bottom: -1px;
+    flex-grow: 1;
+    direction: column;
+}
+
+
+
+.month{
+    display: flex;
+    font-size: 85px;
+    padding: 0px 60px 0px 65px;
+}
+
+header div:last-child{
+    display: flex;
+    align-items: flex-end;
+}
+
+header p{
+    width:auto;
+}
+
+header div p:first-child{
+padding-top: 10px;
+font-size: 12px;
+height: auto;
+}
+
+.body__main div[class*="week"] div[class *="day"] p:last-child{
+    font-size: 10px;
 }
