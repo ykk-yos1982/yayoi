@@ -22,7 +22,7 @@
 .box {
     border: 1px solid #000;
     margin: -1px;
-    padding: 5px;
+    padding: 3px;
 }
 
 .day__8{
@@ -38,40 +38,28 @@
     flex: 1;
     margin: -1px;
     border: 1px solid #000;
-    padding-top: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 5px;
+    padding: 3px;
 }
 .week__5__day__8{
     display: flex;
     flex: 1;
     margin: -1px;
     border: 1px solid #000;    
-    padding-top: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 5px;
+    padding: 3px;
 }
 .week__5__day__2{
     display: flex;
     flex: 1;
     margin: -1px;
     border: 1px solid #000;
-    padding-top: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 5px;
+    padding: 2px;
 }
 .week__5__day__9{
     display: flex;
     flex: 1;
     border: 1px solid #000;
     margin: -1px;
-    padding-top: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 5px;
+    padding: 2px;
 }
 
 .boxspecial{
@@ -82,5 +70,20 @@
     border: 1px solid #000;
     margin: -1px;
     box-sizing: border-box;
-    font-size: 18px;
+}
+
+.sun .day, .nationalholiday>.day{
+    color: red;
+}
+.sat .day{
+    color: blue;
+}
+.day{
+    font-size: 16px;
+}
+.rokuyou{
+    font-size: 8px;
+}
+.boxspecial .day{
+    font-size: 12px;
 }
