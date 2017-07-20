@@ -21,13 +21,14 @@
     display: flex;
     flex-direction: row;
     flex: 1;
+    align-items: flex-end;
 }
 .month__number {
     font-size: 65px;
     margin-left: 40px;
+    margin-bottom: -11px;
 }
 .title__sub {
-    margin-top: auto;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -39,7 +40,7 @@
     font-size: 15px;
 }
 .grid {
-    margin-top: 15px;
+    margin-top: 13px;
     display: flex;
     flex-direction: column;
     flex: 6;
@@ -50,6 +51,9 @@
     flex-direction: row;
     flex: 1;
 }
+.week__body__box__child{
+    padding: 5px;
+}
 .week__header__box {
     flex: 1;
 }
@@ -59,15 +63,14 @@
     flex: 4;
 }
 .week__body__box  {
-    padding: 5px;
     border: 1px solid #000;
-    margin: -1px;
+    margin: -0.5px;
 }
 .boxcommon {
     flex: 1;
 }
 .week__body__box .day {
-    font-size: 16px;
+    font-size: 19px;
 }
 .rokuyou,.holiday__name {
     font-size: 8px;
@@ -83,7 +86,7 @@
 }
 .halfbox__container {
     border: 1px solid #000;
-    margin: -1px;
+    margin: -0.5px;
     display: flex;
     flex-direction: column;
 }
@@ -92,7 +95,7 @@
 }
 .halfbox {
     padding: 3px;
-    border: 1px solid #000;
+    border-bottom: 1px solid #000;
     margin: -1px;
     display: flex;
     flex-direction: column;
