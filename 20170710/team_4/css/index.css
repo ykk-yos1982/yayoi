@@ -1,96 +1,9 @@
-html,body{
+html{
     height: 100%;
 }
-.calender {
+body {
     font-family: 'Trebuchet MS';
-    height: 60%;
-    padding: 2%;
     display: flex;
-}
-.holes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.hole {
-    background-color: #000;
-    height: 10px;
-    width: 15px;
-}
-.title {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-}
-.month__number {
-    font-size: 65px;
-}
-.title__sub {
-    display: flex;
-    flex-direction: column;
-}
-.year {
-    font-size: 10px;
-}
-.month__english {
-    font-size: 15px;
-}
-.grid {
-    display: flex;
-    flex-direction: column;
-}
-.week__header {
-    font-size: 12px;
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-}
-.week__body__box__child{
-    padding: 5px;
-}
-.week__header__box {
-    flex: 1;
-}
-.week__body  {
-    display: flex;
-    flex-direction: row;
-    flex: 4;
-}
-.week__body__box  {
-    margin: -0.5px;
-}
-.boxcommon {
-    flex: 1;
-}
-.week__body__box .day {
-    font-size: 19px;
-}
-.rokuyou,.holiday__name {
-    font-size: 8px;
-}
-.holiday__set {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.holiday__name {
-    margin-left: 5px;
-    font-size: 8px;
-}
-.halfbox__container {
-    margin: -0.5px;
-    display: flex;
-    flex-direction: column;
-}
-.halfbox__container .day {
-    font-size: 14px;
-}
-.halfbox {
-    padding: 3px;
-    margin: -1px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
 }
 .week__header .sun,.sun .day,.nationalholiday .day,.holiday__name {
     color: #cc0033;
@@ -98,49 +11,181 @@ html,body{
 .week__header .sat,.sat .day {
     color: #005bac;
 }
-
-@media screen and (max-width:719px){
-    .calender{
-        flex-direction: row;
-    }
-    .title{
-        align-items: flex-start;
-        
-        margin-top: 10%;
-    }
-    .grid{
-        flex: 12;
-    }
-    .holes, .rokuyou, .holiday__name{
-        display: none;
-    }
+header {
+    display: flex;
+    align-items: flex-end;
 }
-@media screen and (min-width:720px){
-    .calender{
+.title__sub {
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.year {
+    display: flex;
+    flex-direction: row;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+.week__header{
+    font-size: 75%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: flex-end;
+}
+.week__body  {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+}
+.body__box--half {
+    margin: -0.5px;
+    display: flex;
+    flex-direction: column;
+}
+.box--half__child {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+[class^="body__box"] {
+    flex: 1;
+}
+
+@media screen and (min-width:500px) {
+    body {
+        height: 75%;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-bottom: 3%;
+        padding-top: 1%; 
         border: 1px solid #000;
         flex-direction: column;
     }
-    .title{
-        align-items: flex-end;        
+    .holes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 2%;
+        margin: 0;
+        padding: 0;
     }
-    .month__number{
-        margin-left: 40px;
-        margin-bottom: -11px;
+    .holes p {
+        background-color: #000;
+        width: 3%;
+        margin: 0;
     }
-    .title__sub{
-        margin-left: 20px;        
+    header {
+        flex-direction: row;
     }
-    .grid{
-        margin-top: 13px;
-        flex: 6;
+    .title__main{
+        margin-left: 6%;
+        margin-bottom: -3%;        
     }
-    .week__body__box  {
+    .month__number {
+        font-size: 400%;
+    }
+    .year--english,.year--japanese {
+        font-size: 62.5%;
+    }
+    .month__english {
+        font-size: 100%;
+    }
+    .week__header {
+        font-size: 75%;
+    }
+    .week__header div {
+        flex: 1;
+    }
+    .body__box  {
         border: 1px solid #000;
-    }    
-    .halfbox{
-        border-bottom: 1px solid #000;        
+        margin: -0.5px;
     }
-    .halfbox__container {
+    .box__child{
+        padding: 5px;
+    }
+    .body__box .day {
+        font-size: 125%;
+    }
+    .rokuyou,.holiday__name {
+        font-size: 8px;
+    }
+    .holiday__set {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .holiday__name {
+        margin-left: 5px;
+        font-size: 50%;
+    }
+    .body__box--half {
         border: 1px solid #000;
-    }    
+    }
+    .body__box--half .day {
+        font-size: 87.5%;
+    }
+    .box--half__child {
+        padding: 3px;
+        border-bottom: 1px solid #000;
+        margin: -1px;
+    }
+}
+@media screen and (max-width:499px) {
+    body {
+        height: 30%;
+        flex-direction: row;
+    }
+    .holes {
+        display: none;
+    }
+    header {
+        flex-direction: column;
+    }
+    .month__number {
+        font-size: 400%;
+    }
+    .title__sub {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .year--english {
+        font-size: 80%;
+    }
+    .year--japanese {
+        display: none;
+    }
+    .month__english {
+        font-size: 80%;
+    }
+    .week__header {
+        font-size: 80%;
+        text-align: center;
+        margin-bottom: 9px;
+    }
+    .week__header div {
+        flex: 1;
+    }
+    .body__box .day {
+        font-size: 120%;
+        text-align: center;
+    }
+    .rokuyou,.holiday__name {
+        display: none;
+    }
+    .body__box--half .day {
+        font-size: 120%;
+        text-align: center;
+    }
+    .box--half__child {
+        margin-bottom: 3px;
+    }
+    .holiday__name {
+        margin-left: 5px;
+        font-size: 50%;
+    }
 }

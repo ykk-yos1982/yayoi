@@ -1,194 +1,197 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>カレンダー</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
-</head>
+    <head>
+        <title>カレンダー</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    </head>
 
-<body>
-    <div class="calender">
+    <body>
         <div class="holes">
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
         </div>
-        <div class="title">
+        <header>
             <div class="title__main">
                 <div class="month__number">7</div>
             </div>
             <div class="title__sub">
-                <div class="year">2017平成29年</div>
+                <div class="year">
+                    <div class="year--english">2017</div>
+                    <div class="year--japanese">平成29年</div>
+                </div>
                 <div class="month__english">JULY</div>
             </div>
-        </div>
-        <div class="grid">
+        </header>
+        <main>
             <div class="week__header">
-                <div class="week__header__box sun">Sun</div>
-                <div class="week__header__box mon">Mon</div>
-                <div class="week__header__box tue">Tue</div>
-                <div class="week__header__box web">Wed</div>
-                <div class="week__header__box thu">Thu</div>
-                <div class="week__header__box fri">Fri</div>
-                <div class="week__header__box sat">Sat</div>
+                <div class="sun"></div>
+                <div class="mon"></div>
+                <div class="tue"></div>
+                <div class="wed"></div>
+                <div class="thu"></div>
+                <div class="fri"></div>
+                <div class="sat"></div>
             </div>
             <div class="week__body">
-                <div class="week__body__box boxcommon sun">
-                    <div class="week__body__box__child">
+                <div class="body__box sun">
+                    <div class="box__child">
                         <div class="day"></div>
                         <div class="rokuyou"></div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon mon">
-                    <div class="week__body__box__child">
+                <div class="body__box mon">
+                    <div class="box__child">
                         <div class="day"></div>
                         <div class="rokuyou"></div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon tue">
-                    <div class="week__body__box__child">
+                <div class="body__box tue">
+                    <div class="box__child">
                         <div class="day"></div>
                         <div class="rokuyou"></div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon wed">
-                    <div class="week__body__box__child">
+                <div class="body__box wed">
+                    <div class="box__child">
                         <div class="day"></div>
                         <div class="rokuyou"></div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon thu">
-                    <div class="week__body__box__child">
+                <div class="body__box thu">
+                    <div class="box__child">
                         <div class="day"></div>
                         <div class="rokuyou"></div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon fri">
-                    <div class="week__body__box__child">
+                <div class="body__box fri">
+                    <div class="box__child">
                         <div class="day"></div>
                         <div class="rokuyou"></div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon sat">
-                    <div class="week__body__box__child">
+                <div class="body__box sat">
+                    <div class="box__child">
                         <div class="day">1</div>
                         <div class="rokuyou">赤口</div>
                     </div>
                 </div>
             </div>
             <div class="week__body">
-                <div class="week__body__box boxcommon sun">
-                    <div class="week__body__box__child">
+                <div class="body__box sun">
+                    <div class="box__child">
                         <div class="day">2</div>
                         <div class="rokuyou">先勝</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon mon">
-                    <div class="week__body__box__child">
+                <div class="body__box mon">
+                    <div class="box__child">
                         <div class="day">3</div>
                         <div class="rokuyou">友引</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon tue">
-                    <div class="week__body__box__child">
+                <div class="body__box tue">
+                    <div class="box__child">
                         <div class="day">4</div>
                         <div class="rokuyou">先負</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon wed">
-                    <div class="week__body__box__child">
+                <div class="body__box wed">
+                    <div class="box__child">
                         <div class="day">5</div>
                         <div class="rokuyou">仏滅</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon thu">
-                    <div class="week__body__box__child">
+                <div class="body__box thu">
+                    <div class="box__child">
                         <div class="day">6</div>
                         <div class="rokuyou">大安</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon fri">
-                    <div class="week__body__box__child">
+                <div class="body__box fri">
+                    <div class="box__child">
                         <div class="day">7</div>
                         <div class="rokuyou">赤口</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon sat">
-                    <div class="week__body__box__child">
+                <div class="body__box sat">
+                    <div class="box__child">
                         <div class="day">8</div>
                         <div class="rokuyou">先勝</div>
                     </div>
                 </div>
             </div>
             <div class="week__body">
-                <div class="week__body__box boxcommon sun">
-                    <div class="week__body__box__child">
+                <div class="body__box sun">
+                    <div class="box__child">
                         <div class="day">9</div>
                         <div class="rokuyou">友引</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon mon">
-                    <div class="week__body__box__child">
+                <div class="body__box mon">
+                    <div class="box__child">
                         <div class="day">10</div>
                         <div class="rokuyou">先負</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon tue">
-                    <div class="week__body__box__child">
+                <div class="body__box tue">
+                    <div class="box__child">
                         <div class="day">11</div>
                         <div class="rokuyou">仏滅</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon wed">
-                    <div class="week__body__box__child">
+                <div class="body__box wed">
+                    <div class="box__child">
                         <div class="day">12</div>
                         <div class="rokuyou">大安</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon thu">
-                    <div class="week__body__box__child">
+                <div class="body__box thu">
+                    <div class="box__child">
                         <div class="day">13</div>
                         <div class="rokuyou">赤口</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon fri">
-                    <div class="week__body__box__child">
+                <div class="body__box fri">
+                    <div class="box__child">
                         <div class="day">14</div>
                         <div class="rokuyou">先勝</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon sat">
-                    <div class="week__body__box__child">
+                <div class="body__box sat">
+                    <div class="box__child">
                         <div class="day">15</div>
                         <div class="rokuyou">友引</div>
                     </div>
                 </div>
             </div>
             <div class="week__body">
-                <div class="week__body__box boxcommon sun">
-                    <div class="week__body__box__child">
+                <div class="body__box sun">
+                    <div class="box__child">
                         <div class="day">16</div>
                         <div class="rokuyou">先負</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon mon nationalholiday">
-                    <div class="week__body__box__child">
+                <div class="body__box mon nationalholiday">
+                    <div class="box__child">
                         <div class="holiday__set">
                             <div class="day">17</div>
                             <div class="holiday__name">海の日</div>
@@ -196,91 +199,116 @@
                         <div class="rokuyou">仏滅</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon tue">
-                    <div class="week__body__box__child">
+                <div class="body__box tue">
+                    <div class="box__child">
                         <div class="day">18</div>
                         <div class="rokuyou">大安</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon wed">
-                    <div class="week__body__box__child">
+                <div class="body__box wed">
+                    <div class="box__child">
                         <div class="day">19</div>
                         <div class="rokuyou">赤口</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon thu">
-                    <div class="week__body__box__child">
+                <div class="body__box thu">
+                    <div class="box__child">
                         <div class="day">20</div>
                         <div class="rokuyou">先勝</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon fri">
-                    <div class="week__body__box__child">
+                <div class="body__box fri">
+                    <div class="box__child">
                         <div class="day">21</div>
                         <div class="rokuyou">友引</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon sat">
-                    <div class="week__body__box__child">
+                <div class="body__box sat">
+                    <div class="box__child">
                         <div class="day">22</div>
                         <div class="rokuyou">先負</div>
                     </div>
                 </div>
             </div>
             <div class="week__body">
-                <div class="halfbox__container boxcommon sun">
-                    <div class="halfbox">
+                <div class="body__box--half sun">
+                    <div class="box--half__child">
                         <div class="day">23</div>
                         <div class="rokuyou">赤口</div>
                     </div>
-                    <div class="halfbox">
+                    <div class="box--half__child">
                         <div class="day">30</div>
                         <div class="rokuyou">先勝</div>
                     </div>
                 </div>
-                <div class="halfbox__container boxcommon mon">
-                    <div class="halfbox">
+                <div class="body__box--half mon">
+                    <div class="box--half__child">
                         <div class="day">24</div>
                         <div class="rokuyou">先勝</div>
                     </div>
-                    <div class="halfbox">
+                    <div class="box--half__child">
                         <div class="day">31</div>
                         <div class="rokuyou">友引</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon tue">
-                    <div class="week__body__box__child">
+                <div class="body__box tue">
+                    <div class="box__child">
                         <div class="day">25</div>
                         <div class="rokuyou">友引</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon wed">
-                    <div class="week__body__box__child">
+                <div class="body__box wed">
+                    <div class="box__child">
                         <div class="day">26</div>
                         <div class="rokuyou">先負</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon thu">
-                    <div class="week__body__box__child">
+                <div class="body__box thu">
+                    <div class="box__child">
                         <div class="day">27</div>
                         <div class="rokuyou">仏滅</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon fri">
-                    <div class="week__body__box__child">
+                <div class="body__box fri">
+                    <div class="box__child">
                         <div class="day">28</div>
                         <div class="rokuyou">大安</div>
                     </div>
                 </div>
-                <div class="week__body__box boxcommon sat">
-                    <div class="week__body__box__child">
+                <div class="body__box sat">
+                    <div class="box__child">
                         <div class="day">29</div>
                         <div class="rokuyou">赤口</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</body>
+        </main>
+    </body>
+    <script type="text/javascript">
+        var monthEnglishString = $(".month__english").text();
+        $(window).on('load resize', function () {
+
+            if ($(window).width() < 499) {
+                $(".week__header .sun").text("S");
+                $(".week__header .mon").text("M");
+                $(".week__header .tue").text("T");
+                $(".week__header .wed").text("W");
+                $(".week__header .thu").text("T");
+                $(".week__header .fri").text("F");
+                $(".week__header .sat").text("S");
+                $(".month__english").text(monthEnglishString.substr(0, 3));
+            } else {
+                $(".week__header .sun").text("Sun");
+                $(".week__header .mon").text("Mon");
+                $(".week__header .tue").text("Tue");
+                $(".week__header .wed").text("Wed");
+                $(".week__header .thu").text("Thu");
+                $(".week__header .fri").text("Fri");
+                $(".week__header .sat").text("Sat");
+                $(".month__english").text(monthEnglishString);
+            }
+        });
+
+    </script>
 
 </html>
