@@ -27,19 +27,19 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    flex: 2;
+    flex: 2 1 0;
 }
 .week__header{
     font-size: 75%;
     display: flex;
     flex-direction: row;
-    flex: 1;
+    flex: 1 1 0;
     align-items: flex-end;
 }
 .week__body  {
     display: flex;
     flex-direction: row;
-    flex: 2;
+    flex: 2 1 0;
 }
 .body__box--half {
     margin: -0.5px;
@@ -49,10 +49,10 @@ main {
 .box--half__child {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1 1 0;
 }
 [class^="body__box"] {
-    flex: 1;
+    flex: 1 1 0;
 }
 
 @media screen and (min-width:500px) {
@@ -98,7 +98,7 @@ main {
         font-size: 75%;
     }
     .week__header div {
-        flex: 1;
+        flex: 1 1 0;
     }
     .body__box  {
         border: 1px solid #000;
@@ -168,7 +168,7 @@ main {
         margin-bottom: 9px;
     }
     .week__header div {
-        flex: 1;
+        flex: 1 1 0;
     }
     .body__box .day {
         font-size: 120%;
@@ -182,7 +182,7 @@ main {
         text-align: center;
     }
     .box--half__child {
-        margin-bottom: 3px;
+        margin-bottom: 9px;
     }
     .holiday__name {
         margin-left: 5px;
