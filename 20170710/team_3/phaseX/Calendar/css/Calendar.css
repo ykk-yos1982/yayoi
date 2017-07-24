@@ -1,18 +1,16 @@
 html{
-    height: 67.5%;
-    width: 90%;
-    margin:10px;
+    height: 100%;
 }
 body{
-    height: 100%;
-    width: 100%;
+    height: 95%;
+    width: 99%;
     display: flex;    
 }
 
 .body__main{
     height: 100%;
-    width: 100%;
-    margin-top: 3%;
+    width: 97%;
+    margin: 0% 1% 0% 1%;
 }
 
 .calendar{
@@ -28,46 +26,30 @@ body{
 
 @media screen and (max-width:539px){
 
-    body{
-        flex-direction: row;
-    }
-
     .body__top{
         height: 14%;
         display: flex;
         flex-direction: column;
         min-height: 50%;
     }
-    .body__top .yearmonth p:first-child{
-        font-size: 0px; 
+    .body__top .yearmonth div:first-child{
+        display:none;
     }
-    .yearmonth p:first-child:before{
-        font-size: 4vh;
-        content: "2017";
-    }
-
-    .body__top .yearmonth p:last-child{
-        font-size: 0px; 
-    }
-    .yearmonth p:last-child:before{
-        font-size: 5vh;
-        content: "JUL";
-    }
-
+    
     [class *= "week"]{
         display: flex;
-        flex-direction: row;
     }
 
     [class="day-of-the-week"]>[class*="day"]{
-        flex-grow: 1;
+        /*flex-grow: 1;*/
+        flex:1 1 1px;
     }
 
-    #date p:first-child{
+    .date p:first-child{
         margin: 2px 0px 0px 6px;
 
     }
-    #date p:last-child{
+    .date p:last-child{
         margin: -5px 0px 0px 4px;
     }
 
@@ -79,12 +61,10 @@ body{
     .day-of-the-week{
         height: 5%;
         flex-grow: 1;
-        margin: 2% 0px 0px 1%;
         font-size: 2vh;
     }
     .calendar{
         height: 85%;
-        margin: 2% 0px 0px 1%;
     }
 
     .saturday{
@@ -109,7 +89,6 @@ body{
         display: flex;
         font-size: 15vh;
         padding: 0px 4% 0px 5%;
-        min-height: 65%;
     }
 
     .body__top div:last-child{
@@ -135,20 +114,20 @@ body{
     }
 
     .yearmonth{
-        margin: 5% 0px 0px 0.5%;
+       align-items: flex-start;
     }
 
     .calendar div[class*="week"] div[class *="day"] p:last-child{
         font-size: 1vh;
     }
 
-    #date p:last-child{
+    .date p:last-child{
         color: black;
     }
     .fourthweek .monday{
         color: red;
     }
-    #date p:last-child{
+    .date p:last-child{
         display: none;
     }
 
@@ -156,13 +135,13 @@ body{
         display: none;
     }
 
-    #date,.day-of-the-week div{
+    .date,.day-of-the-week div{
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 6vh;
     }
-        #date{
+        .date{
         display: flex;
         flex: 1;
         min-height: 0px;
@@ -181,24 +160,23 @@ body{
 
     body{
         flex-direction: column;
-        height: 100%;
     }
 
     [class *= "week"]{
         display: flex;
-        flex-direction: row;
     }
 
     [class="day-of-the-week"]>[class*="day"]{
-        flex-grow: 1;
+        /*flex-grow: 1;*/
+        flex:1 1 1px;
     }
 
-    #date p:first-child{
+    .date p:first-child{
         margin: 2px 0px 0px 6px;
         font-size: 2vh;
     }
 
-    #date p:last-child{
+    .date p:last-child{
         margin: -5px 0px 0px 4px;
     }
 
@@ -207,7 +185,7 @@ body{
         flex: 1 1 1px;
     }
 
-    #date{
+    .date{
         display: flex;
         border:  1px solid black;
         margin:0px -1px -1px 0px;
@@ -219,20 +197,21 @@ body{
     .body__top{
         height: 14%;
         display: flex;
-        flex-direction: row;
         min-height: 10%;
     }
     
     .day-of-the-week{
         height: 5%;
         flex-grow: 1;
-        margin: 2% 0px 0px 1%;
         font-size: 2vh;
+    }
+
+    .day-of-the-week p{
+        margin: 0px;
     }
     
     .calendar{
         height: 85%;
-        margin: 2% 0px 0px 1%;
     }
 
     .saturday{
@@ -285,14 +264,17 @@ body{
     }
 
     .yearmonth{
-        margin: 5% 0px 0px 0.5%;
+       justify-content :flex-end;
     }
 
+    .body__top .yearmonth div:last-child{
+        display:none;
+    }
     .calendar div[class*="week"] div[class *="day"] p:last-child{
         font-size: 1vh;
     }
 
-    #date p:last-child{
+    .date p:last-child{
         color: black;
     }
     
