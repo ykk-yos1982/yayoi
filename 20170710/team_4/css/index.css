@@ -1,6 +1,3 @@
-html{
-    height: 100%;
-}
 body {
     font-family: 'Trebuchet MS';
     display: flex;
@@ -16,7 +13,7 @@ header {
     align-items: flex-end;
 }
 .title__sub {
-    margin-left: 2%;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -34,7 +31,6 @@ main {
     display: flex;
     flex-direction: row;
     flex: 1 1 0;
-    align-items: flex-end;
 }
 .week__body  {
     display: flex;
@@ -57,11 +53,12 @@ main {
 
 @media screen and (min-width:500px) {
     body {
-        height: 75%;
-        padding-left: 3%;
-        padding-right: 3%;
-        padding-bottom: 3%;
-        padding-top: 1%; 
+        height: 470px;
+        width: 650px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-top: 5px; 
         border: 1px solid #000;
         flex-direction: column;
     }
@@ -69,33 +66,31 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        height: 2%;
-        margin: 0;
-        padding: 0;
     }
     .holes p {
         background-color: #000;
-        width: 3%;
-        margin: 0;
+        width: 15px;
+        height: 10px;
     }
     header {
         flex-direction: row;
     }
     .title__main{
-        margin-left: 6%;
-        margin-bottom: -3%;        
+        margin-left: 40px;
+        margin-bottom: -11px;        
     }
-    .month__number {
-        font-size: 400%;
+    .title__main h1 {
+        font-size: 65px;
     }
     .year--english,.year--japanese {
-        font-size: 62.5%;
+        font-size: 10px;
     }
     .month__english {
-        font-size: 100%;
+        font-size: 15px;
     }
     .week__header {
-        font-size: 75%;
+        font-size: 12px;
+        align-items: flex-end;
     }
     .week__header div {
         flex: 1 1 0;
@@ -108,7 +103,7 @@ main {
         padding: 5px;
     }
     .body__box .day {
-        font-size: 125%;
+        font-size: 19px;
     }
     .rokuyou,.holiday__name {
         font-size: 8px;
@@ -120,13 +115,13 @@ main {
     }
     .holiday__name {
         margin-left: 5px;
-        font-size: 50%;
+        font-size: 8px;
     }
     .body__box--half {
         border: 1px solid #000;
     }
     .body__box--half .day {
-        font-size: 87.5%;
+        font-size: 14px;
     }
     .box--half__child {
         padding: 3px;
@@ -136,7 +131,8 @@ main {
 }
 @media screen and (max-width:499px) {
     body {
-        height: 30%;
+        height: 80px;
+        width: 200px;
         flex-direction: row;
     }
     .holes {
@@ -145,8 +141,8 @@ main {
     header {
         flex-direction: column;
     }
-    .month__number {
-        font-size: 400%;
+    .title__main h1 {
+        font-size: 18px;
     }
     .title__sub {
         margin-left: 20px;
@@ -154,16 +150,16 @@ main {
         flex-direction: column;
     }
     .year--english {
-        font-size: 80%;
+        font-size: 2px;
     }
     .year--japanese {
         display: none;
     }
     .month__english {
-        font-size: 80%;
+        font-size: 2px;
     }
     .week__header {
-        font-size: 80%;
+        font-size: 2px;
         text-align: center;
         margin-bottom: 9px;
     }
@@ -171,21 +167,21 @@ main {
         flex: 1 1 0;
     }
     .body__box .day {
-        font-size: 120%;
+        font-size: 1px;
         text-align: center;
     }
     .rokuyou,.holiday__name {
         display: none;
     }
     .body__box--half .day {
-        font-size: 120%;
+        font-size: 1px;
         text-align: center;
     }
     .box--half__child {
-        margin-bottom: 9px;
+        margin-bottom: 13px;
     }
     .holiday__name {
         margin-left: 5px;
-        font-size: 50%;
+        font-size: 1px;
     }
 }
