@@ -237,8 +237,10 @@ body{
 
     .month{
         display: flex;
-        font-size: 8vw;
-        padding: 0px 4% 0px 5%;
+        font-size: 3vh;
+        flex: 1 1 1px;
+        align-items: center;
+        justify-content: center;
     }
 
     .body__top div:last-child{
@@ -253,23 +255,30 @@ body{
 
     .body__top div p:first-child{
         padding-top: 1%;
-        font-size: 1.2vw;
+        font-size: 1.2vh;
         height: auto;
     }
 
     .body__top div p:last-child{
         padding-top: 1%;
-        font-size: 1.2vw;
+        font-size: 1.2vh;
         height: auto;
     }
 
     .yearmonth{
-       justify-content :flex-end;
+        display: flex;
+       align-items: flex-end;
+       flex: 1 1 1px;
     }
 
     .body__top .yearmonth div:last-child{
         display:none;
     }
+
+    .emptybox{
+        flex: 5 1 1px;        
+    }
+
     .calendar div[class*="week"] div[class *="day"] p:last-child{
         font-size: 1vh;
     }
