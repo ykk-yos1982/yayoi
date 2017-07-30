@@ -4,8 +4,8 @@
 <head>
     <title>カレンダー</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/test.css">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
     </div>
     <div class="title">
         <div class="title__main">
-            <div class="month__number">7</div>
+            <div class="month__number"></div>
         </div>
         <div class="title__sub">
             <div class="year">
@@ -44,242 +44,401 @@
     </div>
     <div class="grid">
         <div class="week__header">
-            <div class="week__header__box sun"></div>
-            <div class="week__header__box mon"></div>
-            <div class="week__header__box tue"></div>
-            <div class="week__header__box wed"></div>
-            <div class="week__header__box thu"></div>
-            <div class="week__header__box fri"></div>
-            <div class="week__header__box sat"></div>
+            <span class="weekbox sun"></span>
+            <span class="weekbox mon"></span>
+            <span class="weekbox tue"></span>
+            <span class="weekbox wed"></span>
+            <span class="weekbox thu"></span>
+            <span class="weekbox fri"></span>
+            <span class="weekbox sat"></span>
         </div>
         <div class="week__body">
-            <div class="week__body__box boxcommon sun">
-                <div class="week__body__box__child">
-                    <div class="day"></div>
-                    <div class="rokuyou"></div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon mon">
-                <div class="week__body__box__child">
-                    <div class="day"></div>
-                    <div class="rokuyou"></div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon tue">
-                <div class="week__body__box__child">
-                    <div class="day"></div>
-                    <div class="rokuyou"></div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon wed">
-                <div class="week__body__box__child">
-                    <div class="day"></div>
-                    <div class="rokuyou"></div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon thu">
-                <div class="week__body__box__child">
-                    <div class="day"></div>
-                    <div class="rokuyou"></div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon fri">
-                <div class="week__body__box__child">
-                    <div class="day"></div>
-                    <div class="rokuyou"></div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon sat">
-                <div class="week__body__box__child">
-                    <div class="day">1</div>
-                    <div class="rokuyou">赤口</div>
-                </div>
-            </div>
-        </div>
-        <div class="week__body">
-            <div class="week__body__box boxcommon sun">
-                <div class="week__body__box__child">
-                    <div class="day">2</div>
-                    <div class="rokuyou">先勝</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon mon">
-                <div class="week__body__box__child">
-                    <div class="day">3</div>
-                    <div class="rokuyou">友引</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon tue">
-                <div class="week__body__box__child">
-                    <div class="day">4</div>
-                    <div class="rokuyou">先負</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon wed">
-                <div class="week__body__box__child">
-                    <div class="day">5</div>
-                    <div class="rokuyou">仏滅</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon thu">
-                <div class="week__body__box__child">
-                    <div class="day">6</div>
-                    <div class="rokuyou">大安</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon fri">
-                <div class="week__body__box__child">
-                    <div class="day">7</div>
-                    <div class="rokuyou">赤口</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon sat">
-                <div class="week__body__box__child">
-                    <div class="day">8</div>
-                    <div class="rokuyou">先勝</div>
-                </div>
-            </div>
-        </div>
-        <div class="week__body">
-            <div class="week__body__box boxcommon sun">
-                <div class="week__body__box__child">
-                    <div class="day">9</div>
-                    <div class="rokuyou">友引</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon mon">
-                <div class="week__body__box__child">
-                    <div class="day">10</div>
-                    <div class="rokuyou">先負</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon tue">
-                <div class="week__body__box__child">
-                    <div class="day">11</div>
-                    <div class="rokuyou">仏滅</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon wed">
-                <div class="week__body__box__child">
-                    <div class="day">12</div>
-                    <div class="rokuyou">大安</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon thu">
-                <div class="week__body__box__child">
-                    <div class="day">13</div>
-                    <div class="rokuyou">赤口</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon fri">
-                <div class="week__body__box__child">
-                    <div class="day">14</div>
-                    <div class="rokuyou">先勝</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon sat">
-                <div class="week__body__box__child">
-                    <div class="day">15</div>
-                    <div class="rokuyou">友引</div>
-                </div>
-            </div>
-        </div>
-        <div class="week__body">
-            <div class="week__body__box boxcommon sun">
-                <div class="week__body__box__child">
-                    <div class="day">16</div>
-                    <div class="rokuyou">先負</div>
-                </div>
-            </div>
-            <div class="week__body__box boxcommon mon nationalholiday">
-                <div class="week__body__box__child">
-                    <div class="holiday__set">
-                        <div class="day">17</div>
-                        <div class="holiday__name">海の日</div>
+            <div id="1" class="daybox sun">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
                     </div>
-                    <div class="rokuyou">仏滅</div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon tue">
-                <div class="week__body__box__child">
-                    <div class="day">18</div>
-                    <div class="rokuyou">大安</div>
+            <div id="2" class="daybox mon">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon wed">
-                <div class="week__body__box__child">
-                    <div class="day">19</div>
-                    <div class="rokuyou">赤口</div>
+            <div id="3" class="daybox tue">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon thu">
-                <div class="week__body__box__child">
-                    <div class="day">20</div>
-                    <div class="rokuyou">先勝</div>
+            <div id="4" class="daybox wed">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon fri">
-                <div class="week__body__box__child">
-                    <div class="day">21</div>
-                    <div class="rokuyou">友引</div>
+            <div id="5" class="daybox thu">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon sat">
-                <div class="week__body__box__child">
-                    <div class="day">22</div>
-                    <div class="rokuyou">先負</div>
+            <div id="6" class="daybox fri">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="7" class="daybox sat">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
         </div>
         <div class="week__body">
-            <div class="week__body__box--half boxcommon sun">
-                <div class="week__body__box--half__child">
-                    <div class="day">23</div>
-                    <div class="rokuyou">赤口</div>
-                </div>
-                <div class="week__body__box--half__child">
-                    <div class="day">30</div>
-                    <div class="rokuyou">先勝</div>
-                </div>
-            </div>
-            <div class="week__body__box--half boxcommon mon">
-                <div class="week__body__box--half__child">
-                    <div class="day">24</div>
-                    <div class="rokuyou">先勝</div>
-                </div>
-                <div class="week__body__box--half__child">
-                    <div class="day">31</div>
-                    <div class="rokuyou">友引</div>
+            <div id="8" class="daybox sun">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon tue">
-                <div class="week__body__box__child">
-                    <div class="day">25</div>
-                    <div class="rokuyou">友引</div>
+            <div id="9" class="daybox mon">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon wed">
-                <div class="week__body__box__child">
-                    <div class="day">26</div>
-                    <div class="rokuyou">先負</div>
+            <div id="10" class="daybox tue">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon thu">
-                <div class="week__body__box__child">
-                    <div class="day">27</div>
-                    <div class="rokuyou">仏滅</div>
+            <div id="11" class="daybox wed">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon fri">
-                <div class="week__body__box__child">
-                    <div class="day">28</div>
-                    <div class="rokuyou">大安</div>
+            <div id="12" class="daybox thu">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
-            <div class="week__body__box boxcommon sat">
-                <div class="week__body__box__child">
-                    <div class="day">29</div>
-                    <div class="rokuyou">赤口</div>
+            <div id="13" class="daybox fri">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="14" class="daybox sat">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+        </div>
+        <div class="week__body">
+            <div id="15" class="daybox sun">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="16" class="daybox mon">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="17" class="daybox tue">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="18" class="daybox wed">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="19" class="daybox thu">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="20" class="daybox fri">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="21" class="daybox sat">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+        </div>
+        <div class="week__body">
+            <div id="22" class="daybox sun">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="23" class="daybox mon">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="24" class="daybox tue">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="25" class="daybox wed">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="26" class="daybox thu">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="27" class="daybox fri">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="28" class="daybox sat">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+        </div>
+        <div class="week__body">
+            <div id="29" class="daybox sun">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="30" class="daybox mon">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="31" class="daybox tue">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="32" class="daybox wed">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="33" class="daybox thu">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="34" class="daybox fri">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="35" class="daybox sat">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+        </div>
+        <div class="week__body">
+            <div id="36" class="daybox sun">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="37" class="daybox mon">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="38" class="daybox tue">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="39" class="daybox wed">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="40" class="daybox thu">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="41" class="daybox fri">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
+                </div>
+            </div>
+            <div id="42" class="daybox sat">
+                <div class="daybox--column">
+                    <div class="daybox--row">
+                        <span class="day--number"></span>
+                        <span class="day--nationalholiday"></span>
+                    </div>
+                    <div class="day--rokuyou"></div>
                 </div>
             </div>
         </div>
@@ -287,29 +446,116 @@
 </div>
 </body>
 <script type="text/javascript">
-    var monthEnglishString = $(".month__english").text();
-    $(window).on('load resize', function(){
+    "use strict";
 
-        if($(window).width() < 499) {
-            $(".week__header .sun").text("S");
-            $(".week__header .mon").text("M");
-            $(".week__header .tue").text("T");
-            $(".week__header .wed").text("W");
-            $(".week__header .thu").text("T");
-            $(".week__header .fri").text("F");
-            $(".week__header .sat").text("S");
-            $(".month__english").text(monthEnglishString.substr(0,3));
+    const MONTHS = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ];
+    const ROKUYOU = [
+        "大安",
+        "赤口",
+        "先勝",
+        "友引",
+        "先負",
+        "仏滅"
+    ];
+    const WEEKS_STRING = {
+        "sun": "Sunday",
+        "mon": "Monday",
+        "tue": "Tuesday",
+        "wed": "Wednesday",
+        "thu": "Thursday",
+        "fri": "Friday",
+        "sat": "Saturday"
+    };
+    const WEEKS_NUMBER = [
+        "sun",
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat"
+    ];
+    // 日付
+    var selectDatetime = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+    var selectYear = selectDatetime.getFullYear();
+    var selectMonth = selectDatetime.getMonth() + 1;
+    // 月初
+    function getFirstDate(date) {
+        return new Date(date.getFullYear(), date.getMonth(), 1).getDate();
+    }
+    var firstDayOfMonth = getFirstDate(new Date());
+    // 月末
+    function getLastDayofMonth(date) {
+        return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    }
+    var lastDayofMonth = getLastDayofMonth(new Date());
+
+    $(".month__number").text(selectMonth);
+    $(".year--english").text(selectYear);
+    $(".year--japanese").text("平成" + (selectYear - 1988).toString());
+    $(".month__english").text(MONTHS[selectMonth]);
+    var monthEnglishString = $(".month__english").text();
+    var count = firstDayOfMonth;
+    var rokuyouIndex;
+    $.ajax({
+        url: `http://api.sekido.info/qreki?output=jsonp&year=${selectYear}&month=${selectMonth}&day=1`,
+        type: 'get',
+        dataType: 'jsonp',
+    }).done(function (response) {
+        rokuyouIndex = response["rokuyou"];
+        $(".daybox").each(function () {
+            if (count != firstDayOfMonth || $(this).hasClass(WEEKS_NUMBER[selectDatetime.getDay()])) {
+                if (count <= lastDayofMonth) {
+                    $(this).find(".day--number").text(count);
+                    $(this).find(".day--rokuyou").text(ROKUYOU[rokuyouIndex]);
+                    count++;
+                    rokuyouIndex++;
+                    if (rokuyouIndex == ROKUYOU.length) {
+                        rokuyouIndex = 0;
+                    }
+                }
+            }
+        });
+    }).fail(function (error) {
+        alert("六曜APIの読み取りに失敗しました。" + error)
+    })
+
+    $(window).on('load resize', function () {
+        if ($(window).width() < 500) {
+            $(".week__header .sun").text(WEEKS_STRING["sun"].substr(0, 1));
+            $(".week__header .mon").text(WEEKS_STRING["mon"].substr(0, 1));
+            $(".week__header .tue").text(WEEKS_STRING["tue"].substr(0, 1));
+            $(".week__header .wed").text(WEEKS_STRING["wed"].substr(0, 1));
+            $(".week__header .thu").text(WEEKS_STRING["thu"].substr(0, 1));
+            $(".week__header .fri").text(WEEKS_STRING["fri"].substr(0, 1));
+            $(".week__header .sat").text(WEEKS_STRING["sat"].substr(0, 1));
+            $(".month__english").text(monthEnglishString.substr(0, 3));
         } else {
-            $(".week__header .sun").text("Sun");
-            $(".week__header .mon").text("Mon");
-            $(".week__header .tue").text("Tue");
-            $(".week__header .wed").text("Wed");
-            $(".week__header .thu").text("Thu");
-            $(".week__header .fri").text("Fri");
-            $(".week__header .sat").text("Sat");
+            $(".week__header .sun").text(WEEKS_STRING["sun"].substr(0, 3));
+            $(".week__header .mon").text(WEEKS_STRING["mon"].substr(0, 3));
+            $(".week__header .tue").text(WEEKS_STRING["tue"].substr(0, 3));
+            $(".week__header .wed").text(WEEKS_STRING["wed"].substr(0, 3));
+            $(".week__header .thu").text(WEEKS_STRING["thu"].substr(0, 3));
+            $(".week__header .fri").text(WEEKS_STRING["fri"].substr(0, 3));
+            $(".week__header .sat").text(WEEKS_STRING["sat"].substr(0, 3));
             $(".month__english").text(monthEnglishString);
         }
     });
+
+
 </script>
 
 </html>

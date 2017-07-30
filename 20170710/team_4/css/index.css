@@ -2,10 +2,10 @@
     font-family: 'Trebuchet MS';
     display: flex;
 }
-.week__header .sun,.sun .day,.nationalholiday .day,.holiday__name {
+.week__header .sun,.week__body .sun .day--number,.week__body .sun .day--number,.holiday__name {
     color: #cc0033;
 }
-.week__header .sat,.sat .day {
+.week__header .sat,.sat .day--number {
     color: #005bac;
 }
 .title {
@@ -38,17 +38,10 @@
     flex-direction: row;
     flex: 4;
 }
-.week__body__box--half {
-    margin: -0.5px;
-    display: flex;
-    flex-direction: column;
-}
-.week__body__box--half__child {
-    display: flex;
-    flex-direction: column;
+.daybox {
     flex: 1;
 }
-.boxcommon {
+.weekbox {
     flex: 1;
 }
 
@@ -90,41 +83,28 @@
     .week__header {
         font-size: 12px;
     }
-    .week__body__box__child{
-        padding: 5px;
-    }
-    .week__header__box {
-        flex: 1;
-    }
-    .week__body__box  {
+    .daybox  {
         border: 1px solid #000;
         margin: -0.5px;
+        padding: 5px;
     }
-    .week__body__box .day {
+    .daybox .day--number {
         font-size: 19px;
     }
-    .rokuyou,.holiday__name {
+    .daybox .day--number {
+        font-size: 14px;
+    }
+    .day--rokuyou,.day--nationalholiday {
         font-size: 8px;
     }
-    .holiday__set {
+    .daybox--row {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    .holiday__name {
+    .day--nationalholiday {
         margin-left: 5px;
         font-size: 8px;
-    }
-    .week__body__box--half {
-        border: 1px solid #000;
-    }
-    .week__body__box--half .day {
-        font-size: 14px;
-    }
-    .week__body__box--half__child {
-        padding: 3px;
-        border-bottom: 1px solid #000;
-        margin: -1px;
     }
 }
 @media screen and (max-width:499px) {
@@ -161,24 +141,24 @@
         text-align: center;
         margin-bottom: 9px;
     }
-    .week__header__box {
+    .weekbox {
         flex: 1;
     }
-    .week__body__box .day {
+    .daybox .day--number {
         font-size: 1px;
         text-align: center;
     }
-    .rokuyou,.holiday__name {
+    .day--rokuyou,.day--nationalholiday {
         display: none;
     }
     .week__body__box--half .day {
         font-size: 1px;
         text-align: center;
     }
-    .week__body__box--half__child {
+    .daybox {
         margin-bottom: 13px;
     }
-    .holiday__name {
+    .day--nationalholiday {
         margin-left: 5px;
         font-size: 8px;
     }
