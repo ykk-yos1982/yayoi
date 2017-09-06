@@ -26,11 +26,27 @@ body{
 
 @media screen and (max-width:539px){
 
+    .calendar{
+        min-height: 255PX;
+        height: 255PX;
+        min-width: 384px;
+        width: 384px;
+        border: 1px solid black;
+        display: flex;
+    }
+    .calendar .main{
+        height: 100%;
+        flex: 10 1 1px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
     .header{
         height: 14%;
         display: flex;
         flex-direction: column;
         min-height: 50%;
+        flex: 1.2 1 1px;
     }
     .header .header__year-month div:first-child{
         display: none;
@@ -41,7 +57,6 @@ body{
     }
 
     [class="main__dayoftheweek"]>[class*="day"]{
-        /*flex-grow: 1;*/
         flex:1 1 1px;
     }
 
@@ -59,12 +74,11 @@ body{
     }
 
     .main__dayoftheweek{
-        height: 5%;
-        flex-grow: 1;
-        font-size: 2vh;
+        flex:1 1 1px; 
+        margin-top: 10px;
     }
     .main__calendar{
-        height: 85%;
+        flex: 7 1 1px;
     }
 
     .date--saturday,.main__dayoftheweek-saturday{
@@ -87,38 +101,40 @@ body{
 
     .header__month{
         display: flex;
-        font-size: 15vh;
+        font-size: 50px;
         padding: 0px 4% 0px 5%;
+        justify-content: center;
     }
 
     .header div:last-child{
         display: flex;
-        flex-direction: column;
+        flex-direction: column;        
     }
 
     .header p{
         width:auto;
-        margin: 0px;
+        margin: 6px 0px -12px 0px;
     }
 
     .header div p:first-child{
-        padding-top: 1%;
-        font-size: 1.2vh;
+        font-size: 15px;
         height: auto;
+        display: flex;
+        justify-content: center;
     }
 
     .header div p:last-child{
-        padding-top: 1%;
-        font-size: 1.2vh;
+        font-size: 20px;
         height: auto;
+        display: flex;
+        justify-content: center;
+        transform: scale(1,0.7);
     }
 
     .header__year-month{
        align-items: flex-start;
-    }
-
-    .main__calendar div[class*="week"] div[class *="day"] p:last-child{
-        font-size: 1vh;
+       display: flex;
+       justify-content: center;
     }
 
     .date p:last-child{
@@ -139,17 +155,13 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 6vh;
+        font-size: 26px;
     }
         .date{
         display: flex;
         flex: 1;
         min-height: 0px;
         flex-direction: column;
-    }
-
-    .fifthweek .date--holyday div:last-child,.fifthweek .date--weekdays div:last-child{
-        /*display: none;*/
     }
 }
 
@@ -172,7 +184,6 @@ body{
     }
 
     [class="main__dayoftheweek"]>[class*="day"]{
-        /*flex-grow: 1;*/
         flex:1 1 1px;
     }
 
@@ -271,18 +282,19 @@ body{
 
     .header p{
         width:auto;
-        margin: 0px;
+        margin: 0px 0px -7px 0px;
+
     }
 
     .header div p:first-child{
         padding-top: 1%;
-        font-size: 1.2vh;
-        height: auto;
+        font-size: 10px;
+        height: auto;        
     }
 
     .header div p:last-child{
         padding-top: 1%;
-        font-size: 1.2vh;
+        font-size: 13px;
         height: auto;
     }
 
