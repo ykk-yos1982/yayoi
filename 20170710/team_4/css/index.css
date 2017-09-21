@@ -42,7 +42,7 @@ section {
 .week__body  {
     display: flex;
     flex-direction: row;
-    flex: 2 1 0;
+    flex: 1 1 40px;
 }
 .body__box--half {
     margin: -0.5px;
