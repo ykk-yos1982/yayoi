@@ -9,8 +9,7 @@ body{
 
 .main{
     height: 88%;
-    width: 97%;
-    margin: 0% 1% 0% 1%;
+    width: 100%;
 }
 
 .main__calendar{
@@ -24,11 +23,11 @@ body{
     width: 100%;
 }
 
-@media screen and (max-width:539px){
+@media screen and (max-width:519px){
 
     .calendar{
-        min-height: 255PX;
-        height: 255PX;
+        min-height: 255px;
+        height: 255px;
         min-width: 384px;
         width: 384px;
         border: 1px solid black;
@@ -42,7 +41,7 @@ body{
         flex-direction: column;
     }
     .header{
-        height: 14%;
+        height: 12%;
         display: flex;
         flex-direction: column;
         min-height: 50%;
@@ -87,16 +86,6 @@ body{
 
     .date--holyday,.main__dayoftheweek-holyday{
         color: red;
-    }
-
-    .fifthweek .date--holyday,.fifthweek .date--weekdays{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .fifthweek .date--holyday div,.fifthweek .date--weekdays div{
-        flex-direction: column;
-        display: flex;
     }
 
     .header__month{
@@ -163,16 +152,24 @@ body{
         min-height: 0px;
         flex-direction: column;
     }
+
+    .align-center{
+        display: flex;
+        flex-direction: column;
+        height: 98%;
+        width: 97%;
+    }
 }
 
-@media screen and (min-width:540px){
+@media screen and (min-width:520px) and (max-width:719px){
     html{
         min-height: 350px;
     }
 
     .calendar{
-    height: 455PX;
-    width: 684px;
+    min-height: 355px;
+    height: 355px;
+    min-width: 484px;
     border: 1px solid black;
     }
     body{
@@ -189,7 +186,7 @@ body{
 
     .date p:first-child{
         margin: 2px 0px 0px 6px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .date p:last-child{
@@ -224,7 +221,7 @@ body{
         border-right: 1px solid black;
     }
     .header{
-        height: 14%;
+        height: 12%;
         display: flex;
         min-height: 10%;
     }
@@ -252,19 +249,6 @@ body{
 
     .date--holyday,.main__dayoftheweek-holyday{
         color: red;
-    }
-
-    .fifthweek .date--holyday,.fifthweek .date--weekdays{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .fifthweek .date--holyday div,.fifthweek .date--weekdays div{
-        border-bottom:  1px solid black;
-        margin-bottom: -1px;
-        flex: 1 1 1px;
-        flex-direction: column;
-        display: flex;
     }
 
     .header__month{
@@ -312,8 +296,8 @@ body{
         flex: 5 1 1px;        
     }
 
-    .main__calendar div[class*="week"] div[class *="day"] p:last-child{
-        font-size:1px;
+    .main__calendar div[class*="week"] div[class*="day"] p:last-child{
+        font-size:10px;
     }
 
     .date p:last-child{
@@ -338,6 +322,194 @@ body{
         display: flex;
         align-items: center;
         color: red;
+    }
+    .margin-top{
+        margin-top: 5px;
+        
+    }
+    .align-center{
+        display: flex;
+        flex-direction: column;
+        height: 98%;
+        width: 97%;
+    }
+}
+
+
+
+@media screen and (min-width:720px){
+    html{
+        min-height: 350px;
+    }
+    .main{
+        display :flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .calendar{
+    height: 455px;
+    width: 684px;
+    border: 1px solid black;
+    }
+    body{
+        flex-direction: column;
+    }
+
+    [class *= "week"]{
+        display: flex;
+    }
+
+    [class="main__dayoftheweek"]>[class*="day"]{
+        flex:1 1 1px;
+    }
+
+    .date p:first-child{
+        margin: 2px 0px 0px 6px;
+        font-size: 18px;
+    }
+
+    .date p:last-child{
+        margin: -5px 0px 0px 4px;
+    }
+
+    .week{
+        display: flex;
+        flex: 2 1 1px;
+    }
+
+    .week:last-child{
+        border-bottom:1px solid black;
+    }
+    .week--shrink{
+        display: flex;
+        flex: 1 1 1px;
+    }
+    .date{
+        display: flex;
+        flex: 1;
+        min-height: 0px;
+        flex-direction: column;
+    }
+    .date:first-child{
+        border-right: 1px solid black;
+        border-left:1px solid black;
+        border-top: 1px solid black;
+    }
+    .date+.date{
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+    }
+    .header{
+        height: 12%;
+        display: flex;
+        min-height: 10%;
+    }
+    
+    .week .date--blank{
+        border-top: none;
+    }
+    .main__dayoftheweek{
+        height: 4%;
+        flex-grow: 1;
+        font-size: 12px;
+    }
+
+    .main__dayoftheweek p{
+        margin: 0px;
+    }
+    
+    .main__calendar{
+        height: 92%;
+    }
+
+    .date--saturday,.main__dayoftheweek-saturday{
+        color: blue;
+    }
+
+    .date--holyday,.main__dayoftheweek-holyday{
+        color: red;
+    }
+
+    .header__month{
+        display: flex;
+        font-size: 50px;
+        flex: 1 1 1px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header div:last-child{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header p{
+        width:auto;
+        margin: 0px 0px -7px 0px;
+
+    }
+
+    .header div p:first-child{
+        padding-top: 1%;
+        font-size: 10px;
+        height: auto;        
+    }
+
+    .header div p:last-child{
+        padding-top: 1%;
+        font-size: 13px;
+        height: auto;
+    }
+
+    .header__year-month{
+       display: flex;
+       align-items: center;
+       flex: 1 1 1px;
+    }
+
+    .header .header__year-month div:last-child{
+        display: none;
+    }
+
+    .header__blank{
+        flex: 5 1 1px;        
+    }
+
+    .main__calendar div[class*="week"] div[class*="day"] p:last-child{
+        font-size:10px;
+    }
+
+    .date p:last-child{
+        color: black;
+    }
+    
+    .main__dayoftheweek p:last-child{
+        display: none;
+    }
+
+    div div[class="date date--blank"]{
+        border-top: 1px white;
+    }
+    div[class="week--shrink"]:first-child{
+        border-bottom-color: white;
+    }
+    
+    .date__holyday{
+        display: flex;
+    }
+    .date__holyday p:last-child{
+        display: flex;
+        align-items: center;
+        color: red;
+    }
+    .margin-top{
+        margin-top: 5px;        
+    }
+    .align-center{
+        display: flex;
+        flex-direction: column;
+        height: 98%;
+        width: 97%;
     }
 }
 
