@@ -47,7 +47,7 @@ body{
         min-height: 50%;
         flex: 1.2 1 1px;
     }
-    .header .header__year-month div:first-child{
+    .header__year-month__first{
         display: none;
     }
     
@@ -80,11 +80,11 @@ body{
         flex: 7 1 1px;
     }
 
-    .date--saturday,.main__dayoftheweek-saturday{
+    .date--saturday,.main__dayoftheweek--saturday{
         color: blue;
     }
 
-    .date--holyday,.main__dayoftheweek-holyday{
+    .date--holyday,.main__dayoftheweek--holyday{
         color: red;
     }
 
@@ -100,7 +100,7 @@ body{
         flex-direction: column;        
     }
 
-    .header p{
+    .header__year-month__year ,.header__year-month__month{
         width:auto;
         margin: 6px 0px -12px 0px;
     }
@@ -159,6 +159,9 @@ body{
         height: 98%;
         width: 97%;
     }
+    .margin-0{
+        margin: 0px;
+    }
 }
 
 @media screen and (min-width:520px) and (max-width:719px){
@@ -168,8 +171,8 @@ body{
 
     .calendar{
     min-height: 355px;
-    height: 355px;
-    min-width: 484px;
+    height: 455px;
+    width: 96%;
     border: 1px solid black;
     }
     body{
@@ -243,11 +246,11 @@ body{
         height: 92%;
     }
 
-    .date--saturday,.main__dayoftheweek-saturday{
+    .date--saturday,.main__dayoftheweek--saturday{
         color: blue;
     }
 
-    .date--holyday,.main__dayoftheweek-holyday{
+    .date--holyday,.main__dayoftheweek--holyday{
         color: red;
     }
 
@@ -259,12 +262,7 @@ body{
         justify-content: center;
     }
 
-    .header div:last-child{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header p{
+    .header__year-month__year ,.header__year-month__month{
         width:auto;
         margin: 0px 0px -7px 0px;
 
@@ -288,7 +286,7 @@ body{
        flex: 1 1 1px;
     }
 
-    .header .header__year-month div:last-child{
+    .header__year-month__second{
         display: none;
     }
 
@@ -332,6 +330,11 @@ body{
         flex-direction: column;
         height: 98%;
         width: 97%;
+    }
+    .main{
+        display :flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -422,11 +425,11 @@ body{
         height: 92%;
     }
 
-    .date--saturday,.main__dayoftheweek-saturday{
+    .date--saturday,.main__dayoftheweek--saturday{
         color: blue;
     }
 
-    .date--holyday,.main__dayoftheweek-holyday{
+    .date--holyday,.main__dayoftheweek--holyday{
         color: red;
     }
 
@@ -438,12 +441,7 @@ body{
         justify-content: center;
     }
 
-    .header div:last-child{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header p{
+    .header__year-month__year ,.header__year-month__month{
         width:auto;
         margin: 0px 0px -7px 0px;
 
@@ -467,7 +465,7 @@ body{
        flex: 1 1 1px;
     }
 
-    .header .header__year-month div:last-child{
+    .header__year-month__second{
         display: none;
     }
 
