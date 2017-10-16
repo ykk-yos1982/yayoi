@@ -4,7 +4,6 @@
     <head>
         <title>カレンダー</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     </head>
@@ -289,7 +288,7 @@
         var monthEnglishString = $(".month__english").text();
         $(window).on('load resize', function () {
 
-            if ($(window).width() < 499) {
+            if ($(window).width() < 351 && $(window).height() < 351) {
                 $(".week__header .sun").text("S");
                 $(".week__header .mon").text("M");
                 $(".week__header .tue").text("T");

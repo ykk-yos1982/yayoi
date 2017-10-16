@@ -37,7 +37,6 @@ section {
     font-size: 75%;
     display: flex;
     flex-direction: row;
-    flex: 1 1 0;
 }
 .week__body  {
     display: flex;
@@ -58,14 +57,14 @@ section {
     flex: 1 1 0;
 }
 
-@media  screen and (min-width:710px) , screen and (min-height:530px) {
+@media  screen and (min-width:710px) and (min-height:530px) {
     body {
         height: 470px;
         width: 650px;
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 15px;
-        padding-top: 15px; 
+        padding-top: 15px;
         border: 1px solid #000;
         flex-direction: column;
     }
@@ -84,7 +83,7 @@ section {
     }
     .title__main{
         margin-left: 40px;
-        margin-bottom: -11px;        
+        margin-bottom: -11px;
     }
     .month__number {
         font-size: 65px;
@@ -137,18 +136,23 @@ section {
     }
 }
 
-@media  screen and (max-width:709px) and (min-width:351px) , screen and (max-height:529px) and (min-height:351px) {
+@media  screen and (min-width:350px) and (max-height:530px) ,
+screen and (max-width:710px) and (min-height:350px) {
     html {
         height: 80%;
         width: 80%
     }
     body {
         height: 100%;
+        min-height: 230px;
+        max-height: 470px;
         width: 100%;
+        min-width: 200px;
+        max-width: 650px;
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 15px;
-        padding-top: 15px; 
+        padding-top: 15px;
         border: 1px solid #000;
         flex-direction: column;
     }
@@ -159,7 +163,7 @@ section {
     }
     .holes p {
         background-color: #000;
-        width: 10px;
+        width: 5px;
         height: 10px;
     }
     header {
@@ -170,7 +174,7 @@ section {
     }
     .title__main{
         margin-left: 40px;
-        margin-bottom: -11px;        
+        margin-bottom: -11px;
     }
     .month__number {
         font-size: 40px;
@@ -182,7 +186,7 @@ section {
         font-size: 15px;
     }
     .week__header {
-        font-size: 12px;
+        font-size: 10px;
         align-items: flex-end;
     }
     .week__header p {
@@ -196,11 +200,11 @@ section {
         padding: 5px;
     }
     .body__box .day {
-        font-size: 15px;
+        font-size: 13px;
     }
     .rokuyou,.holiday__name {
         font-size: 8px;
-        display: none;      
+        display: none;
     }
     .holiday__set {
         display: flex;
@@ -214,18 +218,20 @@ section {
         border: 1px solid #000;
     }
     .body__box--half .day {
-        font-size: 14px;
+        font-size: 13px;
     }
     .box--half__child {
         padding: 3px;
         border-bottom: 1px solid #000;
         margin: -1px;
-    } 
-} 
-@media  screen and (max-width:350px) , screen and (max-height:350px) {
+    }
+}
+@media  screen and (max-width:350px) and (max-height:350px) {
     body {
         height: 80px;
+        min-height: 40px;
         width: 200px;
+        min-width: 40px;
         flex-direction: row;
     }
     .holes {
