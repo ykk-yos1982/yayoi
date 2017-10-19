@@ -25,9 +25,6 @@ header {
     display: flex;
     flex-direction: row;
 }
-.title{
-    flex:0 0 70px;
-}
 section {
     display: flex;
     flex-direction: column;
@@ -47,11 +44,6 @@ section {
     margin: -0.5px;
     display: flex;
     flex-direction: column;
-}
-.box--half__child {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 0;
 }
 [class^="body__box"] {
     flex: 1 1 0;
@@ -80,6 +72,9 @@ section {
     }
     header {
         flex-direction: row;
+    }
+    .title{
+        flex:0 0 70px;
     }
     .title__main{
         margin-left: 40px;
@@ -133,11 +128,14 @@ section {
         padding: 3px;
         border-bottom: 1px solid #000;
         margin: -1px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
     }
 }
 
-@media  screen and (min-width:350px) and (max-height:530px) ,
-screen and (max-width:710px) and (min-height:350px) {
+@media  screen and (min-width:380px) and (max-height:530px) ,
+screen and (max-width:710px) and (min-height:380px) {
     html {
         height: 80%;
         width: 80%
@@ -224,14 +222,15 @@ screen and (max-width:710px) and (min-height:350px) {
         padding: 3px;
         border-bottom: 1px solid #000;
         margin: -1px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
     }
 }
-@media  screen and (max-width:350px) and (max-height:350px) {
+@media  screen and (max-width:380px) and (max-height:380px) {
     body {
-        height: 80px;
-        min-height: 40px;
-        width: 200px;
-        min-width: 40px;
+        height: 100%;
+        width: 85%;
         flex-direction: row;
     }
     .holes {
@@ -249,16 +248,16 @@ screen and (max-width:710px) and (min-height:350px) {
         flex-direction: column;
     }
     .year--english {
-        font-size: 2px;
+        font-size: 8px;
     }
     .year--japanese {
         display: none;
     }
     .month__english {
-        font-size: 2px;
+        font-size: 10px;
     }
     .week__header {
-        font-size: 2px;
+        font-size: 10px;
         text-align: center;
         margin-bottom: 9px;
     }
@@ -266,21 +265,21 @@ screen and (max-width:710px) and (min-height:350px) {
         flex: 1 1 0;
     }
     .body__box .day {
-        font-size: 1px;
+        font-size: 10px;
         text-align: center;
     }
     .rokuyou,.holiday__name {
         display: none;
     }
     .body__box--half .day {
-        font-size: 1px;
+        font-size: 10px;
         text-align: center;
     }
     .box--half__child {
-        margin-bottom: 13px;
+        margin-bottom: 28px;
     }
     .holiday__name {
         margin-left: 5px;
-        font-size: 1px;
+        font-size: 10px;
     }
 }
